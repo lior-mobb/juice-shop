@@ -35753,7 +35753,7 @@ THREE.EdgesHelper = function ( object, hex ) {
 
 	var coords = geometry.attributes.position.array;
 
-	var index = 0;
+	let index = 0;
 
 	for ( var key in hash ) {
 
