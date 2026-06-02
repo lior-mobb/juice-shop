@@ -8726,7 +8726,7 @@ THREE.Projector = function () {
 				_vector4.set( _modelMatrix.elements[12], _modelMatrix.elements[13], _modelMatrix.elements[14], 1 );
 				_vector4.applyMatrix4( _viewProjectionMatrix );
 
-				var invW = 1 / _vector4.w;
+				const invW = 1 / _vector4.w;
 
 				_vector4.z *= invW;
 
