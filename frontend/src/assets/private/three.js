@@ -12466,7 +12466,7 @@ THREE.JSONLoader.prototype.parse = function ( json, texturePath ) {
 
 THREE.LoadingManager = function ( onLoad, onProgress, onError ) {
 
-	var scope = this;
+	const scope = this;
 
 	var loaded = 0, total = 0;
 
