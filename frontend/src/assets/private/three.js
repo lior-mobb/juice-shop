@@ -36699,7 +36699,7 @@ THREE.MorphBlendMesh.prototype.autoCreateAnimations = function ( fps ) {
 
 	var geometry = this.geometry;
 
-	for ( var i = 0, il = geometry.morphTargets.length; i < il; i ++ ) {
+	for ( let i = 0, il = geometry.morphTargets.length; i < il; i ++ ) {
 
 		var morph = geometry.morphTargets[ i ];
 		var chunks = morph.name.match( pattern );
