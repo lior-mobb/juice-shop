@@ -31495,7 +31495,7 @@ THREE.AnimationHandler = ( function () {
 
 	};
 
-	var parseRecurseHierarchy = function ( root, hierarchy ) {
+	const parseRecurseHierarchy = function ( root, hierarchy ) {
 
 		hierarchy.push( root );
 
