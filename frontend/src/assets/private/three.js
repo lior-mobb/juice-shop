@@ -4424,7 +4424,7 @@ THREE.Matrix4.prototype = {
 
 		return function ( m ) {
 
-			var te = this.elements;
+			const te = this.elements;
 			var me = m.elements;
 
 			var scaleX = 1 / v1.set( me[0], me[1], me[2] ).length();
@@ -8726,7 +8726,7 @@ THREE.Projector = function () {
 				_vector4.set( _modelMatrix.elements[12], _modelMatrix.elements[13], _modelMatrix.elements[14], 1 );
 				_vector4.applyMatrix4( _viewProjectionMatrix );
 
-				var invW = 1 / _vector4.w;
+				const invW = 1 / _vector4.w;
 
 				_vector4.z *= invW;
 
@@ -24391,7 +24391,7 @@ THREE.WebGLRenderer = function ( parameters ) {
 
 		if ( material instanceof THREE.MeshFaceMaterial ) {
 
-			var materialIndex = geometry instanceof THREE.BufferGeometry ? 0 : buffer.materialIndex;
+			const materialIndex = geometry instanceof THREE.BufferGeometry ? 0 : buffer.materialIndex;
 
 			material = material.materials[ materialIndex ];
 
@@ -31495,7 +31495,7 @@ THREE.AnimationHandler = ( function () {
 
 	};
 
-	var parseRecurseHierarchy = function ( root, hierarchy ) {
+	const parseRecurseHierarchy = function ( root, hierarchy ) {
 
 		hierarchy.push( root );
 
@@ -33299,7 +33299,7 @@ THREE.ExtrudeGeometry.prototype.addShape = function ( shape, options ) {
 			
 			// shift adjacent points by unit vectors to the left
 	
-			var ptPrevShift_x = ( inPrev.x - v_prev_y / v_prev_len );
+			const ptPrevShift_x = ( inPrev.x - v_prev_y / v_prev_len );
 			var ptPrevShift_y = ( inPrev.y + v_prev_x / v_prev_len );
 			
 			var ptNextShift_x = ( inNext.x - v_next_y / v_next_len );
@@ -33934,7 +33934,7 @@ THREE.LatheGeometry = function ( points, segments, phiStart, phiLength ) {
 	var inversePointLength = 1.0 / ( points.length - 1 );
 	var inverseSegments = 1.0 / segments;
 
-	for ( var i = 0, il = segments; i <= il; i ++ ) {
+	for ( let i = 0, il = segments; i <= il; i ++ ) {
 
 		var phi = phiStart + i * inverseSegments * phiLength;
 
@@ -35834,7 +35834,7 @@ THREE.FaceNormalsHelper.prototype.update = function () {
 
 	this.normalMatrix.getNormalMatrix( objectWorldMatrix );
 
-	for ( var i = 0, i2 = 0, l = objectFaces.length; i < l; i ++, i2 += 2 ) {
+	for ( let i = 0, i2 = 0, l = objectFaces.length; i < l; i ++, i2 += 2 ) {
 
 		var face = objectFaces[ i ];
 
@@ -36209,7 +36209,7 @@ THREE.VertexNormalsHelper.prototype = Object.create( THREE.Line.prototype );
 
 THREE.VertexNormalsHelper.prototype.update = ( function ( object ) {
 
-	var v1 = new THREE.Vector3();
+	const v1 = new THREE.Vector3();
 
 	return function( object ) {
 
@@ -36699,7 +36699,7 @@ THREE.MorphBlendMesh.prototype.autoCreateAnimations = function ( fps ) {
 
 	var geometry = this.geometry;
 
-	for ( var i = 0, il = geometry.morphTargets.length; i < il; i ++ ) {
+	for ( let i = 0, il = geometry.morphTargets.length; i < il; i ++ ) {
 
 		var morph = geometry.morphTargets[ i ];
 		var chunks = morph.name.match( pattern );
