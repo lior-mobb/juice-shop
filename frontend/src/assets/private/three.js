@@ -34849,7 +34849,7 @@ THREE.PolyhedronGeometry = function ( vertices, indices, radius, detail ) {
 		var uvs = this.faceVertexUvs[ 0 ][ i ];
 
 		var x0 = uvs[ 0 ].x;
-		var x1 = uvs[ 1 ].x;
+		const x1 = uvs[ 1 ].x;
 		var x2 = uvs[ 2 ].x;
 
 		var max = Math.max( x0, Math.max( x1, x2 ) );
