@@ -33299,7 +33299,7 @@ THREE.ExtrudeGeometry.prototype.addShape = function ( shape, options ) {
 			
 			// shift adjacent points by unit vectors to the left
 	
-			var ptPrevShift_x = ( inPrev.x - v_prev_y / v_prev_len );
+			const ptPrevShift_x = ( inPrev.x - v_prev_y / v_prev_len );
 			var ptPrevShift_y = ( inPrev.y + v_prev_x / v_prev_len );
 			
 			var ptNextShift_x = ( inNext.x - v_next_y / v_next_len );
