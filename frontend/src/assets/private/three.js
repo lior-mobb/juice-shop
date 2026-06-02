@@ -35834,7 +35834,7 @@ THREE.FaceNormalsHelper.prototype.update = function () {
 
 	this.normalMatrix.getNormalMatrix( objectWorldMatrix );
 
-	for ( var i = 0, i2 = 0, l = objectFaces.length; i < l; i ++, i2 += 2 ) {
+	for ( let i = 0, i2 = 0, l = objectFaces.length; i < l; i ++, i2 += 2 ) {
 
 		var face = objectFaces[ i ];
 
