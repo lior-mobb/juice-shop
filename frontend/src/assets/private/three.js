@@ -15531,7 +15531,7 @@ THREE.Line = function ( geometry, material, type ) {
 	THREE.Object3D.call( this );
 
 	this.geometry = geometry !== undefined ? geometry : new THREE.Geometry();
-	this.material = material !== undefined ? material : new THREE.LineBasicMaterial( { color: Math.random() * 0xffffff } );
+	this.material = material !== undefined ? material : new THREE.LineBasicMaterial( { color: (crypto.getRandomValues(new Uint32Array(1))[0] / 2 ** 32) * 0xffffff } );
 
 	this.type = ( type !== undefined ) ? type : THREE.LineStrip;
 
