@@ -3,6 +3,7 @@
  * @author Larry Battle / http://bateru.com/news
  * @author bhouston / http://exocortex.com
  */
+const crypto = require('crypto');
 
 var THREE = { REVISION: '67' };
 
@@ -6423,7 +6424,7 @@ THREE.Math = {
 
 	random16: function () {
 
-		return ( 65280 * Math.random() + 255 * Math.random() ) / 65535;
+		return ( 65280 * Math.random() + 255 * (crypto.getRandomValues(new Uint32Array(1))[0] / 2 ** 32) ) / 65535;
 
 	},
 
