@@ -36209,7 +36209,7 @@ THREE.VertexNormalsHelper.prototype = Object.create( THREE.Line.prototype );
 
 THREE.VertexNormalsHelper.prototype.update = ( function ( object ) {
 
-	var v1 = new THREE.Vector3();
+	const v1 = new THREE.Vector3();
 
 	return function( object ) {
 
