@@ -2,6 +2,7 @@
  * Copyright (c) 2014-2024 Bjoern Kimminich & the OWASP Juice Shop contributors.
  * SPDX-License-Identifier: MIT
  */
+import rateLimit from 'express-rate-limit'
 import dataErasure from './routes/dataErasure'
 import fs = require('fs')
 import { type Request, type Response, type NextFunction } from 'express'
@@ -257,7 +258,7 @@ restoreOverwrittenFilesWithOriginals().then(() => {
 
   // vuln-code-snippet start directoryListingChallenge accessLogDisclosureChallenge
   /* /ftp directory browsing and file download */ // vuln-code-snippet neutral-line directoryListingChallenge
-  app.use('/ftp', serveIndexMiddleware, serveIndex('ftp', { icons: true })) // vuln-code-snippet vuln-line directoryListingChallenge
+  app.use('/ftp', rateLimit({ limit: 60 }), serveIndexMiddleware, serveIndex('ftp', { icons: true })) // vuln-code-snippet vuln-line directoryListingChallenge
   app.use('/ftp(?!/quarantine)/:file', fileServer()) // vuln-code-snippet vuln-line directoryListingChallenge
   app.use('/ftp/quarantine/:file', quarantineServer()) // vuln-code-snippet neutral-line directoryListingChallenge
 
@@ -565,7 +566,7 @@ restoreOverwrittenFilesWithOriginals().then(() => {
   app.get('/rest/user/change-password', changePassword())
   app.post('/rest/user/reset-password', resetPassword())
   app.get('/rest/user/security-question', securityQuestion())
-  app.get('/rest/user/whoami', security.updateAuthenticatedUsers(), currentUser())
+  app.get('/rest/user/whoami', rateLimit({ limit: 60 }), security.updateAuthenticatedUsers(), currentUser())
   app.get('/rest/user/authentication-details', authenticatedUsers())
   app.get('/rest/products/search', search())
   app.get('/rest/basket/:id', basket())
