@@ -1,3 +1,4 @@
+import * as path from 'node:path'
 import { type NextFunction, type Request, type Response } from 'express'
 import * as accuracy from '../lib/accuracy'
 
@@ -78,7 +79,8 @@ export const checkCorrectFix = () => async (req: Request<Record<string, unknown>
     let explanation
     if (fs.existsSync('./data/static/codefixes/' + key + '.info.yml')) {
       const codingChallengeInfos = yaml.load(fs.readFileSync('./data/static/codefixes/' + key + '.info.yml', 'utf8'))
-      const selectedFixInfo = codingChallengeInfos?.fixes.find(({ id }: { id: number }) => id === selectedFix + 1)
+      const safeInput = path.basename(String(codingChallengeInfos?.fixes || '').replace('\0', '').replace(/^(\.\.(\/|\\$))+/, ''))
+      const selectedFixInfo = safeInput.find(({ id }: { id: number }) => id === selectedFix + 1)
       if (selectedFixInfo?.explanation) explanation = res.__(selectedFixInfo.explanation)
     }
     if (selectedFix === fixData.correct) {
