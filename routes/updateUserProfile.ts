@@ -10,6 +10,18 @@ import * as utils from '../lib/utils'
 
 const security = require('../lib/insecurity')
 const cache = require('../data/datacache')
+
+function validateRootDomain(url?: string, domain?: string): boolean {
+  if (!url || !domain) {
+    return false
+  }
+  try {
+    const host = new URL(url).host
+    return host === domain || host.endsWith('.' + domain)
+  } catch(_) {
+    return false
+  }
+}
 const challenges = cache.challenges
 
 module.exports = function updateUserProfile () {
@@ -20,7 +32,7 @@ module.exports = function updateUserProfile () {
       UserModel.findByPk(loggedInUser.data.id).then((user: UserModel | null) => {
         if (user != null) {
           challengeUtils.solveIf(challenges.csrfChallenge, () => {
-            return ((req.headers.origin?.includes('://htmledit.squarefree.com')) ??
+            return ((validateRootDomain(req.headers.origin, 'htmledit.squarefree.com')) ??
               (req.headers.referer?.includes('://htmledit.squarefree.com'))) &&
               req.body.username !== user.username
           })
