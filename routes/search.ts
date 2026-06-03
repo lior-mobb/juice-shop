@@ -26,7 +26,7 @@ module.exports = function searchProducts () {
     })
       .then((products: any) => {
         const dataString = JSON.stringify(products)
-        if (challengeUtils.notSolved(challenges.unionSqlInjectionChallenge)) { // vuln-code-snippet hide-start
+        if (challengeUtils.notSolved(challenges.unionSqlInjectionChallenge)) {
           let solved = true
           UserModel.findAll().then(data => {
             const users = utils.queryResultToJson(data)
@@ -63,7 +63,7 @@ module.exports = function searchProducts () {
               }
             }
           })
-        } // vuln-code-snippet hide-end
+        }
         for (let i = 0; i < products.length; i++) {
           products[i].name = req.__(products[i].name)
           products[i].description = req.__(products[i].description)
