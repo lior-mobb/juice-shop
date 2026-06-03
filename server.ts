@@ -390,7 +390,7 @@ restoreOverwrittenFilesWithOriginals().then(() => {
         req.body.password = req.body.password.trim()
         req.body.passwordRepeat = req.body.passwordRepeat.trim()
       } else {
-        res.status(400).send(res.__('Invalid email/password cannot be empty'))
+        res.status(400).setHeader('X-Frame-Options', 'DENY').send(res.__('Invalid email/password cannot be empty'))
       }
     }
     next()
