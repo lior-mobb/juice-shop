@@ -27880,7 +27880,7 @@ THREE.ImageUtils = {
 
 	loadCompressedTexture: function ( url, mapping, onLoad, onError ) {
 
-		var texture = new THREE.CompressedTexture();
+		const texture = new THREE.CompressedTexture();
 		texture.mapping = mapping;
 
 		var request = new XMLHttpRequest();
