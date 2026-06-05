@@ -6294,7 +6294,7 @@ THREE.Plane.prototype = {
 			var normalMatrix = optionalNormalMatrix || m1.getNormalMatrix( matrix );
 			var newNormal = v1.copy( this.normal ).applyMatrix3( normalMatrix );
 			
-			var newCoplanarPoint = this.coplanarPoint( v2 );
+			const newCoplanarPoint = this.coplanarPoint( v2 );
 			newCoplanarPoint.applyMatrix4( matrix );
 
 			this.setFromNormalAndCoplanarPoint( newNormal, newCoplanarPoint );
