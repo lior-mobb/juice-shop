@@ -33614,7 +33614,7 @@ THREE.ExtrudeGeometry.prototype.addShape = function ( shape, options ) {
 
 	function buildSideFaces() {
 
-		var layeroffset = 0;
+		let layeroffset = 0;
 		sidewalls( contour, layeroffset );
 		layeroffset += contour.length;
 
