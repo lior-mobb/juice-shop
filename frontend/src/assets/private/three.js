@@ -37343,7 +37343,7 @@ THREE.ShadowMapPlugin = function () {
 						virtualLight = createVirtualLight( light, n );
 						virtualLight.originalCamera = camera;
 
-						var gyro = new THREE.Gyroscope();
+						const gyro = new THREE.Gyroscope();
 						gyro.position.copy( light.shadowCascadeOffset );
 
 						gyro.add( virtualLight );
