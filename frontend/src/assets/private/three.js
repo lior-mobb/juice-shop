@@ -34027,7 +34027,7 @@ THREE.PlaneGeometry = function ( width, height, widthSegments, heightSegments ) 
 	var width_half = width / 2;
 	var height_half = height / 2;
 
-	var gridX = widthSegments || 1;
+	const gridX = widthSegments || 1;
 	var gridZ = heightSegments || 1;
 
 	var gridX1 = gridX + 1;
