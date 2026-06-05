@@ -29635,7 +29635,7 @@ THREE.CurvePath.prototype.getWrapPoints = function ( oldPts, path ) {
 
 	var bounds = this.getBoundingBox();
 
-	var i, il, p, oldX, oldY, xNorm;
+	let i, il, p, oldX, oldY, xNorm;
 
 	for ( i = 0, il = oldPts.length; i < il; i ++ ) {
 
