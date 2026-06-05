@@ -34194,7 +34194,7 @@ THREE.SphereGeometry = function ( radius, widthSegments, heightSegments, phiStar
 	for ( y = 0; y <= heightSegments; y ++ ) {
 
 		var verticesRow = [];
-		var uvsRow = [];
+		const uvsRow = [];
 
 		for ( x = 0; x <= widthSegments; x ++ ) {
 
