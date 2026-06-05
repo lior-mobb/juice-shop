@@ -5866,7 +5866,7 @@ THREE.Sphere.prototype = {
 
 	clampPoint: function ( point, optionalTarget ) {
 
-		var deltaLengthSq = this.center.distanceToSquared( point );
+		const deltaLengthSq = this.center.distanceToSquared( point );
 
 		var result = optionalTarget || new THREE.Vector3();
 		result.copy( point );
