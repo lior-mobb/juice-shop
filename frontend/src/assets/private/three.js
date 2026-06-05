@@ -453,7 +453,7 @@ THREE.Color.prototype = {
 
 		} else {
 
-			var delta = max - min;
+			const delta = max - min;
 
 			saturation = lightness <= 0.5 ? delta / ( max + min ) : delta / ( 2 - max - min );
 
