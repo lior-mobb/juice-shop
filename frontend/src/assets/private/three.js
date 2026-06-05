@@ -24387,7 +24387,7 @@ THREE.WebGLRenderer = function ( parameters ) {
 		var buffer = globject.buffer;
 
 		var geometry = object.geometry;
-		var material = object.material;
+		let material = object.material;
 
 		if ( material instanceof THREE.MeshFaceMaterial ) {
 
