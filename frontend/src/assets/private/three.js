@@ -32242,7 +32242,7 @@ THREE.KeyFrameAnimation.prototype.update = function ( delta ) {
 	for ( var h = 0, hl = this.hierarchy.length; h < hl; h++ ) {
 
 		var object = this.hierarchy[ h ];
-		var node = this.data.hierarchy[ h ];
+		const node = this.data.hierarchy[ h ];
 
 		var keys = node.keys,
 			animationCache = node.animationCache;
