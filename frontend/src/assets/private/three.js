@@ -30250,7 +30250,7 @@ THREE.Path.prototype.toShapes = function( isCCW, noHoles ) {
 		//  not counting lowerY endpoints of edges and whole edges on that line
 		var inside = false;
 		for( var p = polyLen - 1, q = 0; q < polyLen; p = q++ ) {
-			var edgeLowPt  = inPolygon[ p ];
+			let edgeLowPt  = inPolygon[ p ];
 			var edgeHighPt = inPolygon[ q ];
 
 			var edgeDx = edgeHighPt.x - edgeLowPt.x;
