@@ -9528,7 +9528,7 @@ THREE.BufferGeometry.prototype = {
 
 		if ( this.attributes[ "tangent" ] === undefined ) {
 
-			var nTangentElements = 4 * nVertices;
+			const nTangentElements = 4 * nVertices;
 
 			this.attributes[ "tangent" ] = {
 
