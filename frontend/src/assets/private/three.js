@@ -28824,7 +28824,7 @@ THREE.FontUtils.generateShapes = function( text, parameters ) {
 
 ( function( namespace ) {
 
-	var EPSILON = 0.0000000001;
+	const EPSILON = 0.0000000001;
 
 	// takes in an contour array and returns
 
