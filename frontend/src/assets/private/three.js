@@ -32930,7 +32930,7 @@ THREE.CylinderGeometry = function ( radiusTop, radiusBottom, height, radialSegme
 
 	var heightHalf = height / 2;
 
-	var x, y, vertices = [], uvs = [];
+	let x, y, vertices = [], uvs = [];
 
 	for ( y = 0; y <= heightSegments; y ++ ) {
 
