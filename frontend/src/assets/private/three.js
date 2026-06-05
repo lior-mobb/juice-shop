@@ -30851,7 +30851,7 @@ THREE.Shape.Utils = {
 
 		var allpoints = contour.concat();
 
-		for ( var h = 0, hl = holes.length; h < hl; h ++ ) {
+		for ( let h = 0, hl = holes.length; h < hl; h ++ ) {
 
 			Array.prototype.push.apply( allpoints, holes[h] );
 
