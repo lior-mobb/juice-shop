@@ -32548,7 +32548,7 @@ THREE.CombinedCamera.prototype.toOrthographic = function () {
 	var halfHeight = Math.tan( fov / 2 ) * hyperfocus;
 	var planeHeight = 2 * halfHeight;
 	var planeWidth = planeHeight * aspect;
-	var halfWidth = planeWidth / 2;
+	let halfWidth = planeWidth / 2;
 
 	halfHeight /= this.zoom;
 	halfWidth /= this.zoom;
