@@ -5271,7 +5271,7 @@ THREE.Matrix4.prototype = {
 
 	toArray: function () {
 
-		var te = this.elements;
+		const te = this.elements;
 
 		return [
 			te[ 0 ], te[ 1 ], te[ 2 ], te[ 3 ],
