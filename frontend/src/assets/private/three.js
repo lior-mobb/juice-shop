@@ -29516,7 +29516,7 @@ THREE.CurvePath.prototype.getBoundingBox = function () {
 
 	}
 
-	var ret = {
+	const ret = {
 
 		minX: minX,
 		minY: minY,
