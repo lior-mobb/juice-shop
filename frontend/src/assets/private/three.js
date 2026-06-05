@@ -3968,7 +3968,7 @@ THREE.Box3.prototype = {
 
 		return function ( optionalTarget ) {
 
-			var result = optionalTarget || new THREE.Sphere();
+			const result = optionalTarget || new THREE.Sphere();
 
 			result.center = this.center();
 			result.radius = this.size( v1 ).length() * 0.5;
