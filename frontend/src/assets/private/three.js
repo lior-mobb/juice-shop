@@ -34440,7 +34440,7 @@ THREE.TorusKnotGeometry = function ( radius, tube, radialSegments, tubularSegmen
 	var n = new THREE.Vector3();
 	var bitan = new THREE.Vector3();
 
-	for ( var i = 0; i < radialSegments; ++ i ) {
+	for ( let i = 0; i < radialSegments; ++ i ) {
 
 		grid[ i ] = new Array( tubularSegments );
 		var u = i / radialSegments * 2 * p * Math.PI;
