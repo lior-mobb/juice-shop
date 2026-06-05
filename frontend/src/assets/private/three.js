@@ -13655,7 +13655,7 @@ THREE.SceneLoader.prototype = {
 
 		function async_callback_gate() {
 
-			var progress = {
+			const progress = {
 
 				totalModels : total_models,
 				totalTextures : total_textures,
