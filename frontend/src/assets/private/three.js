@@ -33231,7 +33231,7 @@ THREE.ExtrudeGeometry.prototype.addShape = function ( shape, options ) {
 	}
 
 
-	var faces = THREE.Shape.Utils.triangulateShape ( vertices, holes );
+	const faces = THREE.Shape.Utils.triangulateShape ( vertices, holes );
 
 	/* Vertices */
 
