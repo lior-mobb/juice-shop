@@ -12343,7 +12343,7 @@ THREE.JSONLoader.prototype.parse = function ( json, texturePath ) {
 				var x =                               json.skinWeights[ i     ];
 				var y = ( influencesPerVertex > 1 ) ? json.skinWeights[ i + 1 ] : 0;
 				var z = ( influencesPerVertex > 2 ) ? json.skinWeights[ i + 2 ] : 0;
-				var w = ( influencesPerVertex > 3 ) ? json.skinWeights[ i + 3 ] : 0;
+				const w = ( influencesPerVertex > 3 ) ? json.skinWeights[ i + 3 ] : 0;
 
 				geometry.skinWeights.push( new THREE.Vector4( x, y, z, w ) );
 
