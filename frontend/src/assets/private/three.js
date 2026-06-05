@@ -9821,7 +9821,7 @@ THREE.BufferGeometry.prototype = {
 
 	normalizeNormals: function () {
 
-		var normals = this.attributes[ "normal" ].array;
+		const normals = this.attributes[ "normal" ].array;
 
 		var x, y, z, n;
 
