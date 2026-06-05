@@ -34460,7 +34460,7 @@ THREE.TorusKnotGeometry = function ( radius, tube, radialSegments, tubularSegmen
 			var cx = - tube * Math.cos( v ); // TODO: Hack: Negating it so it faces outside.
 			var cy = tube * Math.sin( v );
 
-			var pos = new THREE.Vector3();
+			const pos = new THREE.Vector3();
 			pos.x = p1.x + cx * n.x + cy * bitan.x;
 			pos.y = p1.y + cx * n.y + cy * bitan.y;
 			pos.z = p1.z + cx * n.z + cy * bitan.z;
