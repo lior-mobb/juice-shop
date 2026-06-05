@@ -13874,7 +13874,7 @@ THREE.SceneLoader.prototype = {
 
 			} else if ( geoJSON.type === "embedded" ) {
 
-				var modelJson = data.embeds[ geoJSON.id ],
+				let modelJson = data.embeds[ geoJSON.id ],
 					texture_path = "";
 
 				// pass metadata along to jsonLoader so it knows the format version
