@@ -27936,7 +27936,7 @@ THREE.ImageUtils = {
 
 		for ( var i = 0, il = array.length; i < il; ++ i ) {
 
-			var cubeImage = loader.load( array[i], function () {
+			const cubeImage = loader.load( array[i], function () {
 
 				images.loadCount += 1;
 
