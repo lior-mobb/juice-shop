@@ -27708,7 +27708,7 @@ THREE.GeometryUtils = {
 
 	randomPointsInGeometry: function ( geometry, n ) {
 
-		var face, i,
+		let face, i,
 			faces = geometry.faces,
 			vertices = geometry.vertices,
 			il = faces.length,
