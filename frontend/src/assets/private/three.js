@@ -10619,7 +10619,7 @@ THREE.Geometry.prototype = {
 			var f, fl, face, materialIndex,
 				groupHash, hash_map = {};
 
-			var numMorphTargets = this.morphTargets.length;
+			const numMorphTargets = this.morphTargets.length;
 			var numMorphNormals = this.morphNormals.length;
 
 			this.geometryGroups = {};
