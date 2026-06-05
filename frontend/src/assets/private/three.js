@@ -10266,7 +10266,7 @@ THREE.Geometry.prototype = {
 		// based on http://www.terathon.com/code/tangent.html
 		// tangents go to vertices
 
-		var f, fl, v, vl, i, il, vertexIndex,
+		let f, fl, v, vl, i, il, vertexIndex,
 			face, uv, vA, vB, vC, uvA, uvB, uvC,
 			x1, x2, y1, y2, z1, z2,
 			s1, s2, t1, t2, r, t, test,
