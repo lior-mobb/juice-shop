@@ -453,7 +453,7 @@ THREE.Color.prototype = {
 
 		} else {
 
-			var delta = max - min;
+			const delta = max - min;
 
 			saturation = lightness <= 0.5 ? delta / ( max + min ) : delta / ( 2 - max - min );
 
@@ -5866,7 +5866,7 @@ THREE.Sphere.prototype = {
 
 	clampPoint: function ( point, optionalTarget ) {
 
-		var deltaLengthSq = this.center.distanceToSquared( point );
+		const deltaLengthSq = this.center.distanceToSquared( point );
 
 		var result = optionalTarget || new THREE.Vector3();
 		result.copy( point );
@@ -6178,7 +6178,7 @@ THREE.Plane.prototype = {
 
 		// Note: will lead to a divide by zero if the plane is invalid.
 
-		var inverseNormalLength = 1.0 / this.normal.length();
+		const inverseNormalLength = 1.0 / this.normal.length();
 		this.normal.multiplyScalar( inverseNormalLength );
 		this.constant *= inverseNormalLength;
 
@@ -6338,7 +6338,7 @@ THREE.Math = {
 
 		// http://www.broofa.com/Tools/Math.uuid.htm
 		
-		var chars = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz'.split('');
+		const chars = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz'.split('');
 		var uuid = new Array(36);
 		var rnd = 0, r;
 
@@ -6423,7 +6423,7 @@ THREE.Math = {
 
 	random16: function () {
 
-		return ( 65280 * Math.random() + 255 * Math.random() ) / 65535;
+		return ( 65280 * (crypto.getRandomValues(new Uint32Array(1))[0] / 2 ** 32) + 255 * Math.random() ) / 65535;
 
 	},
 
@@ -8646,7 +8646,7 @@ THREE.Projector = function () {
 
 							var indices = attributes.index.array;
 
-							for ( var i = 0, l = indices.length; i < l; i += 2 ) {
+							for ( let i = 0, l = indices.length; i < l; i += 2 ) {
 
 								renderList.pushLine( indices[ i ], indices[ i + 1 ] );
 
@@ -9649,7 +9649,7 @@ THREE.BufferGeometry.prototype = {
 		}
 
 		var tmp = new THREE.Vector3(), tmp2 = new THREE.Vector3();
-		var n = new THREE.Vector3(), n2 = new THREE.Vector3();
+		let n = new THREE.Vector3(), n2 = new THREE.Vector3();
 		var w, t, test;
 
 		function handleVertex( v ) {
@@ -10330,7 +10330,7 @@ THREE.Geometry.prototype = {
 
 		}
 
-		var faceIndex = [ 'a', 'b', 'c', 'd' ];
+		const faceIndex = [ 'a', 'b', 'c', 'd' ];
 
 		for ( f = 0, fl = this.faces.length; f < fl; f ++ ) {
 
@@ -23590,7 +23590,7 @@ THREE.WebGLRenderer = function ( parameters ) {
 
 		var linewidth, a, attribute, i, il;
 
-		var program = setProgram( camera, lights, fog, material, object );
+		const program = setProgram( camera, lights, fog, material, object );
 
 		var attributes = program.attributes;
 
@@ -28208,7 +28208,7 @@ THREE.ImageUtils = {
 
 		function loadARGBMip( buffer, dataOffset, width, height ) {
 			var dataLength = width*height*4;
-			var srcBuffer = new Uint8Array( buffer, dataOffset, dataLength );
+			const srcBuffer = new Uint8Array( buffer, dataOffset, dataLength );
 			var byteArray = new Uint8Array( dataLength );
 			var dst = 0;
 			var src = 0;
@@ -33967,7 +33967,7 @@ THREE.LatheGeometry = function ( points, segments, phiStart, phiLength ) {
 			var a = base;
 			var b = base + np;
 			var c = base + 1 + np;
-			var d = base + 1;
+			const d = base + 1;
 
 			var u0 = i * inverseSegments;
 			var v0 = j * inversePointLength;
@@ -34390,7 +34390,7 @@ THREE.TorusGeometry = function ( radius, tube, radialSegments, tubularSegments, 
 			var c = ( tubularSegments + 1 ) * ( j - 1 ) + i;
 			var d = ( tubularSegments + 1 ) * j + i;
 
-			var face = new THREE.Face3( a, b, d, [ normals[ a ].clone(), normals[ b ].clone(), normals[ d ].clone() ] );
+			let face = new THREE.Face3( a, b, d, [ normals[ a ].clone(), normals[ b ].clone(), normals[ d ].clone() ] );
 			this.faces.push( face );
 			this.faceVertexUvs[ 0 ].push( [ uvs[ a ].clone(), uvs[ b ].clone(), uvs[ d ].clone() ] );
 
@@ -35707,7 +35707,7 @@ THREE.EdgesHelper = function ( object, hex ) {
 
 	var color = ( hex !== undefined ) ? hex : 0xffffff;
 
-	var edge = [ 0, 0 ], hash = {};
+	let edge = [ 0, 0 ], hash = {};
 	var sortFunction = function ( a, b ) { return a - b };
 
 	var keys = [ 'a', 'b', 'c' ];
@@ -35823,7 +35823,7 @@ THREE.FaceNormalsHelper.prototype = Object.create( THREE.Line.prototype );
 
 THREE.FaceNormalsHelper.prototype.update = function () {
 
-	var vertices = this.geometry.vertices;
+	const vertices = this.geometry.vertices;
 
 	var object = this.object;
 	var objectVertices = object.geometry.vertices;
@@ -36229,7 +36229,7 @@ THREE.VertexNormalsHelper.prototype.update = ( function ( object ) {
 
 		var idx = 0;
 
-		for ( var i = 0, l = faces.length; i < l; i ++ ) {
+		for ( let i = 0, l = faces.length; i < l; i ++ ) {
 
 			var face = faces[ i ];
 
@@ -36440,7 +36440,7 @@ THREE.WireframeHelper = function ( object, hex ) {
 
 			var start = offsets[ o ].start;
 			var count = offsets[ o ].count;
-			var index = offsets[ o ].index;
+			const index = offsets[ o ].index;
 
 			for ( var i = start, il = start + count; i < il; i += 3 ) {
 
