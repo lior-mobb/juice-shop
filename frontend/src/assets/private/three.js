@@ -19334,7 +19334,7 @@ THREE.UniformsUtils = {
 
 	clone: function ( uniforms_src ) {
 
-		var u, p, parameter, parameter_src, uniforms_dst = {};
+		let u, p, parameter, parameter_src, uniforms_dst = {};
 
 		for ( u in uniforms_src ) {
 
