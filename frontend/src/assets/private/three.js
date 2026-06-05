@@ -16525,7 +16525,7 @@ THREE.CanvasRenderer = function ( parameters ) {
 
 	console.log( 'THREE.CanvasRenderer', THREE.REVISION );
 
-	var smoothstep = THREE.Math.smoothstep;
+	const smoothstep = THREE.Math.smoothstep;
 
 	parameters = parameters || {};
 
