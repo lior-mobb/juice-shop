@@ -33885,7 +33885,7 @@ THREE.ShapeGeometry.prototype.addShape = function ( shape, options ) {
 	//
 
 	var vert, vlen = vertices.length;
-	var face, flen = faces.length;
+	let face, flen = faces.length;
 	var cont, clen = contour.length;
 
 	for ( i = 0; i < vlen; i++ ) {
