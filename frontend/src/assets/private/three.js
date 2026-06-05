@@ -31722,7 +31722,7 @@ THREE.Animation.prototype.reset = function () {
 
 		}
 
-		var animationCache = object.animationCache[this.data.name];
+		const animationCache = object.animationCache[this.data.name];
 
 		// Get keys to match our current time
 
