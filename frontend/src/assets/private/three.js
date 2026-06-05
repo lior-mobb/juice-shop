@@ -34930,7 +34930,7 @@ THREE.PolyhedronGeometry = function ( vertices, indices, radius, detail ) {
 		const cols = Math.pow(2, detail);
 		var cells = Math.pow(4, detail);
 		var a = prepare( that.vertices[ face.a ] );
-		var b = prepare( that.vertices[ face.b ] );
+		const b = prepare( that.vertices[ face.b ] );
 		var c = prepare( that.vertices[ face.c ] );
 		var v = [];
 
