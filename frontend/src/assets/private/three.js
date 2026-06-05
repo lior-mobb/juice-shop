@@ -11742,7 +11742,7 @@ THREE.Loader.prototype = {
 
 		} else {
 
-			var material = new THREE[ mtype ]( mpars );
+			const material = new THREE[ mtype ]( mpars );
 
 		}
 
