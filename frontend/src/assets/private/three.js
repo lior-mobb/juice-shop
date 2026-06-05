@@ -10530,7 +10530,7 @@ THREE.Geometry.prototype = {
 		var verticesMap = {}; // Hashmap for looking up vertice by position coordinates (and making sure they are unique)
 		var unique = [], changes = [];
 
-		var v, key;
+		let v, key;
 		var precisionPoints = 4; // number of decimal points, eg. 4 for epsilon of 0.0001
 		var precision = Math.pow( 10, precisionPoints );
 		var i,il, face;
