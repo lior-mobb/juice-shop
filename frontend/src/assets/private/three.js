@@ -12832,7 +12832,7 @@ THREE.ObjectLoader.prototype = {
 
 		if ( json !== undefined ) {
 
-			var loader = new THREE.MaterialLoader();
+			const loader = new THREE.MaterialLoader();
 
 			for ( var i = 0, l = json.length; i < l; i ++ ) {
 
