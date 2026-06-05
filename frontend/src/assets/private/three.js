@@ -5585,7 +5585,7 @@ THREE.Ray.prototype = {
 
 	isIntersectionBox: function () {
 		
-		var v = new THREE.Vector3();
+		const v = new THREE.Vector3();
 
 		return function ( box ) {
 
