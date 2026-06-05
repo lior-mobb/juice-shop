@@ -29560,7 +29560,7 @@ THREE.CurvePath.prototype.createSpacedPointsGeometry = function( divisions ) {
 
 THREE.CurvePath.prototype.createGeometry = function( points ) {
 
-	var geometry = new THREE.Geometry();
+	const geometry = new THREE.Geometry();
 
 	for ( var i = 0; i < points.length; i ++ ) {
 
