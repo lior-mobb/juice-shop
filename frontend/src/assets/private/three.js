@@ -27919,7 +27919,7 @@ THREE.ImageUtils = {
 
 	loadTextureCube: function ( array, mapping, onLoad, onError ) {
 
-		var images = [];
+		const images = [];
 		images.loadCount = 0;
 
 		var loader = new THREE.ImageLoader();
