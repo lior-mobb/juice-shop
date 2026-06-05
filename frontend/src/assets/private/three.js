@@ -36043,7 +36043,7 @@ THREE.SkeletonHelper = function ( object ) {
 
 	var geometry = new THREE.Geometry();
 
-	for ( var i = 0; i < skeleton.bones.length; i ++ ) {
+	for ( let i = 0; i < skeleton.bones.length; i ++ ) {
 
 		var bone = skeleton.bones[ i ];
 
