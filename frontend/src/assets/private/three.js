@@ -36829,7 +36829,7 @@ THREE.MorphBlendMesh.prototype.getAnimationDuration = function ( name ) {
 
 	var duration = -1;
 
-	var animation = this.animationsMap[ name ];
+	const animation = this.animationsMap[ name ];
 
 	if ( animation ) {
 
