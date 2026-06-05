@@ -13685,7 +13685,7 @@ THREE.SceneLoader.prototype = {
 
 				var ta = target_array[ i ];
 
-				var target = result.objects[ ta.targetName ];
+				const target = result.objects[ ta.targetName ];
 
 				if ( target ) {
 
