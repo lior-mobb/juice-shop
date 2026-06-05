@@ -26573,7 +26573,7 @@ THREE.WebGLRenderer = function ( parameters ) {
 				_gl.bindTexture( _gl.TEXTURE_CUBE_MAP, renderTarget.__webglTexture );
 				setTextureParameters( _gl.TEXTURE_CUBE_MAP, renderTarget, isTargetPowerOfTwo );
 
-				for ( var i = 0; i < 6; i ++ ) {
+				for ( let i = 0; i < 6; i ++ ) {
 
 					renderTarget.__webglFramebuffer[ i ] = _gl.createFramebuffer();
 					renderTarget.__webglRenderbuffer[ i ] = _gl.createRenderbuffer();
