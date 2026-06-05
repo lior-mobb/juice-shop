@@ -33934,7 +33934,7 @@ THREE.LatheGeometry = function ( points, segments, phiStart, phiLength ) {
 	var inversePointLength = 1.0 / ( points.length - 1 );
 	const inverseSegments = 1.0 / segments;
 
-	for ( var i = 0, il = segments; i <= il; i ++ ) {
+	for ( let i = 0, il = segments; i <= il; i ++ ) {
 
 		var phi = phiStart + i * inverseSegments * phiLength;
 
