@@ -36872,7 +36872,7 @@ THREE.MorphBlendMesh.prototype.stopAnimation = function ( name ) {
 
 THREE.MorphBlendMesh.prototype.update = function ( delta ) {
 
-	for ( var i = 0, il = this.animationsList.length; i < il; i ++ ) {
+	for ( let i = 0, il = this.animationsList.length; i < il; i ++ ) {
 
 		var animation = this.animationsList[ i ];
 
