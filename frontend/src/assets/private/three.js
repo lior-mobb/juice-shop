@@ -1796,7 +1796,7 @@ THREE.Vector3.prototype = {
 		var y = this.y;
 		var z = this.z;
 
-		var qx = q.x;
+		const qx = q.x;
 		var qy = q.y;
 		var qz = q.z;
 		var qw = q.w;
@@ -5216,7 +5216,7 @@ THREE.Matrix4.prototype = {
 		var x = 2 * near / ( right - left );
 		var y = 2 * near / ( top - bottom );
 
-		var a = ( right + left ) / ( right - left );
+		const a = ( right + left ) / ( right - left );
 		var b = ( top + bottom ) / ( top - bottom );
 		var c = - ( far + near ) / ( far - near );
 		var d = - 2 * far * near / ( far - near );
@@ -5562,7 +5562,7 @@ THREE.Ray.prototype = {
 
 		}
 
-		var t = - ( this.origin.dot( plane.normal ) + plane.constant ) / denominator;
+		const t = - ( this.origin.dot( plane.normal ) + plane.constant ) / denominator;
 
 		// Return if the ray never intersects the plane
 
@@ -5667,7 +5667,7 @@ THREE.Ray.prototype = {
 
 		// Compute the offset origin, edges, and normal.
 		var diff = new THREE.Vector3();
-		var edge1 = new THREE.Vector3();
+		const edge1 = new THREE.Vector3();
 		var edge2 = new THREE.Vector3();
 		var normal = new THREE.Vector3();
 
@@ -6239,7 +6239,7 @@ THREE.Plane.prototype = {
 
 		return function ( line, optionalTarget ) {
 
-			var result = optionalTarget || new THREE.Vector3();
+			const result = optionalTarget || new THREE.Vector3();
 
 			var direction = line.delta( v1 );
 
@@ -6294,7 +6294,7 @@ THREE.Plane.prototype = {
 			var normalMatrix = optionalNormalMatrix || m1.getNormalMatrix( matrix );
 			var newNormal = v1.copy( this.normal ).applyMatrix3( normalMatrix );
 			
-			var newCoplanarPoint = this.coplanarPoint( v2 );
+			const newCoplanarPoint = this.coplanarPoint( v2 );
 			newCoplanarPoint.applyMatrix4( matrix );
 
 			this.setFromNormalAndCoplanarPoint( newNormal, newCoplanarPoint );
@@ -6724,7 +6724,7 @@ THREE.Triangle.barycoordFromPoint = function() {
 		var dot11 = v1.dot( v1 );
 		var dot12 = v1.dot( v2 );
 
-		var denom = ( dot00 * dot11 - dot01 * dot01 );
+		const denom = ( dot00 * dot11 - dot01 * dot01 );
 
 		var result = optionalTarget || new THREE.Vector3();
 
@@ -8497,7 +8497,7 @@ THREE.Projector = function () {
 
 					}
 
-					for ( var f = 0, fl = faces.length; f < fl; f ++ ) {
+					for ( let f = 0, fl = faces.length; f < fl; f ++ ) {
 
 						face = faces[ f ];
 
@@ -9899,7 +9899,7 @@ THREE.BufferGeometry.prototype = {
 		for ( var attr in this.attributes ) {
 
 			var sourceAttr = this.attributes[ attr ];
-			var sourceArray = sourceAttr.array;
+			const sourceArray = sourceAttr.array;
 
 			var attribute = {
 
@@ -10527,7 +10527,7 @@ THREE.Geometry.prototype = {
 
 	mergeVertices: function () {
 
-		var verticesMap = {}; // Hashmap for looking up vertice by position coordinates (and making sure they are unique)
+		const verticesMap = {}; // Hashmap for looking up vertice by position coordinates (and making sure they are unique)
 		var unique = [], changes = [];
 
 		var v, key;
@@ -11742,7 +11742,7 @@ THREE.Loader.prototype = {
 
 		} else {
 
-			var material = new THREE[ mtype ]( mpars );
+			const material = new THREE[ mtype ]( mpars );
 
 		}
 
@@ -14608,7 +14608,7 @@ THREE.MeshBasicMaterial.prototype = Object.create( THREE.Material.prototype );
 
 THREE.MeshBasicMaterial.prototype.clone = function () {
 
-	var material = new THREE.MeshBasicMaterial();
+	const material = new THREE.MeshBasicMaterial();
 
 	THREE.Material.prototype.clone.call( this, material );
 
@@ -24163,7 +24163,7 @@ THREE.WebGLRenderer = function ( parameters ) {
 
 		} else {
 
-			var material = null;
+			const material = null;
 
 			// opaque pass (front-to-back order)
 
@@ -28444,7 +28444,7 @@ THREE.ImageUtils = {
 
 				}
 
-				var normal = [ 0, 0, 0 ];
+				const normal = [ 0, 0, 0 ];
 
 				for ( var i = 0; i < normals.length; i ++ ) {
 
@@ -28626,7 +28626,7 @@ THREE.FontUtils = {
 
 		// get the width
 
-		var width = offset / 2;
+		const width = offset / 2;
 		//
 		// for ( p = 0; p < allPts.length; p++ ) {
 		//
@@ -29221,7 +29221,7 @@ THREE.Curve.prototype.getUtoTmapping = function ( u, distance ) {
 	// we could get finer grain at lengths, or use simple interpolatation between two points
 
 	var lengthBefore = arcLengths[ i ];
-    var lengthAfter = arcLengths[ i + 1 ];
+    const lengthAfter = arcLengths[ i + 1 ];
 
     var segmentLength = lengthAfter - lengthBefore;
 
@@ -29399,7 +29399,7 @@ THREE.CurvePath.prototype.getPoint = function( t ) {
 
 	var d = t * this.getLength();
 	var curveLengths = this.getCurveLengths();
-	var i = 0, diff, curve;
+	let i = 0, diff, curve;
 
 	// To think about boundaries points.
 
@@ -29635,7 +29635,7 @@ THREE.CurvePath.prototype.getWrapPoints = function ( oldPts, path ) {
 
 	var bounds = this.getBoundingBox();
 
-	var i, il, p, oldX, oldY, xNorm;
+	let i, il, p, oldX, oldY, xNorm;
 
 	for ( i = 0, il = oldPts.length; i < il; i ++ ) {
 
@@ -30590,7 +30590,7 @@ THREE.Shape.Utils = {
 				if ( perpSeg1 == limit )	return  [ inSeg2Pt2 ];
 
 				// return real intersection point
-				var factorSeg1 = perpSeg2 / limit;
+				const factorSeg1 = perpSeg2 / limit;
 				return	[ { x: inSeg1Pt1.x + factorSeg1 * seg1dx,
 							y: inSeg1Pt1.y + factorSeg1 * seg1dy } ];
 
@@ -31089,7 +31089,7 @@ THREE.CubicBezierCurve.prototype.getPoint = function ( t ) {
 
 THREE.CubicBezierCurve.prototype.getTangent = function( t ) {
 
-	var tx, ty;
+	let tx, ty;
 
 	tx = THREE.Curve.Utils.tangentCubicBezier( t, this.v0.x, this.v1.x, this.v2.x, this.v3.x );
 	ty = THREE.Curve.Utils.tangentCubicBezier( t, this.v0.y, this.v1.y, this.v2.y, this.v3.y );
@@ -31722,7 +31722,7 @@ THREE.Animation.prototype.reset = function () {
 
 		}
 
-		var animationCache = object.animationCache[this.data.name];
+		const animationCache = object.animationCache[this.data.name];
 
 		// Get keys to match our current time
 
@@ -32074,7 +32074,7 @@ THREE.KeyFrameAnimation = function ( root, data ) {
 
 	for ( var h = 0, hl = this.hierarchy.length; h < hl; h ++ ) {
 
-		var keys = this.data.hierarchy[h].keys,
+		let keys = this.data.hierarchy[h].keys,
 			sids = this.data.hierarchy[h].sids,
 			obj = this.hierarchy[h];
 
@@ -33367,7 +33367,7 @@ THREE.ExtrudeGeometry.prototype.addShape = function ( shape, options ) {
 		//  (j)---(i)---(k)
 		// console.log('i,j,k', i, j , k)
 
-		var pt_i = contour[ i ];
+		const pt_i = contour[ i ];
 		var pt_j = contour[ j ];
 		var pt_k = contour[ k ];
 
@@ -33843,7 +33843,7 @@ THREE.ShapeGeometry.prototype.addShape = function ( shape, options ) {
 	var shapePoints = shape.extractPoints( curveSegments );
 
 	var vertices = shapePoints.shape;
-	var holes = shapePoints.holes;
+	const holes = shapePoints.holes;
 
 	var reverse = !THREE.Shape.Utils.isClockWise( vertices );
 
@@ -33885,7 +33885,7 @@ THREE.ShapeGeometry.prototype.addShape = function ( shape, options ) {
 	//
 
 	var vert, vlen = vertices.length;
-	var face, flen = faces.length;
+	let face, flen = faces.length;
 	var cont, clen = contour.length;
 
 	for ( i = 0; i < vlen; i++ ) {
@@ -34058,7 +34058,7 @@ THREE.PlaneGeometry = function ( width, height, widthSegments, heightSegments ) 
 
 			var a = ix + gridX1 * iz;
 			var b = ix + gridX1 * ( iz + 1 );
-			var c = ( ix + 1 ) + gridX1 * ( iz + 1 );
+			const c = ( ix + 1 ) + gridX1 * ( iz + 1 );
 			var d = ( ix + 1 ) + gridX1 * iz;
 
 			var uva = new THREE.Vector2( ix / gridX, 1 - iz / gridZ );
@@ -36141,7 +36141,7 @@ THREE.SpotLightHelper.prototype.dispose = function () {
 THREE.SpotLightHelper.prototype.update = function () {
 
 	var vector = new THREE.Vector3();
-	var vector2 = new THREE.Vector3();
+	const vector2 = new THREE.Vector3();
 
 	return function () {
 
@@ -36227,7 +36227,7 @@ THREE.VertexNormalsHelper.prototype.update = ( function ( object ) {
 
 		var worldMatrix = this.object.matrixWorld;
 
-		var idx = 0;
+		let idx = 0;
 
 		for ( var i = 0, l = faces.length; i < l; i ++ ) {
 
