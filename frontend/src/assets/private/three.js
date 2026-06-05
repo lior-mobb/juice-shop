@@ -12695,7 +12695,7 @@ THREE.ObjectLoader.prototype = {
 			var geometryLoader = new THREE.JSONLoader();
 			var bufferGeometryLoader = new THREE.BufferGeometryLoader();
 
-			for ( var i = 0, l = json.length; i < l; i ++ ) {
+			for ( let i = 0, l = json.length; i < l; i ++ ) {
 
 				var geometry;
 				var data = json[ i ];
