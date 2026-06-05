@@ -33967,7 +33967,7 @@ THREE.LatheGeometry = function ( points, segments, phiStart, phiLength ) {
 			var a = base;
 			var b = base + np;
 			var c = base + 1 + np;
-			var d = base + 1;
+			const d = base + 1;
 
 			var u0 = i * inverseSegments;
 			var v0 = j * inversePointLength;
