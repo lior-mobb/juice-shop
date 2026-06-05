@@ -26454,7 +26454,7 @@ THREE.WebGLRenderer = function ( parameters ) {
 
 				setTextureParameters( _gl.TEXTURE_CUBE_MAP, texture, isImagePowerOfTwo );
 
-				for ( var i = 0; i < 6; i ++ ) {
+				for ( let i = 0; i < 6; i ++ ) {
 
 					if( !isCompressed ) {
 
