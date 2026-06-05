@@ -4810,7 +4810,7 @@ THREE.Matrix4.prototype = {
 
 	determinant: function () {
 
-		var te = this.elements;
+		const te = this.elements;
 
 		var n11 = te[0], n12 = te[4], n13 = te[8], n14 = te[12];
 		var n21 = te[1], n22 = te[5], n23 = te[9], n24 = te[13];
