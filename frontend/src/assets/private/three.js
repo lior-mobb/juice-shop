@@ -32751,7 +32751,7 @@ THREE.BoxGeometry = function ( width, height, depth, widthSegments, heightSegmen
 
 	function buildPlane( u, v, udir, vdir, width, height, depth, materialIndex ) {
 
-		var w, ix, iy,
+		let w, ix, iy,
 		gridX = scope.widthSegments,
 		gridY = scope.heightSegments,
 		width_half = width / 2,
