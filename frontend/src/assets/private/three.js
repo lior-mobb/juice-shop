@@ -1798,7 +1798,7 @@ THREE.Vector3.prototype = {
 
 		var qx = q.x;
 		var qy = q.y;
-		var qz = q.z;
+		const qz = q.z;
 		var qw = q.w;
 
 		// calculate quat * vector
