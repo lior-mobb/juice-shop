@@ -12838,7 +12838,7 @@ THREE.ObjectLoader.prototype = {
 			for ( var i = 0, l = json.length; i < l; i ++ ) {
 
 				var data = json[ i ];
-				var material = loader.parse( data );
+				const material = loader.parse( data );
 
 				material.uuid = data.uuid;
 
