@@ -27157,7 +27157,7 @@ THREE.WebGLProgram = ( function () {
 		var vertexShader = material.vertexShader;
 		var uniforms = material.uniforms;
 		var attributes = material.attributes;
-		var defines = material.defines;
+		const defines = material.defines;
 		var index0AttributeName = material.index0AttributeName;
 
 		if ( index0AttributeName === undefined && parameters.morphTargets === true ) {
