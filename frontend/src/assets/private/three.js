@@ -38124,7 +38124,7 @@ THREE.DepthPassPlugin = function () {
 		_gl = renderer.context;
 		_renderer = renderer;
 
-		var depthShader = THREE.ShaderLib[ "depthRGBA" ];
+		const depthShader = THREE.ShaderLib[ "depthRGBA" ];
 		var depthUniforms = THREE.UniformsUtils.clone( depthShader.uniforms );
 
 		_depthMaterial = new THREE.ShaderMaterial( { fragmentShader: depthShader.fragmentShader, vertexShader: depthShader.vertexShader, uniforms: depthUniforms } );
