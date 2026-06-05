@@ -31862,7 +31862,7 @@ THREE.Animation.prototype.update = (function(){
 				var scale = ( this.currentTime - prevKey.time ) / ( nextKey.time - prevKey.time );
 
 				var prevXYZ = prevKey[ type ];
-				var nextXYZ = nextKey[ type ];
+				const nextXYZ = nextKey[ type ];
 
 				if ( scale < 0 ) scale = 0;
 				if ( scale > 1 ) scale = 1;
