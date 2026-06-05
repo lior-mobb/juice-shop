@@ -16390,7 +16390,7 @@ THREE.Scene.prototype.__addObject = function ( object ) {
 
 		// check if previously removed
 
-		var i = this.__objectsRemoved.indexOf( object );
+		const i = this.__objectsRemoved.indexOf( object );
 
 		if ( i !== -1 ) {
 
