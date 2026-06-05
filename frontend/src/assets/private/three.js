@@ -34657,7 +34657,7 @@ THREE.TubeGeometry.prototype = Object.create( THREE.Geometry.prototype );
 // For computing of Frenet frames, exposing the tangents, normals and binormals the spline
 THREE.TubeGeometry.FrenetFrames = function ( path, segments, closed ) {
 
-	var	tangent = new THREE.Vector3(),
+	let	tangent = new THREE.Vector3(),
 		normal = new THREE.Vector3(),
 		binormal = new THREE.Vector3(),
 
