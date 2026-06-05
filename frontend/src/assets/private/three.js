@@ -6718,7 +6718,7 @@ THREE.Triangle.barycoordFromPoint = function() {
 		v1.subVectors( b, a );
 		v2.subVectors( point, a );
 
-		var dot00 = v0.dot( v0 );
+		const dot00 = v0.dot( v0 );
 		var dot01 = v0.dot( v1 );
 		var dot02 = v0.dot( v2 );
 		var dot11 = v1.dot( v1 );
