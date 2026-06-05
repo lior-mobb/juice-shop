@@ -28275,7 +28275,7 @@ THREE.ImageUtils = {
 
 		}
 
-		var blockBytes;
+		let blockBytes;
 
 		var fourCC = header[ off_pfFourCC ];
 
