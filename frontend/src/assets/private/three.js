@@ -29810,7 +29810,7 @@ THREE.Path.prototype.quadraticCurveTo = function( aCPx, aCPy, aX, aY ) {
 	var lastargs = this.actions[ this.actions.length - 1 ].args;
 
 	var x0 = lastargs[ lastargs.length - 2 ];
-	var y0 = lastargs[ lastargs.length - 1 ];
+	const y0 = lastargs[ lastargs.length - 1 ];
 
 	var curve = new THREE.QuadraticBezierCurve( new THREE.Vector2( x0, y0 ),
 												new THREE.Vector2( aCPx, aCPy ),
