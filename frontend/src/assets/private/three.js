@@ -28229,7 +28229,7 @@ THREE.ImageUtils = {
 
 		var FOURCC_DXT1 = fourCCToInt32("DXT1");
 		var FOURCC_DXT3 = fourCCToInt32("DXT3");
-		var FOURCC_DXT5 = fourCCToInt32("DXT5");
+		const FOURCC_DXT5 = fourCCToInt32("DXT5");
 
 		var headerLengthInt = 31; // The header length in 32 bit ints
 
