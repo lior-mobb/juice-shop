@@ -33830,7 +33830,7 @@ THREE.ShapeGeometry.prototype.addShape = function ( shape, options ) {
 	if ( options === undefined ) options = {};
 	var curveSegments = options.curveSegments !== undefined ? options.curveSegments : 12;
 
-	var material = options.material;
+	const material = options.material;
 	var uvgen = options.UVGenerator === undefined ? THREE.ExtrudeGeometry.WorldUVGenerator : options.UVGenerator;
 
 	var shapebb = this.shapebb;
