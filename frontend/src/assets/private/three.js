@@ -22388,7 +22388,7 @@ THREE.WebGLRenderer = function ( parameters ) {
 
 		needsSmoothNormals = ( normalType === THREE.SmoothShading );
 
-		var f, fl, fi, face,
+		let f, fl, fi, face,
 		vertexNormals, faceNormal, normal,
 		vertexColors, faceColor,
 		vertexTangents,
