@@ -21753,7 +21753,7 @@ THREE.WebGLRenderer = function ( parameters ) {
 
 				var originalAttribute = material.attributes[ a ];
 
-				var attribute = {};
+				const attribute = {};
 
 				for ( var property in originalAttribute ) {
 
