@@ -33197,7 +33197,7 @@ THREE.ExtrudeGeometry.prototype.addShape = function ( shape, options ) {
 
 	var ahole, h, hl; // looping of holes
 	var scope = this;
-	var bevelPoints = [];
+	const bevelPoints = [];
 
 	var shapesOffset = this.vertices.length;
 
