@@ -36701,7 +36701,7 @@ THREE.MorphBlendMesh.prototype.autoCreateAnimations = function ( fps ) {
 
 	for ( var i = 0, il = geometry.morphTargets.length; i < il; i ++ ) {
 
-		var morph = geometry.morphTargets[ i ];
+		const morph = geometry.morphTargets[ i ];
 		var chunks = morph.name.match( pattern );
 
 		if ( chunks && chunks.length > 1 ) {
