@@ -32376,7 +32376,7 @@ THREE.MorphAnimation.prototype = {
 
 			this.currentTime = Math.min( this.currentTime, this.duration );
 
-			var interpolation = this.duration / this.frames;
+			const interpolation = this.duration / this.frames;
 			var frame = Math.floor( this.currentTime / interpolation );
 
 			if ( frame != currentFrame ) {
