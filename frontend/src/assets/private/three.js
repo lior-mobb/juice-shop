@@ -8118,7 +8118,7 @@ THREE.Projector = function () {
 
 	this.unprojectVector = function () {
 
-		var projectionMatrixInverse = new THREE.Matrix4();
+		const projectionMatrixInverse = new THREE.Matrix4();
 
 		return function ( vector, camera ) {
 
