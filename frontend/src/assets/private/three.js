@@ -13060,7 +13060,7 @@ THREE.SceneLoader.prototype = {
 
 		var target_array = [];
 
-		var data = json;
+		const data = json;
 
 		// async geometry loaders
 
