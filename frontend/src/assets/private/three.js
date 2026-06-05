@@ -17302,7 +17302,7 @@ THREE.CanvasRenderer = function ( parameters ) {
 		var repeatX = texture.wrapS === THREE.RepeatWrapping;
 		var repeatY = texture.wrapT === THREE.RepeatWrapping;
 
-		var image = texture.image;
+		const image = texture.image;
 
 		var canvas = document.createElement( 'canvas' );
 		canvas.width = image.width;
