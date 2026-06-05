@@ -27394,7 +27394,7 @@ THREE.WebGLProgram = ( function () {
 
 		// cache uniform locations
 
-		var identifiers = [
+		let identifiers = [
 
 			'viewMatrix', 'modelViewMatrix', 'projectionMatrix', 'normalMatrix', 'modelMatrix', 'cameraPosition',
 			'morphTargetInfluences'
