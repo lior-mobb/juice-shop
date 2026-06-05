@@ -13532,7 +13532,7 @@ THREE.SceneLoader.prototype = {
 		function handle_hierarchy( node, id, parent, material, obj ) {
 
 			var p = obj.position;
-			var r = obj.rotation;
+			const r = obj.rotation;
 			var q = obj.quaternion;
 			var s = obj.scale;
 
