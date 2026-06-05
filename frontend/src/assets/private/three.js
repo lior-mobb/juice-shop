@@ -28444,7 +28444,7 @@ THREE.ImageUtils = {
 
 				}
 
-				var normal = [ 0, 0, 0 ];
+				const normal = [ 0, 0, 0 ];
 
 				for ( var i = 0; i < normals.length; i ++ ) {
 
