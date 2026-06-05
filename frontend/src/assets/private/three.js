@@ -6546,7 +6546,7 @@ THREE.Spline = function ( points ) {
 
 	this.getControlPointsArray = function () {
 
-		var i, p, l = this.points.length,
+		let i, p, l = this.points.length,
 			coords = [];
 
 		for ( i = 0; i < l; i ++ ) {
