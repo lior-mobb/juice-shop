@@ -13941,7 +13941,7 @@ THREE.SceneLoader.prototype = {
 				var count = textureJSON.url.length;
 				var url_array = [];
 
-				for( var i = 0; i < count; i ++ ) {
+				for( let i = 0; i < count; i ++ ) {
 
 					url_array[ i ] = get_url( textureJSON.url[ i ], data.urlBaseType );
 
