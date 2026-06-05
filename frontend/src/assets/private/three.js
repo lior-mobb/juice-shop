@@ -16909,7 +16909,7 @@ THREE.CanvasRenderer = function ( parameters ) {
 
 	function calculateLight( position, normal, color ) {
 
-		for ( var l = 0, ll = _lights.length; l < ll; l ++ ) {
+		for ( let l = 0, ll = _lights.length; l < ll; l ++ ) {
 
 			var light = _lights[ l ];
 
