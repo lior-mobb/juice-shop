@@ -10602,7 +10602,7 @@ THREE.Geometry.prototype = {
 
 		// Use unique set of vertices
 
-		var diff = this.vertices.length - unique.length;
+		const diff = this.vertices.length - unique.length;
 		this.vertices = unique;
 		return diff;
 
