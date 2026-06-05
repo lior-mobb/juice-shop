@@ -9898,7 +9898,7 @@ THREE.BufferGeometry.prototype = {
 
 		for ( var attr in this.attributes ) {
 
-			var sourceAttr = this.attributes[ attr ];
+			const sourceAttr = this.attributes[ attr ];
 			var sourceArray = sourceAttr.array;
 
 			var attribute = {
