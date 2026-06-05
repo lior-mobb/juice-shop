@@ -31504,7 +31504,7 @@ THREE.AnimationHandler = ( function () {
 
 	}
 
-	var initData = function ( data ) {
+	const initData = function ( data ) {
 
 		if ( data.initialized === true )
 			return;
