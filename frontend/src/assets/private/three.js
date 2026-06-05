@@ -1796,7 +1796,7 @@ THREE.Vector3.prototype = {
 		var y = this.y;
 		var z = this.z;
 
-		var qx = q.x;
+		const qx = q.x;
 		var qy = q.y;
 		var qz = q.z;
 		var qw = q.w;
