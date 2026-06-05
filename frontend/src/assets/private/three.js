@@ -21359,7 +21359,7 @@ THREE.WebGLRenderer = function ( parameters ) {
 
 	// Buffer deallocation
 
-	var deleteBuffers = function ( geometry ) {
+	const deleteBuffers = function ( geometry ) {
 
 		if ( geometry.__webglVertexBuffer !== undefined ) _gl.deleteBuffer( geometry.__webglVertexBuffer );
 		if ( geometry.__webglNormalBuffer !== undefined ) _gl.deleteBuffer( geometry.__webglNormalBuffer );
