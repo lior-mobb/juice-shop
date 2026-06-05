@@ -16047,7 +16047,7 @@ THREE.MorphAnimMesh.prototype.parseAnimations = function () {
 
 	for ( var i = 0, il = geometry.morphTargets.length; i < il; i ++ ) {
 
-		var morph = geometry.morphTargets[ i ];
+		const morph = geometry.morphTargets[ i ];
 		var parts = morph.name.match( pattern );
 
 		if ( parts && parts.length > 1 ) {
