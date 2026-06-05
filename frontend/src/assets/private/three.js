@@ -32359,7 +32359,7 @@ THREE.MorphAnimation.prototype = {
 
 	update: ( function () {
 
-		var lastFrame = 0;
+		let lastFrame = 0;
 		var currentFrame = 0;
 
 		return function ( delta ) {
