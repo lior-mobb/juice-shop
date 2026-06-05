@@ -31089,7 +31089,7 @@ THREE.CubicBezierCurve.prototype.getPoint = function ( t ) {
 
 THREE.CubicBezierCurve.prototype.getTangent = function( t ) {
 
-	var tx, ty;
+	let tx, ty;
 
 	tx = THREE.Curve.Utils.tangentCubicBezier( t, this.v0.x, this.v1.x, this.v2.x, this.v3.x );
 	ty = THREE.Curve.Utils.tangentCubicBezier( t, this.v0.y, this.v1.y, this.v2.y, this.v3.y );
