@@ -21751,7 +21751,7 @@ THREE.WebGLRenderer = function ( parameters ) {
 				// Do a shallow copy of the attribute object so different geometryGroup chunks use different
 				// attribute buffers which are correctly indexed in the setMeshBuffers function
 
-				var originalAttribute = material.attributes[ a ];
+				const originalAttribute = material.attributes[ a ];
 
 				var attribute = {};
 
