@@ -31759,7 +31759,7 @@ THREE.Animation.prototype.update = (function(){
 
 	// Catmull-Rom spline
 
-	var interpolateCatmullRom = function ( points, scale ) {
+	const interpolateCatmullRom = function ( points, scale ) {
 
 		var c = [], v3 = [],
 		point, intPoint, weight, w2, w3,
