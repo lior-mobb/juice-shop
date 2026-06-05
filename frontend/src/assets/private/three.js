@@ -10023,7 +10023,7 @@ THREE.Geometry.prototype = {
 
 		for ( var i = 0, il = this.faces.length; i < il; i ++ ) {
 
-			var face = this.faces[ i ];
+			const face = this.faces[ i ];
 			face.normal.applyMatrix3( normalMatrix ).normalize();
 
 			for ( var j = 0, jl = face.vertexNormals.length; j < jl; j ++ ) {
