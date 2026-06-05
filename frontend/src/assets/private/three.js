@@ -32993,7 +32993,7 @@ THREE.CylinderGeometry = function ( radiusTop, radiusBottom, height, radialSegme
 			var n3 = nb.clone();
 			var n4 = nb.clone();
 
-			var uv1 = uvs[ y ][ x ].clone();
+			const uv1 = uvs[ y ][ x ].clone();
 			var uv2 = uvs[ y + 1 ][ x ].clone();
 			var uv3 = uvs[ y + 1 ][ x + 1 ].clone();
 			var uv4 = uvs[ y ][ x + 1 ].clone();
