@@ -30254,7 +30254,7 @@ THREE.Path.prototype.toShapes = function( isCCW, noHoles ) {
 			var edgeHighPt = inPolygon[ q ];
 
 			var edgeDx = edgeHighPt.x - edgeLowPt.x;
-			var edgeDy = edgeHighPt.y - edgeLowPt.y;
+			let edgeDy = edgeHighPt.y - edgeLowPt.y;
 
 			if ( Math.abs(edgeDy) > EPSILON ) {			// not parallel
 				if ( edgeDy < 0 ) {
