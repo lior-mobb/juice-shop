@@ -17300,7 +17300,7 @@ THREE.CanvasRenderer = function ( parameters ) {
 	function textureToPattern( texture ) {
 
 		var repeatX = texture.wrapS === THREE.RepeatWrapping;
-		var repeatY = texture.wrapT === THREE.RepeatWrapping;
+		const repeatY = texture.wrapT === THREE.RepeatWrapping;
 
 		var image = texture.image;
 
