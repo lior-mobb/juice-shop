@@ -33367,7 +33367,7 @@ THREE.ExtrudeGeometry.prototype.addShape = function ( shape, options ) {
 		//  (j)---(i)---(k)
 		// console.log('i,j,k', i, j , k)
 
-		var pt_i = contour[ i ];
+		const pt_i = contour[ i ];
 		var pt_j = contour[ j ];
 		var pt_k = contour[ k ];
 
