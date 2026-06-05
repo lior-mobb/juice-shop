@@ -16918,7 +16918,7 @@ THREE.CanvasRenderer = function ( parameters ) {
 
 				var lightPosition = _vector3.setFromMatrixPosition( light.matrixWorld ).normalize();
 
-				var amount = normal.dot( lightPosition );
+				let amount = normal.dot( lightPosition );
 
 				if ( amount <= 0 ) continue;
 
