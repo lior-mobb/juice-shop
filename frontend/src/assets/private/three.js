@@ -29782,7 +29782,7 @@ THREE.Path.prototype.fromPoints = function ( vectors ) {
 
 THREE.Path.prototype.moveTo = function ( x, y ) {
 
-	var args = Array.prototype.slice.call( arguments );
+	const args = Array.prototype.slice.call( arguments );
 	this.actions.push( { action: THREE.PathActions.MOVE_TO, args: args } );
 
 };
