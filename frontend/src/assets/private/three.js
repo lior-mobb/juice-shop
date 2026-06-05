@@ -12698,7 +12698,7 @@ THREE.ObjectLoader.prototype = {
 			for ( var i = 0, l = json.length; i < l; i ++ ) {
 
 				var geometry;
-				var data = json[ i ];
+				const data = json[ i ];
 
 				switch ( data.type ) {
 
