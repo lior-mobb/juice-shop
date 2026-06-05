@@ -6338,7 +6338,7 @@ THREE.Math = {
 
 		// http://www.broofa.com/Tools/Math.uuid.htm
 		
-		var chars = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz'.split('');
+		const chars = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz'.split('');
 		var uuid = new Array(36);
 		var rnd = 0, r;
 
