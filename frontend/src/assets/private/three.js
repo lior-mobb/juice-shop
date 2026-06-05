@@ -36141,7 +36141,7 @@ THREE.SpotLightHelper.prototype.dispose = function () {
 THREE.SpotLightHelper.prototype.update = function () {
 
 	var vector = new THREE.Vector3();
-	var vector2 = new THREE.Vector3();
+	const vector2 = new THREE.Vector3();
 
 	return function () {
 
