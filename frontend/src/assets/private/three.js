@@ -5669,7 +5669,7 @@ THREE.Ray.prototype = {
 		var diff = new THREE.Vector3();
 		var edge1 = new THREE.Vector3();
 		var edge2 = new THREE.Vector3();
-		var normal = new THREE.Vector3();
+		const normal = new THREE.Vector3();
 
 		return function ( a, b, c, backfaceCulling, optionalTarget ) {
 
