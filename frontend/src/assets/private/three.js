@@ -5248,7 +5248,7 @@ THREE.Matrix4.prototype = {
 		var h = top - bottom;
 		var p = far - near;
 
-		var x = ( right + left ) / w;
+		const x = ( right + left ) / w;
 		var y = ( top + bottom ) / h;
 		var z = ( far + near ) / p;
 
