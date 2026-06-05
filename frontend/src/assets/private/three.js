@@ -27805,7 +27805,7 @@ THREE.GeometryUtils = {
 
 	triangleArea: function () {
 
-		var vector1 = new THREE.Vector3();
+		const vector1 = new THREE.Vector3();
 		var vector2 = new THREE.Vector3();
 
 		return function ( vectorA, vectorB, vectorC ) {
