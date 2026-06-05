@@ -6431,7 +6431,7 @@ THREE.Math = {
 
 	randInt: function ( low, high ) {
 
-		return low + Math.floor( Math.random() * ( high - low + 1 ) );
+		return low + Math.floor( (crypto.getRandomValues(new Uint32Array(1))[0] / 2 ** 32) * ( high - low + 1 ) );
 
 	},
 
