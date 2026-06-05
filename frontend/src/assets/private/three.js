@@ -34435,7 +34435,7 @@ THREE.TorusKnotGeometry = function ( radius, tube, radialSegments, tubularSegmen
 	q = q || 3;
 	heightScale = heightScale || 1;
 	
-	var grid = new Array( radialSegments );
+	const grid = new Array( radialSegments );
 	var tang = new THREE.Vector3();
 	var n = new THREE.Vector3();
 	var bitan = new THREE.Vector3();
