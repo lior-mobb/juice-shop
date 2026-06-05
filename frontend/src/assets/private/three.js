@@ -25336,7 +25336,7 @@ THREE.WebGLRenderer = function ( parameters ) {
 		if ( uvScaleMap !== undefined ) {
 
 			var offset = uvScaleMap.offset;
-			var repeat = uvScaleMap.repeat;
+			const repeat = uvScaleMap.repeat;
 
 			uniforms.offsetRepeat.value.set( offset.x, offset.y, repeat.x, repeat.y );
 
