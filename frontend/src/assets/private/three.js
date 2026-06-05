@@ -5376,7 +5376,7 @@ THREE.Ray.prototype = {
 
 		return function ( point ) {
 
-			var directionDistance = v1.subVectors( point, this.origin ).dot( this.direction );
+			const directionDistance = v1.subVectors( point, this.origin ).dot( this.direction );
 
 			// point behind the ray
 
