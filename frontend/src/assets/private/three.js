@@ -28388,7 +28388,7 @@ THREE.ImageUtils = {
 
 		}
 
-		var normalize = function ( a ) {
+		const normalize = function ( a ) {
 
 			var l = Math.sqrt( a[ 0 ] * a[ 0 ] + a[ 1 ] * a[ 1 ] + a[ 2 ] * a[ 2 ] );
 			return [ a[ 0 ] / l, a[ 1 ] / l, a[ 2 ] / l ];
