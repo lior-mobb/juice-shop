@@ -8442,7 +8442,7 @@ THREE.Projector = function () {
 
 					if ( attributes.index !== undefined ) {
 
-						var indices = attributes.index.array;
+						const indices = attributes.index.array;
 
 						if ( offsets.length > 0 ) {
 
