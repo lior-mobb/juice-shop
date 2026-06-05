@@ -31831,7 +31831,7 @@ THREE.Animation.prototype.update = (function(){
 
 			// loop through pos/rot/scl
 
-			for ( var t = 0; t < 3; t ++ ) {
+			for ( let t = 0; t < 3; t ++ ) {
 
 				// get keys
 
