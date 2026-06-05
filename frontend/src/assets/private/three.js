@@ -3759,7 +3759,7 @@ THREE.Box3.prototype = {
 
 	setFromCenterAndSize: function() {
 
-		var v1 = new THREE.Vector3();
+		const v1 = new THREE.Vector3();
 
 		return function ( center, size ) {
 
