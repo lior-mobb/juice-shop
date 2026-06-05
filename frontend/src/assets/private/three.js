@@ -16040,7 +16040,7 @@ THREE.MorphAnimMesh.prototype.parseAnimations = function () {
 
 	if ( ! geometry.animations ) geometry.animations = {};
 
-	var firstAnimation, animations = geometry.animations;
+	let firstAnimation, animations = geometry.animations;
 
 	var pattern = /([a-z]+)_?(\d+)/;
 
