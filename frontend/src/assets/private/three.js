@@ -29912,7 +29912,7 @@ THREE.Path.prototype.getSpacedPoints = function ( divisions, closedPath ) {
 
 	if ( ! divisions ) divisions = 40;
 
-	var points = [];
+	const points = [];
 
 	for ( var i = 0; i < divisions; i ++ ) {
 
