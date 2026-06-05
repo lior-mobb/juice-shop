@@ -33369,7 +33369,7 @@ THREE.ExtrudeGeometry.prototype.addShape = function ( shape, options ) {
 
 		var pt_i = contour[ i ];
 		var pt_j = contour[ j ];
-		var pt_k = contour[ k ];
+		const pt_k = contour[ k ];
 
 		contourMovements[ i ]= getBevelVec( contour[ i ], contour[ j ], contour[ k ] );
 
