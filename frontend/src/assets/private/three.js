@@ -35871,7 +35871,7 @@ THREE.GridHelper = function ( size, step ) {
 	this.color1 = new THREE.Color( 0x444444 );
 	this.color2 = new THREE.Color( 0x888888 );
 
-	for ( var i = - size; i <= size; i += step ) {
+	for ( let i = - size; i <= size; i += step ) {
 
 		geometry.vertices.push(
 			new THREE.Vector3( - size, 0, i ), new THREE.Vector3( size, 0, i ),
