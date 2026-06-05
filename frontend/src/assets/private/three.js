@@ -27627,7 +27627,7 @@ THREE.GeometryUtils = {
 
 		console.warn( 'DEPRECATED: GeometryUtils\'s .merge() has been moved to Geometry. Use geometry.merge( geometry2, matrix, materialIndexOffset ) instead.' );
 
-		var matrix;
+		let matrix;
 
 		if ( geometry2 instanceof THREE.Mesh ) {
 
