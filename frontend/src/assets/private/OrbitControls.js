@@ -80,7 +80,7 @@ THREE.OrbitControls = function ( object, domElement ) {
 
     var panStart = new THREE.Vector2();
     var panEnd = new THREE.Vector2();
-    var panDelta = new THREE.Vector2();
+    const panDelta = new THREE.Vector2();
 
     var dollyStart = new THREE.Vector2();
     var dollyEnd = new THREE.Vector2();
@@ -161,7 +161,7 @@ THREE.OrbitControls = function ( object, domElement ) {
             // perspective
             var position = scope.object.position;
             var offset = position.clone().sub( scope.target );
-            var targetDistance = offset.length();
+            let targetDistance = offset.length();
 
             // half of the fov is center to top of screen
             targetDistance *= Math.tan( (scope.object.fov/2) * Math.PI / 180.0 );
