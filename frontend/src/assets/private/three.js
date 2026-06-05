@@ -485,7 +485,7 @@ THREE.Color.prototype = {
 
 	offsetHSL: function ( h, s, l ) {
 
-		var hsl = this.getHSL();
+		const hsl = this.getHSL();
 
 		hsl.h += h; hsl.s += s; hsl.l += l;
 
