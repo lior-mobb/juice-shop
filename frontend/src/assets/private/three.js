@@ -27648,7 +27648,7 @@ THREE.GeometryUtils = {
 
 	randomPointInTriangle: function () {
 
-		var vector = new THREE.Vector3();
+		const vector = new THREE.Vector3();
 
 		return function ( vectorA, vectorB, vectorC ) {
 
