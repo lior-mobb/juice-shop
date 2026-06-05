@@ -28716,7 +28716,7 @@ THREE.FontUtils = {
 						for ( i2 = 1, divisions = this.divisions; i2 <= divisions; i2 ++ ) {
 
 							var t = i2 / divisions;
-							var tx = THREE.Shape.Utils.b2( t, cpx0, cpx1, cpx );
+							const tx = THREE.Shape.Utils.b2( t, cpx0, cpx1, cpx );
 							var ty = THREE.Shape.Utils.b2( t, cpy0, cpy1, cpy );
 					  }
 
