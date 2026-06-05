@@ -33202,7 +33202,7 @@ THREE.ExtrudeGeometry.prototype.addShape = function ( shape, options ) {
 
 	var shapesOffset = this.vertices.length;
 
-	var shapePoints = shape.extractPoints( curveSegments );
+	const shapePoints = shape.extractPoints( curveSegments );
 
 	var vertices = shapePoints.shape;
 	var holes = shapePoints.holes;
