@@ -36370,7 +36370,7 @@ THREE.WireframeHelper = function ( object, hex ) {
 	var edge = [ 0, 0 ], hash = {};
 	var sortFunction = function ( a, b ) { return a - b };
 
-	var keys = [ 'a', 'b', 'c' ];
+	const keys = [ 'a', 'b', 'c' ];
 	var geometry = new THREE.BufferGeometry();
 
 	if ( object.geometry instanceof THREE.Geometry ) {
