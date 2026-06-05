@@ -8519,7 +8519,7 @@ THREE.Projector = function () {
 							const morphInfluences = object.morphTargetInfluences;
 
 							var v1p = v1.position;
-							var v2p = v2.position;
+							const v2p = v2.position;
 							var v3p = v3.position;
 
 							_vA.set( 0, 0, 0 );
