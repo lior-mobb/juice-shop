@@ -27118,7 +27118,7 @@ THREE.WebGLProgram = ( function () {
 
 	};
 
-	var cacheUniformLocations = function ( gl, program, identifiers ) {
+	const cacheUniformLocations = function ( gl, program, identifiers ) {
 
 		var uniforms = {};
 
