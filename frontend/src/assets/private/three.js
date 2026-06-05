@@ -28237,7 +28237,7 @@ THREE.ImageUtils = {
 
 		var off_magic = 0;
 
-		var off_size = 1;
+		const off_size = 1;
 		var off_flags = 2;
 		var off_height = 3;
 		var off_width = 4;
