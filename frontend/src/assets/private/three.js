@@ -11466,7 +11466,7 @@ THREE.Loader.prototype = {
 
 			if ( wrap ) {
 
-				var wrapMap = {
+				const wrapMap = {
 					"repeat": THREE.RepeatWrapping,
 					"mirror": THREE.MirroredRepeatWrapping
 				}
