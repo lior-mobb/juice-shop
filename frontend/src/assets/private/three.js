@@ -35452,7 +35452,7 @@ THREE.CameraHelper = function ( camera ) {
 	var hexCone = 0xff0000;
 	var hexUp = 0x00aaff;
 	var hexTarget = 0xffffff;
-	var hexCross = 0x333333;
+	const hexCross = 0x333333;
 
 	// near
 
