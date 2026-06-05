@@ -10330,7 +10330,7 @@ THREE.Geometry.prototype = {
 
 		}
 
-		var faceIndex = [ 'a', 'b', 'c', 'd' ];
+		const faceIndex = [ 'a', 'b', 'c', 'd' ];
 
 		for ( f = 0, fl = this.faces.length; f < fl; f ++ ) {
 
