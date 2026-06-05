@@ -31754,7 +31754,7 @@ THREE.Animation.prototype.update = (function(){
 
 	var points = [];
 	var target = new THREE.Vector3();
-	var newVector = new THREE.Vector3();
+	const newVector = new THREE.Vector3();
 	var newQuat = new THREE.Quaternion();
 
 	// Catmull-Rom spline
