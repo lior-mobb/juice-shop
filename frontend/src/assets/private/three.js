@@ -21579,7 +21579,7 @@ THREE.WebGLRenderer = function ( parameters ) {
 
 			for ( var a in material.attributes ) {
 
-				var attribute = material.attributes[ a ];
+				const attribute = material.attributes[ a ];
 
 				if ( !attribute.__webglInitialized || attribute.createUniqueBuffers ) {
 
