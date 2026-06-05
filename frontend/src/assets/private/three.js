@@ -10441,7 +10441,7 @@ THREE.Geometry.prototype = {
 
 			var vertex = vertices2[ i ];
 
-			var vertexCopy = vertex.clone();
+			const vertexCopy = vertex.clone();
 
 			if ( matrix !== undefined ) vertexCopy.applyMatrix4( matrix );
 
