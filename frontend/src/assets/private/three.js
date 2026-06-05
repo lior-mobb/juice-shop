@@ -27856,7 +27856,7 @@ THREE.ImageUtils = {
 		var loader = new THREE.ImageLoader();
 		loader.crossOrigin = this.crossOrigin;
 
-		var texture = new THREE.Texture( undefined, mapping );
+		const texture = new THREE.Texture( undefined, mapping );
 
 		var image = loader.load( url, function () {
 
