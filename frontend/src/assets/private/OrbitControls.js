@@ -86,9 +86,9 @@ THREE.OrbitControls = function ( object, domElement ) {
     var dollyEnd = new THREE.Vector2();
     var dollyDelta = new THREE.Vector2();
 
-    var phiDelta = 0;
+    let phiDelta = 0;
     var thetaDelta = 0;
-    var scale = 1;
+    let scale = 1;
     var pan = new THREE.Vector3();
 
     var lastPosition = new THREE.Vector3();
@@ -160,7 +160,7 @@ THREE.OrbitControls = function ( object, domElement ) {
 
             // perspective
             var position = scope.object.position;
-            var offset = position.clone().sub( scope.target );
+            const offset = position.clone().sub( scope.target );
             var targetDistance = offset.length();
 
             // half of the fov is center to top of screen
@@ -389,7 +389,7 @@ THREE.OrbitControls = function ( object, domElement ) {
 
         if ( scope.enabled === false || scope.noZoom === true ) return;
 
-        var delta = 0;
+        let delta = 0;
 
         if ( event.wheelDelta ) { // WebKit / Opera / Explorer 9
 
