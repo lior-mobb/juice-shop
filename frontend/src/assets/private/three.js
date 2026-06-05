@@ -8532,7 +8532,7 @@ THREE.Projector = function () {
 
 								if ( influence === 0 ) continue;
 
-								var targets = morphTargets[ t ].vertices;
+								const targets = morphTargets[ t ].vertices;
 
 								_vA.x += ( targets[ face.a ].x - v1p.x ) * influence;
 								_vA.y += ( targets[ face.a ].y - v1p.y ) * influence;
