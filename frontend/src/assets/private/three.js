@@ -3357,7 +3357,7 @@ THREE.Line3.prototype = {
 			startEnd.subVectors( this.end, this.start );
 
 			var startEnd2 = startEnd.dot( startEnd );
-			var startEnd_startP = startEnd.dot( startP );
+			const startEnd_startP = startEnd.dot( startP );
 
 			var t = startEnd_startP / startEnd2;
 
