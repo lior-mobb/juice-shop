@@ -34058,7 +34058,7 @@ THREE.PlaneGeometry = function ( width, height, widthSegments, heightSegments ) 
 
 			var a = ix + gridX1 * iz;
 			var b = ix + gridX1 * ( iz + 1 );
-			var c = ( ix + 1 ) + gridX1 * ( iz + 1 );
+			const c = ( ix + 1 ) + gridX1 * ( iz + 1 );
 			var d = ( ix + 1 ) + gridX1 * iz;
 
 			var uva = new THREE.Vector2( ix / gridX, 1 - iz / gridZ );
