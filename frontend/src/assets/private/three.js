@@ -9364,7 +9364,7 @@ THREE.BufferGeometry.prototype = {
 			var i, il;
 			var j, jl;
 
-			var nVertexElements = this.attributes[ "position" ].array.length;
+			const nVertexElements = this.attributes[ "position" ].array.length;
 
 			if ( this.attributes[ "normal" ] === undefined ) {
 
