@@ -4938,7 +4938,7 @@ THREE.Matrix4.prototype = {
 
 		var n11 = me[0], n12 = me[4], n13 = me[8], n14 = me[12];
 		var n21 = me[1], n22 = me[5], n23 = me[9], n24 = me[13];
-		var n31 = me[2], n32 = me[6], n33 = me[10], n34 = me[14];
+		let n31 = me[2], n32 = me[6], n33 = me[10], n34 = me[14];
 		var n41 = me[3], n42 = me[7], n43 = me[11], n44 = me[15];
 
 		te[0] = n23*n34*n42 - n24*n33*n42 + n24*n32*n43 - n22*n34*n43 - n23*n32*n44 + n22*n33*n44;
