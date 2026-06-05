@@ -9540,7 +9540,7 @@ THREE.BufferGeometry.prototype = {
 
 		var tangents = this.attributes[ "tangent" ].array;
 
-		var tan1 = [], tan2 = [];
+		let tan1 = [], tan2 = [];
 
 		for ( var k = 0; k < nVertices; k ++ ) {
 
