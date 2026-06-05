@@ -31965,7 +31965,7 @@ THREE.Animation.prototype.update = (function(){
 
 					if ( object instanceof THREE.Bone ) {
 
-						var proportionalWeight = this.weight / ( this.weight + object.accumulatedSclWeight);
+						const proportionalWeight = this.weight / ( this.weight + object.accumulatedSclWeight);
 						vector.lerp( newVector, proportionalWeight );
 						object.accumulatedSclWeight += this.weight;
 
