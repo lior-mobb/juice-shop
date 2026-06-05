@@ -5214,7 +5214,7 @@ THREE.Matrix4.prototype = {
 
 		var te = this.elements;
 		var x = 2 * near / ( right - left );
-		var y = 2 * near / ( top - bottom );
+		const y = 2 * near / ( top - bottom );
 
 		var a = ( right + left ) / ( right - left );
 		var b = ( top + bottom ) / ( top - bottom );
