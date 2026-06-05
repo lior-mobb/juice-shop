@@ -32929,7 +32929,7 @@ THREE.CylinderGeometry = function ( radiusTop, radiusBottom, height, radialSegme
 
 	openEnded = openEnded !== undefined ? openEnded : false;
 
-	var heightHalf = height / 2;
+	const heightHalf = height / 2;
 
 	var x, y, vertices = [], uvs = [];
 
