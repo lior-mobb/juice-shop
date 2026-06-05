@@ -5572,7 +5572,7 @@ THREE.Ray.prototype = {
 
 	intersectPlane: function ( plane, optionalTarget ) {
 
-		var t = this.distanceToPlane( plane );
+		const t = this.distanceToPlane( plane );
 
 		if ( t === null ) {
 
