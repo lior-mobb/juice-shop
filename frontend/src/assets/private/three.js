@@ -35823,7 +35823,7 @@ THREE.FaceNormalsHelper.prototype = Object.create( THREE.Line.prototype );
 
 THREE.FaceNormalsHelper.prototype.update = function () {
 
-	var vertices = this.geometry.vertices;
+	const vertices = this.geometry.vertices;
 
 	var object = this.object;
 	var objectVertices = object.geometry.vertices;
