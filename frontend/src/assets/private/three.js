@@ -8446,7 +8446,7 @@ THREE.Projector = function () {
 
 						if ( offsets.length > 0 ) {
 
-							for ( var o = 0; o < offsets.length; o ++ ) {
+							for ( let o = 0; o < offsets.length; o ++ ) {
 
 								var offset = offsets[ o ];
 								var index = offset.index;
