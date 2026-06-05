@@ -7961,7 +7961,7 @@ THREE.Object3D.prototype = {
 
 		Array.prototype.push.apply( array, this.children );
 
-		for ( var i = 0, l = this.children.length; i < l; i ++ ) {
+		for ( let i = 0, l = this.children.length; i < l; i ++ ) {
 
 			this.children[ i ].getDescendants( array );
 
