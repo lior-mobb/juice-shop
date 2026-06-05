@@ -10199,7 +10199,7 @@ THREE.Geometry.prototype = {
 				this.morphNormals[ i ].vertexNormals = [];
 
 				var dstNormalsFace = this.morphNormals[ i ].faceNormals;
-				var dstNormalsVertex = this.morphNormals[ i ].vertexNormals;
+				const dstNormalsVertex = this.morphNormals[ i ].vertexNormals;
 
 				var faceNormal, vertexNormals;
 
