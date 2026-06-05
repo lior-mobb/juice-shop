@@ -16438,7 +16438,7 @@ THREE.Scene.prototype.__removeObject = function ( object ) {
 
 		// check if previously added
 
-		var i = this.__objectsAdded.indexOf( object );
+		const i = this.__objectsAdded.indexOf( object );
 
 		if ( i !== -1 ) {
 
