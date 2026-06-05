@@ -22204,7 +22204,7 @@ THREE.WebGLRenderer = function ( parameters ) {
 
 	function setLineBuffers ( geometry, hint ) {
 
-		var v, c, d, vertex, offset, color,
+		let v, c, d, vertex, offset, color,
 
 		vertices = geometry.vertices,
 		colors = geometry.colors,
