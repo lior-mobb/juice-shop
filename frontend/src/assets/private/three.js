@@ -3039,7 +3039,7 @@ THREE.Euler.prototype = {
 		// assumes the upper 3x3 of m is a pure rotation matrix (i.e, unscaled)
 
 		var te = m.elements;
-		var m11 = te[0], m12 = te[4], m13 = te[8];
+		let m11 = te[0], m12 = te[4], m13 = te[8];
 		var m21 = te[1], m22 = te[5], m23 = te[9];
 		var m31 = te[2], m32 = te[6], m33 = te[10];
 
