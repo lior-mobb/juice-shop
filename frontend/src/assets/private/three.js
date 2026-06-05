@@ -8516,7 +8516,7 @@ THREE.Projector = function () {
 						if ( material.morphTargets === true ) {
 
 							var morphTargets = geometry.morphTargets;
-							var morphInfluences = object.morphTargetInfluences;
+							const morphInfluences = object.morphTargetInfluences;
 
 							var v1p = v1.position;
 							var v2p = v2.position;
