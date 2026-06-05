@@ -10681,7 +10681,7 @@ THREE.Geometry.prototype = {
 
 		var vertices = this.vertices;
 
-		for ( var i = 0, il = vertices.length; i < il; i ++ ) {
+		for ( let i = 0, il = vertices.length; i < il; i ++ ) {
 
 			geometry.vertices.push( vertices[ i ].clone() );
 
