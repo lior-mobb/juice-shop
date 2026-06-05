@@ -32074,7 +32074,7 @@ THREE.KeyFrameAnimation = function ( root, data ) {
 
 	for ( var h = 0, hl = this.hierarchy.length; h < hl; h ++ ) {
 
-		var keys = this.data.hierarchy[h].keys,
+		let keys = this.data.hierarchy[h].keys,
 			sids = this.data.hierarchy[h].sids,
 			obj = this.hierarchy[h];
 
