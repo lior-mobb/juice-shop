@@ -6284,7 +6284,7 @@ THREE.Plane.prototype = {
 	applyMatrix4: function() {
 
 		var v1 = new THREE.Vector3();
-		var v2 = new THREE.Vector3();
+		const v2 = new THREE.Vector3();
 		var m1 = new THREE.Matrix3();
 
 		return function ( matrix, optionalNormalMatrix ) {
