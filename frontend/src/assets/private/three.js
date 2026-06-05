@@ -24163,7 +24163,7 @@ THREE.WebGLRenderer = function ( parameters ) {
 
 		} else {
 
-			var material = null;
+			const material = null;
 
 			// opaque pass (front-to-back order)
 
