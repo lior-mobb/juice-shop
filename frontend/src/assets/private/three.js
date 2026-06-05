@@ -33296,7 +33296,7 @@ THREE.ExtrudeGeometry.prototype.addShape = function ( shape, options ) {
 			// length of vectors for normalizing
 	
 			var v_prev_len = Math.sqrt( v_prev_lensq );
-			var v_next_len = Math.sqrt( v_next_x * v_next_x + v_next_y * v_next_y );
+			const v_next_len = Math.sqrt( v_next_x * v_next_x + v_next_y * v_next_y );
 			
 			// shift adjacent points by unit vectors to the left
 	
