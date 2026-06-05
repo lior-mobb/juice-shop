@@ -3224,7 +3224,7 @@ THREE.Euler.prototype = {
 
 		// WARNING: this discards revolution information -bhouston
 
-		var q = new THREE.Quaternion();
+		const q = new THREE.Quaternion();
 
 		return function ( newOrder ) {
 
