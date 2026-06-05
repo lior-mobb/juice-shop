@@ -7476,7 +7476,7 @@ THREE.EventDispatcher.prototype = {
 
 	THREE.Raycaster.prototype.intersectObject = function ( object, recursive ) {
 
-		var intersects = [];
+		const intersects = [];
 
 		if ( recursive === true ) {
 
