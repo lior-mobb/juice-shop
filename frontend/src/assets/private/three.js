@@ -4174,7 +4174,7 @@ THREE.Matrix3.prototype = {
 
 	determinant: function () {
 
-		var te = this.elements;
+		const te = this.elements;
 
 		var a = te[0], b = te[1], c = te[2],
 			d = te[3], e = te[4], f = te[5],
