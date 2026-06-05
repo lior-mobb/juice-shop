@@ -4877,7 +4877,7 @@ THREE.Matrix4.prototype = {
 
 	flattenToArrayOffset: function( array, offset ) {
 
-		var te = this.elements;
+		const te = this.elements;
 
 		array[ offset     ] = te[0];
 		array[ offset + 1 ] = te[1];
