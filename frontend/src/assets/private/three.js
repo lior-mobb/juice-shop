@@ -7735,7 +7735,7 @@ THREE.Object3D.prototype = {
 
 	translateX: function () {
 
-		var v1 = new THREE.Vector3( 1, 0, 0 );
+		const v1 = new THREE.Vector3( 1, 0, 0 );
 
 		return function ( distance ) {
 
