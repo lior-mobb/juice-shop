@@ -34385,7 +34385,7 @@ THREE.TorusGeometry = function ( radius, tube, radialSegments, tubularSegments, 
 
 		for ( var i = 1; i <= tubularSegments; i ++ ) {
 
-			var a = ( tubularSegments + 1 ) * j + i - 1;
+			const a = ( tubularSegments + 1 ) * j + i - 1;
 			var b = ( tubularSegments + 1 ) * ( j - 1 ) + i - 1;
 			var c = ( tubularSegments + 1 ) * ( j - 1 ) + i;
 			var d = ( tubularSegments + 1 ) * j + i;
