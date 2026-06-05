@@ -10620,7 +10620,7 @@ THREE.Geometry.prototype = {
 				groupHash, hash_map = {};
 
 			var numMorphTargets = this.morphTargets.length;
-			var numMorphNormals = this.morphNormals.length;
+			const numMorphNormals = this.morphNormals.length;
 
 			this.geometryGroups = {};
 
