@@ -27045,7 +27045,7 @@ THREE.WebGLRenderTarget.prototype = {
 
 	clone: function () {
 
-		var tmp = new THREE.WebGLRenderTarget( this.width, this.height );
+		const tmp = new THREE.WebGLRenderTarget( this.width, this.height );
 
 		tmp.wrapS = this.wrapS;
 		tmp.wrapT = this.wrapT;
