@@ -28208,7 +28208,7 @@ THREE.ImageUtils = {
 
 		function loadARGBMip( buffer, dataOffset, width, height ) {
 			var dataLength = width*height*4;
-			var srcBuffer = new Uint8Array( buffer, dataOffset, dataLength );
+			const srcBuffer = new Uint8Array( buffer, dataOffset, dataLength );
 			var byteArray = new Uint8Array( dataLength );
 			var dst = 0;
 			var src = 0;
