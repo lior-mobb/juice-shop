@@ -12594,7 +12594,7 @@ THREE.MaterialLoader.prototype = {
 
 		var scope = this;
 
-		var loader = new THREE.XHRLoader();
+		const loader = new THREE.XHRLoader();
 		loader.setCrossOrigin( this.crossOrigin );
 		loader.load( url, function ( text ) {
 
