@@ -14608,7 +14608,7 @@ THREE.MeshBasicMaterial.prototype = Object.create( THREE.Material.prototype );
 
 THREE.MeshBasicMaterial.prototype.clone = function () {
 
-	var material = new THREE.MeshBasicMaterial();
+	const material = new THREE.MeshBasicMaterial();
 
 	THREE.Material.prototype.clone.call( this, material );
 
