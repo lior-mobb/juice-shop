@@ -21453,7 +21453,7 @@ THREE.WebGLRenderer = function ( parameters ) {
 
 	};
 
-	var deallocateTexture = function ( texture ) {
+	const deallocateTexture = function ( texture ) {
 
 		if ( texture.image && texture.image.__webglTextureCube ) {
 
