@@ -1796,7 +1796,7 @@ THREE.Vector3.prototype = {
 		var y = this.y;
 		var z = this.z;
 
-		var qx = q.x;
+		const qx = q.x;
 		var qy = q.y;
 		var qz = q.z;
 		var qw = q.w;
@@ -14608,7 +14608,7 @@ THREE.MeshBasicMaterial.prototype = Object.create( THREE.Material.prototype );
 
 THREE.MeshBasicMaterial.prototype.clone = function () {
 
-	var material = new THREE.MeshBasicMaterial();
+	const material = new THREE.MeshBasicMaterial();
 
 	THREE.Material.prototype.clone.call( this, material );
 
@@ -34058,7 +34058,7 @@ THREE.PlaneGeometry = function ( width, height, widthSegments, heightSegments ) 
 
 			var a = ix + gridX1 * iz;
 			var b = ix + gridX1 * ( iz + 1 );
-			var c = ( ix + 1 ) + gridX1 * ( iz + 1 );
+			const c = ( ix + 1 ) + gridX1 * ( iz + 1 );
 			var d = ( ix + 1 ) + gridX1 * iz;
 
 			var uva = new THREE.Vector2( ix / gridX, 1 - iz / gridZ );
