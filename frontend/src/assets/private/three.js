@@ -7075,7 +7075,7 @@ THREE.EventDispatcher.prototype = {
 
 	var inverseMatrix = new THREE.Matrix4();
 
-	var descSort = function ( a, b ) {
+	const descSort = function ( a, b ) {
 
 		return a.distance - b.distance;
 
