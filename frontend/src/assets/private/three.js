@@ -33142,7 +33142,7 @@ THREE.ExtrudeGeometry.prototype.addShape = function ( shape, options ) {
 
 	var bevelEnabled = options.bevelEnabled !== undefined ? options.bevelEnabled : true; // false
 
-	var curveSegments = options.curveSegments !== undefined ? options.curveSegments : 12;
+	const curveSegments = options.curveSegments !== undefined ? options.curveSegments : 12;
 
 	var steps = options.steps !== undefined ? options.steps : 1;
 
