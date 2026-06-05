@@ -34482,7 +34482,7 @@ THREE.TorusKnotGeometry = function ( radius, tube, radialSegments, tubularSegmen
 			var a = grid[ i ][ j ];
 			var b = grid[ ip ][ j ];
 			var c = grid[ ip ][ jp ];
-			var d = grid[ i ][ jp ];
+			const d = grid[ i ][ jp ];
 
 			var uva = new THREE.Vector2( i / radialSegments, j / tubularSegments );
 			var uvb = new THREE.Vector2( ( i + 1 ) / radialSegments, j / tubularSegments );
