@@ -31414,7 +31414,7 @@ THREE.AnimationHandler = ( function () {
 
 	that.removeFromUpdate = function ( animation ) {
 
-		var index = playing.indexOf( animation );
+		const index = playing.indexOf( animation );
 
 		if ( index !== -1 ) {
 
