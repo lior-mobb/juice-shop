@@ -9892,7 +9892,7 @@ THREE.BufferGeometry.prototype = {
 
 	clone: function () {
 
-		var geometry = new THREE.BufferGeometry();
+		const geometry = new THREE.BufferGeometry();
 
 		var types = [ Int8Array, Uint8Array, Uint8ClampedArray, Int16Array, Uint16Array, Int32Array, Uint32Array, Float32Array, Float64Array ];
 
