@@ -28626,7 +28626,7 @@ THREE.FontUtils = {
 
 		// get the width
 
-		var width = offset / 2;
+		const width = offset / 2;
 		//
 		// for ( p = 0; p < allPts.length; p++ ) {
 		//
