@@ -23590,7 +23590,7 @@ THREE.WebGLRenderer = function ( parameters ) {
 
 		var linewidth, a, attribute, i, il;
 
-		var program = setProgram( camera, lights, fog, material, object );
+		const program = setProgram( camera, lights, fog, material, object );
 
 		var attributes = program.attributes;
 
