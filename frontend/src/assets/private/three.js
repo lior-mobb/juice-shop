@@ -30954,7 +30954,7 @@ THREE.Shape.Utils = {
 
 	b3p1: function ( t, p ) {
 
-		var k = 1 - t;
+		const k = 1 - t;
 		return 3 * k * k * t * p;
 
 	},
