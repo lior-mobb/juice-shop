@@ -6060,7 +6060,7 @@ THREE.Frustum.prototype = {
 				p2.z = plane.normal.z > 0 ? box.max.z : box.min.z;
 
 				var d1 = plane.distanceToPoint( p1 );
-				var d2 = plane.distanceToPoint( p2 );
+				const d2 = plane.distanceToPoint( p2 );
 				
 				// if both outside plane, no intersection
 
