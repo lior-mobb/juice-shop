@@ -15945,7 +15945,7 @@ THREE.SkinnedMesh.prototype.normalizeSkinWeights = function () {
 
 		for ( var i = 0; i < this.geometry.skinIndices.length; i ++ ) {
 
-			var sw = this.geometry.skinWeights[ i ];
+			const sw = this.geometry.skinWeights[ i ];
 
 			var scale = 1.0 / sw.lengthManhattan();
 
