@@ -27655,7 +27655,7 @@ THREE.GeometryUtils = {
 			var point = new THREE.Vector3();
 
 			var a = THREE.Math.random16();
-			var b = THREE.Math.random16();
+			let b = THREE.Math.random16();
 
 			if ( ( a + b ) > 1 ) {
 
