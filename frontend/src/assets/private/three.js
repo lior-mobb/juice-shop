@@ -8497,7 +8497,7 @@ THREE.Projector = function () {
 
 					}
 
-					for ( var f = 0, fl = faces.length; f < fl; f ++ ) {
+					for ( let f = 0, fl = faces.length; f < fl; f ++ ) {
 
 						face = faces[ f ];
 
