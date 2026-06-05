@@ -28236,7 +28236,7 @@ THREE.ImageUtils = {
 
 		// Offsets into the header array
 
-		var off_magic = 0;
+		const off_magic = 0;
 
 		var off_size = 1;
 		var off_flags = 2;
