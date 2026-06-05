@@ -5334,7 +5334,7 @@ THREE.Ray.prototype = {
 
 	at: function ( t, optionalTarget ) {
 
-		var result = optionalTarget || new THREE.Vector3();
+		const result = optionalTarget || new THREE.Vector3();
 
 		return result.copy( this.direction ).multiplyScalar( t ).add( this.origin );
 
