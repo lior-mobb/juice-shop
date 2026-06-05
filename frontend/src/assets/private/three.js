@@ -35547,7 +35547,7 @@ THREE.CameraHelper.prototype.update = function () {
 
 		var scope = this;
 
-		var w = 1, h = 1;
+		let w = 1, h = 1;
 
 		// we need just camera projection matrix
 		// world matrix must be identity
