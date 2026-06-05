@@ -19313,7 +19313,7 @@ THREE.UniformsUtils = {
 
 	merge: function ( uniforms ) {
 
-		var u, p, tmp, merged = {};
+		let u, p, tmp, merged = {};
 
 		for ( u = 0; u < uniforms.length; u ++ ) {
 
