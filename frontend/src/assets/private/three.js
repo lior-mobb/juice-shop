@@ -37984,7 +37984,7 @@ THREE.SpritePlugin = function () {
 		var program = _gl.createProgram();
 
 		var vertexShader = _gl.createShader( _gl.VERTEX_SHADER );
-		var fragmentShader = _gl.createShader( _gl.FRAGMENT_SHADER );
+		const fragmentShader = _gl.createShader( _gl.FRAGMENT_SHADER );
 
 		_gl.shaderSource( vertexShader, [
 
