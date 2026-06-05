@@ -12340,7 +12340,7 @@ THREE.JSONLoader.prototype.parse = function ( json, texturePath ) {
 
 			for ( var i = 0, l = json.skinWeights.length; i < l; i += influencesPerVertex ) {
 
-				var x =                               json.skinWeights[ i     ];
+				const x =                               json.skinWeights[ i     ];
 				var y = ( influencesPerVertex > 1 ) ? json.skinWeights[ i + 1 ] : 0;
 				var z = ( influencesPerVertex > 2 ) ? json.skinWeights[ i + 2 ] : 0;
 				var w = ( influencesPerVertex > 3 ) ? json.skinWeights[ i + 3 ] : 0;
