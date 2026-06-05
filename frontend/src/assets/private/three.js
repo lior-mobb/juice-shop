@@ -2232,7 +2232,7 @@ THREE.Vector3.prototype = {
 
 	setFromMatrixScale: function ( m ) {
 
-		var sx = this.set( m.elements[ 0 ], m.elements[ 1 ], m.elements[  2 ] ).length();
+		const sx = this.set( m.elements[ 0 ], m.elements[ 1 ], m.elements[  2 ] ).length();
 		var sy = this.set( m.elements[ 4 ], m.elements[ 5 ], m.elements[  6 ] ).length();
 		var sz = this.set( m.elements[ 8 ], m.elements[ 9 ], m.elements[ 10 ] ).length();
 
