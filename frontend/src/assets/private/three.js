@@ -29399,7 +29399,7 @@ THREE.CurvePath.prototype.getPoint = function( t ) {
 
 	var d = t * this.getLength();
 	var curveLengths = this.getCurveLengths();
-	var i = 0, diff, curve;
+	let i = 0, diff, curve;
 
 	// To think about boundaries points.
 
