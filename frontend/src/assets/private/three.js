@@ -29865,7 +29865,7 @@ THREE.Path.prototype.splineThru = function( pts /*Array of Vector*/ ) {
 THREE.Path.prototype.arc = function ( aX, aY, aRadius,
 									  aStartAngle, aEndAngle, aClockwise ) {
 
-	var lastargs = this.actions[ this.actions.length - 1].args;
+	const lastargs = this.actions[ this.actions.length - 1].args;
 	var x0 = lastargs[ lastargs.length - 2 ];
 	var y0 = lastargs[ lastargs.length - 1 ];
 
