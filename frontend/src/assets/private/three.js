@@ -16236,7 +16236,7 @@ THREE.LOD.prototype.getObjectForDistance = function ( distance ) {
 
 THREE.LOD.prototype.update = function () {
 
-	var v1 = new THREE.Vector3();
+	const v1 = new THREE.Vector3();
 	var v2 = new THREE.Vector3();
 
 	return function ( camera ) {
