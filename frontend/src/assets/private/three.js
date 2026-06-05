@@ -33016,7 +33016,7 @@ THREE.CylinderGeometry = function ( radiusTop, radiusBottom, height, radialSegme
 
 		for ( x = 0; x < radialSegments; x ++ ) {
 
-			var v1 = vertices[ 0 ][ x ];
+			const v1 = vertices[ 0 ][ x ];
 			var v2 = vertices[ 0 ][ x + 1 ];
 			var v3 = this.vertices.length - 1;
 
