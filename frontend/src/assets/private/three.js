@@ -16993,7 +16993,7 @@ THREE.CanvasRenderer = function ( parameters ) {
 
 				//
 
-				var bitmap = texture.image;
+				const bitmap = texture.image;
 
 				var ox = bitmap.width * texture.offset.x;
 				var oy = bitmap.height * texture.offset.y;
