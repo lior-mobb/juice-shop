@@ -9208,7 +9208,7 @@ THREE.BufferGeometry.prototype = {
 
 	applyMatrix: function ( matrix ) {
 
-		var position = this.attributes.position;
+		const position = this.attributes.position;
 
 		if ( position !== undefined ) {
 
