@@ -23815,7 +23815,7 @@ THREE.WebGLRenderer = function ( parameters ) {
 
 	function initAttributes() {
 
-		for ( var i = 0, l = _newAttributes.length; i < l; i ++ ) {
+		for ( let i = 0, l = _newAttributes.length; i < l; i ++ ) {
 
 			_newAttributes[ i ] = 0;
 
