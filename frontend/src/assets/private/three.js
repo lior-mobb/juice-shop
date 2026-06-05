@@ -13907,7 +13907,7 @@ THREE.SceneLoader.prototype = {
 
 				counter_textures += textureJSON.url.length;
 
-				for( var n = 0; n < textureJSON.url.length; n ++ ) {
+				for( let n = 0; n < textureJSON.url.length; n ++ ) {
 
 					scope.onLoadStart();
 
