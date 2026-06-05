@@ -5409,7 +5409,7 @@ THREE.Ray.prototype = {
 		var diff = this.origin.clone().sub( segCenter );
 		var a01 = - this.direction.dot( segDir );
 		var b0 = diff.dot( this.direction );
-		var b1 = - diff.dot( segDir );
+		const b1 = - diff.dot( segDir );
 		var c = diff.lengthSq();
 		var det = Math.abs( 1 - a01 * a01 );
 		var s0, s1, sqrDist, extDet;
