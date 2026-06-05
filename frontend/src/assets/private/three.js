@@ -1005,7 +1005,7 @@ THREE.Quaternion.prototype = {
 
 	slerp: function ( qb, t ) {
 
-		var x = this._x, y = this._y, z = this._z, w = this._w;
+		let x = this._x, y = this._y, z = this._z, w = this._w;
 
 		// http://www.euclideanspace.com/maths/algebra/realNormedAlgebra/quaternions/slerp/
 
