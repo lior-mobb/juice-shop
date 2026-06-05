@@ -3916,7 +3916,7 @@ THREE.Box3.prototype = {
 		// This can potentially have a divide by zero if the box
 		// has a size dimension of 0.
 
-		var result = optionalTarget || new THREE.Vector3();
+		const result = optionalTarget || new THREE.Vector3();
 
 		return result.set(
 			( point.x - this.min.x ) / ( this.max.x - this.min.x ),
