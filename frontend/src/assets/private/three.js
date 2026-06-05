@@ -10616,7 +10616,7 @@ THREE.Geometry.prototype = {
 		
 		return function ( usesFaceMaterial, maxVerticesInGroup ) {
 
-			var f, fl, face, materialIndex,
+			let f, fl, face, materialIndex,
 				groupHash, hash_map = {};
 
 			var numMorphTargets = this.morphTargets.length;
