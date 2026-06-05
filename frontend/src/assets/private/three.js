@@ -30590,7 +30590,7 @@ THREE.Shape.Utils = {
 				if ( perpSeg1 == limit )	return  [ inSeg2Pt2 ];
 
 				// return real intersection point
-				var factorSeg1 = perpSeg2 / limit;
+				const factorSeg1 = perpSeg2 / limit;
 				return	[ { x: inSeg1Pt1.x + factorSeg1 * seg1dx,
 							y: inSeg1Pt1.y + factorSeg1 * seg1dy } ];
 
