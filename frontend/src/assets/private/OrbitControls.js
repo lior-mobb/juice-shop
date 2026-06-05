@@ -80,7 +80,7 @@ THREE.OrbitControls = function ( object, domElement ) {
 
     var panStart = new THREE.Vector2();
     var panEnd = new THREE.Vector2();
-    var panDelta = new THREE.Vector2();
+    const panDelta = new THREE.Vector2();
 
     var dollyStart = new THREE.Vector2();
     var dollyEnd = new THREE.Vector2();
