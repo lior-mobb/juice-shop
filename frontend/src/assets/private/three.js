@@ -23906,7 +23906,7 @@ THREE.WebGLRenderer = function ( parameters ) {
 
 			// find the most influencing
 
-			var influence, activeInfluenceIndices = [];
+			let influence, activeInfluenceIndices = [];
 			var influences = object.morphTargetInfluences;
 			var i, il = influences.length;
 
