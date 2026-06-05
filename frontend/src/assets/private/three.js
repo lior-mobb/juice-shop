@@ -30689,7 +30689,7 @@ THREE.Shape.Utils = {
 
 			if ( Math.abs(from2toAngle) > EPSILON ) {			// angle != 180 deg.
 
-				var other2toAngle		= otherPtX * legToPtY - otherPtY * legToPtX;
+				const other2toAngle		= otherPtX * legToPtY - otherPtY * legToPtX;
 				// console.log( "from2to: " + from2toAngle + ", from2other: " + from2otherAngle + ", other2to: " + other2toAngle );
 
 				if ( from2toAngle > 0 ) {				// main angle < 180 deg.
