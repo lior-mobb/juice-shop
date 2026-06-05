@@ -30679,7 +30679,7 @@ THREE.Shape.Utils = {
 
 			// translation of all points, so that Vertex is at (0,0)
 			var legFromPtX	= inLegFromPt.x - inVertex.x,  legFromPtY	= inLegFromPt.y - inVertex.y;
-			var legToPtX	= inLegToPt.x	- inVertex.x,  legToPtY		= inLegToPt.y	- inVertex.y;
+			let legToPtX	= inLegToPt.x	- inVertex.x,  legToPtY		= inLegToPt.y	- inVertex.y;
 			var otherPtX	= inOtherPt.x	- inVertex.x,  otherPtY		= inOtherPt.y	- inVertex.y;
 
 			// main angle >0: < 180 deg.; 0: 180 deg.; <0: > 180 deg.
