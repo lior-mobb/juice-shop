@@ -29162,7 +29162,7 @@ THREE.Curve.prototype.getUtoTmapping = function ( u, distance ) {
 
 	var i = 0, il = arcLengths.length;
 
-	var targetArcLength; // The targeted u distance value to get
+	let targetArcLength; // The targeted u distance value to get
 
 	if ( distance ) {
 
