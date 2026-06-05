@@ -32801,7 +32801,7 @@ THREE.BoxGeometry = function ( width, height, depth, widthSegments, heightSegmen
 
 			for ( ix = 0; ix < gridX; ix++ ) {
 
-				var a = ix + gridX1 * iy;
+				const a = ix + gridX1 * iy;
 				var b = ix + gridX1 * ( iy + 1 );
 				var c = ( ix + 1 ) + gridX1 * ( iy + 1 );
 				var d = ( ix + 1 ) + gridX1 * iy;
