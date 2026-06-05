@@ -33375,7 +33375,7 @@ THREE.ExtrudeGeometry.prototype.addShape = function ( shape, options ) {
 
 	}
 
-	var holesMovements = [], oneHoleMovements, verticesMovements = contourMovements.concat();
+	let holesMovements = [], oneHoleMovements, verticesMovements = contourMovements.concat();
 
 	for ( h = 0, hl = holes.length; h < hl; h ++ ) {
 
