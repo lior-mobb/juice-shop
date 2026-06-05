@@ -36082,7 +36082,7 @@ THREE.SkeletonHelper.prototype.update = function () {
 
 	for ( var i = 0; i < this.skeleton.bones.length; i ++ ) {
 
-		var bone = this.skeleton.bones[ i ];
+		const bone = this.skeleton.bones[ i ];
 
 		if ( bone.parent instanceof THREE.Bone ) {
 
