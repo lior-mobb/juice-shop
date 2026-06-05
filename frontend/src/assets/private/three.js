@@ -2471,7 +2471,7 @@ THREE.Vector4.prototype = {
 
 	applyMatrix4: function ( m ) {
 
-		var x = this.x;
+		const x = this.x;
 		var y = this.y;
 		var z = this.z;
 		var w = this.w;
