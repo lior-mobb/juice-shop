@@ -28649,7 +28649,7 @@ THREE.FontUtils = {
 
 	extractGlyphPoints : function( c, face, scale, offset, path ) {
 
-		var pts = [];
+		const pts = [];
 
 		var i, i2, divisions,
 			outline, action, length,
