@@ -1763,7 +1763,7 @@ THREE.Vector3.prototype = {
 
 		var x = this.x, y = this.y, z = this.z;
 
-		var e = m.elements;
+		const e = m.elements;
 
 		this.x = e[0] * x + e[4] * y + e[8]  * z + e[12];
 		this.y = e[1] * x + e[5] * y + e[9]  * z + e[13];
