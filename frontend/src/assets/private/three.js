@@ -10059,7 +10059,7 @@ THREE.Geometry.prototype = {
 
 			var vA = this.vertices[ face.a ];
 			var vB = this.vertices[ face.b ];
-			var vC = this.vertices[ face.c ];
+			const vC = this.vertices[ face.c ];
 
 			cb.subVectors( vC, vB );
 			ab.subVectors( vA, vB );
