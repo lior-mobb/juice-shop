@@ -2179,7 +2179,7 @@ THREE.Vector3.prototype = {
 
 		var dx = this.x - v.x;
 		var dy = this.y - v.y;
-		var dz = this.z - v.z;
+		const dz = this.z - v.z;
 
 		return dx * dx + dy * dy + dz * dz;
 
