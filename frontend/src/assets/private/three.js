@@ -7827,7 +7827,7 @@ THREE.Object3D.prototype = {
 
 			// add to scene
 
-			var scene = this;
+			let scene = this;
 
 			while ( scene.parent !== undefined ) {
 
