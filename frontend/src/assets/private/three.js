@@ -28259,7 +28259,7 @@ THREE.ImageUtils = {
 
 		// Parse header
 
-		var header = new Int32Array( buffer, 0, headerLengthInt );
+		const header = new Int32Array( buffer, 0, headerLengthInt );
 
 		if ( header[ off_magic ] !== DDS_MAGIC ) {
 
