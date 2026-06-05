@@ -28585,7 +28585,7 @@ THREE.FontUtils = {
 
 		var family = data.familyName.toLowerCase();
 
-		var ThreeFont = this;
+		const ThreeFont = this;
 
 		ThreeFont.faces[ family ] = ThreeFont.faces[ family ] || {};
 
