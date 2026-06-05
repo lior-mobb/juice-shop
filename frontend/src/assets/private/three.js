@@ -35540,7 +35540,7 @@ THREE.CameraHelper.prototype = Object.create( THREE.Line.prototype );
 THREE.CameraHelper.prototype.update = function () {
 
 	var vector = new THREE.Vector3();
-	var camera = new THREE.Camera();
+	const camera = new THREE.Camera();
 	var projector = new THREE.Projector();
 
 	return function () {
