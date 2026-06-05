@@ -14321,7 +14321,7 @@ THREE.Material.prototype = {
 
 		for ( var key in values ) {
 
-			var newValue = values[ key ];
+			const newValue = values[ key ];
 
 			if ( newValue === undefined ) {
 
