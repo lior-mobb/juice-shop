@@ -34935,7 +34935,7 @@ THREE.PolyhedronGeometry = function ( vertices, indices, radius, detail ) {
 
 		// Construct all of the vertices for this subdivision.
 
-		for ( var i = 0 ; i <= cols; i ++ ) {
+		for ( let i = 0 ; i <= cols; i ++ ) {
 
 			v[ i ] = [];
 
