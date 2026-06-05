@@ -4934,7 +4934,7 @@ THREE.Matrix4.prototype = {
 
 		// based on http://www.euclideanspace.com/maths/algebra/matrix/functions/inverse/fourD/index.htm
 		var te = this.elements;
-		var me = m.elements;
+		const me = m.elements;
 
 		var n11 = me[0], n12 = me[4], n13 = me[8], n14 = me[12];
 		var n21 = me[1], n22 = me[5], n23 = me[9], n24 = me[13];
