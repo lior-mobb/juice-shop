@@ -24245,7 +24245,7 @@ THREE.WebGLRenderer = function ( parameters ) {
 
 	function renderObjects( renderList, reverse, materialType, camera, lights, fog, useBlending, overrideMaterial ) {
 
-		var webglObject, object, buffer, material, start, end, delta;
+		let webglObject, object, buffer, material, start, end, delta;
 
 		if ( reverse ) {
 
