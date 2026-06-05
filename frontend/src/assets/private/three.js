@@ -28481,7 +28481,7 @@ THREE.ImageUtils = {
 		var data = new Uint8Array( 3 * size );
 
 		var r = Math.floor( color.r * 255 );
-		var g = Math.floor( color.g * 255 );
+		const g = Math.floor( color.g * 255 );
 		var b = Math.floor( color.b * 255 );
 
 		for ( var i = 0; i < size; i ++ ) {
