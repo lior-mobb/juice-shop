@@ -6239,7 +6239,7 @@ THREE.Plane.prototype = {
 
 		return function ( line, optionalTarget ) {
 
-			var result = optionalTarget || new THREE.Vector3();
+			const result = optionalTarget || new THREE.Vector3();
 
 			var direction = line.delta( v1 );
 
