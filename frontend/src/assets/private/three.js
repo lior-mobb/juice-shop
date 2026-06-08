@@ -36431,7 +36431,7 @@ THREE.WireframeHelper = function ( object, hex ) {
 		var vertices = object.geometry.attributes.position.array;
 		var indices = object.geometry.attributes.index.array;
 		var offsets = object.geometry.offsets;
-		var numEdges = 0;
+		let numEdges = 0;
 
 		// allocate maximal size
 		var edges = new Uint32Array( 2 * indices.length );
