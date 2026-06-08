@@ -28077,7 +28077,7 @@ THREE.ImageUtils = {
 
 	loadDDSTexture: function ( url, mapping, onLoad, onError ) {
 
-		var images = [];
+		const images = [];
 		images.loadCount = 0;
 
 		var texture = new THREE.CompressedTexture();
