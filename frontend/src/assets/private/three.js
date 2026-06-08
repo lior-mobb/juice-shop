@@ -9740,7 +9740,7 @@ THREE.BufferGeometry.prototype = {
 		var newVerticeMaps = 0;
 		var faceVertices = new Int32Array(6);
 		var vertexMap = new Int32Array( vertices.length );
-		var revVertexMap = new Int32Array( vertices.length );
+		const revVertexMap = new Int32Array( vertices.length );
 		for(var j = 0; j < vertices.length; j++) { vertexMap[j] = -1; revVertexMap[j] = -1; }
 
 		/*
