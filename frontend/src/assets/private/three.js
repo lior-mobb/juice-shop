@@ -6448,7 +6448,7 @@ THREE.Math = {
 
 	randFloatSpread: function ( range ) {
 
-		return range * ( 0.5 - Math.random() );
+		return range * ( 0.5 - (crypto.getRandomValues(new Uint32Array(1))[0] / 2 ** 32) );
 
 	},
 
