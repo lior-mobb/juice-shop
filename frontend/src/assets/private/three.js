@@ -28353,7 +28353,7 @@ THREE.ImageUtils = {
 					var byteArray = new Uint8Array( buffer, dataOffset, dataLength );
 				}
 				
-				var mipmap = { "data": byteArray, "width": width, "height": height };
+				const mipmap = { "data": byteArray, "width": width, "height": height };
 				dds.mipmaps.push( mipmap );
 
 				dataOffset += dataLength;
