@@ -3623,7 +3623,7 @@ THREE.Box2.prototype = {
 
 		return function ( point ) {
 
-			var clampedPoint = v1.copy( point ).clamp( this.min, this.max );
+			const clampedPoint = v1.copy( point ).clamp( this.min, this.max );
 			return clampedPoint.sub( point ).length();
 
 		};
