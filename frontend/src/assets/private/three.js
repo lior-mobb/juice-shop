@@ -6724,7 +6724,7 @@ THREE.Triangle.barycoordFromPoint = function() {
 		var dot11 = v1.dot( v1 );
 		var dot12 = v1.dot( v2 );
 
-		var denom = ( dot00 * dot11 - dot01 * dot01 );
+		const denom = ( dot00 * dot11 - dot01 * dot01 );
 
 		var result = optionalTarget || new THREE.Vector3();
 
