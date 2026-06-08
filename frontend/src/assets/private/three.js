@@ -8586,7 +8586,7 @@ THREE.Projector = function () {
 
 						faceVertexNormals = face.vertexNormals;
 
-						for ( var n = 0, nl = Math.min( faceVertexNormals.length, 3 ); n < nl; n ++ ) {
+						for ( let n = 0, nl = Math.min( faceVertexNormals.length, 3 ); n < nl; n ++ ) {
 
 							var normalModel = _face.vertexNormalsModel[ n ];
 							normalModel.copy( faceVertexNormals[ n ] );
