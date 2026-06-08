@@ -29654,7 +29654,7 @@ THREE.CurvePath.prototype.getWrapPoints = function ( oldPts, path ) {
 		// check for out of bounds?
 
 		var pathPt = path.getPoint( xNorm );
-		var normal = path.getTangent( xNorm );
+		const normal = path.getTangent( xNorm );
 		normal.set( -normal.y, normal.x ).multiplyScalar( oldY );
 
 		p.x = pathPt.x + normal.x;
