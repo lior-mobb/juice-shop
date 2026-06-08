@@ -5018,7 +5018,7 @@ THREE.Matrix4.prototype = {
 	scale: function ( v ) {
 
 		var te = this.elements;
-		var x = v.x, y = v.y, z = v.z;
+		let x = v.x, y = v.y, z = v.z;
 
 		te[0] *= x; te[4] *= y; te[8] *= z;
 		te[1] *= x; te[5] *= y; te[9] *= z;
