@@ -159,7 +159,7 @@ THREE.OrbitControls = function ( object, domElement ) {
         if ( scope.object.fov !== undefined ) {
 
             // perspective
-            var position = scope.object.position;
+            const position = scope.object.position;
             var offset = position.clone().sub( scope.target );
             var targetDistance = offset.length();
 
