@@ -24668,7 +24668,7 @@ THREE.WebGLRenderer = function ( parameters ) {
 
 			// check all geometry groups
 
-			for( var i = 0, il = geometry.geometryGroupsList.length; i < il; i ++ ) {
+			for( let i = 0, il = geometry.geometryGroupsList.length; i < il; i ++ ) {
 
 				geometryGroup = geometry.geometryGroupsList[ i ];
 
