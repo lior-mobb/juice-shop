@@ -5666,7 +5666,7 @@ THREE.Ray.prototype = {
 	intersectTriangle: function() {
 
 		// Compute the offset origin, edges, and normal.
-		var diff = new THREE.Vector3();
+		const diff = new THREE.Vector3();
 		var edge1 = new THREE.Vector3();
 		var edge2 = new THREE.Vector3();
 		var normal = new THREE.Vector3();
