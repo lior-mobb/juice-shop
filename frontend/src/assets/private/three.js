@@ -37748,7 +37748,7 @@ THREE.ShadowMapPlugin.__projector = new THREE.Projector();
 
 THREE.SpritePlugin = function () {
 
-	var _gl, _renderer, _texture;
+	let _gl, _renderer, _texture;
 
 	var vertices, faces, vertexBuffer, elementBuffer;
 	var program, attributes, uniforms;
