@@ -26647,7 +26647,7 @@ THREE.WebGLRenderer = function ( parameters ) {
 
 		}
 
-		var framebuffer, width, height, vx, vy;
+		let framebuffer, width, height, vx, vy;
 
 		if ( renderTarget ) {
 
