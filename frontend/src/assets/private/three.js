@@ -13566,7 +13566,7 @@ THREE.SceneLoader.prototype = {
 			// override children visibility
 			// with root node visibility as specified in JSON
 
-			var visible = ( obj.visible !== undefined ) ? obj.visible : true;
+			const visible = ( obj.visible !== undefined ) ? obj.visible : true;
 
 			node.traverse( function ( child ) {
 
