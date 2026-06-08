@@ -34471,7 +34471,7 @@ THREE.TorusKnotGeometry = function ( radius, tube, radialSegments, tubularSegmen
 
 	}
 
-	for ( var i = 0; i < radialSegments; ++ i ) {
+	for ( let i = 0; i < radialSegments; ++ i ) {
 
 		for ( var j = 0; j < tubularSegments; ++ j ) {
 
