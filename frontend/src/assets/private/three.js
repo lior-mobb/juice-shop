@@ -8432,7 +8432,7 @@ THREE.Projector = function () {
 
 						var uvs = attributes.uv.array;
 
-						for ( var i = 0, l = uvs.length; i < l; i += 2 ) {
+						for ( let i = 0, l = uvs.length; i < l; i += 2 ) {
 
 							renderList.pushUv( uvs[ i ], uvs[ i + 1 ] );
 
