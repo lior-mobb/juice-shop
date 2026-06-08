@@ -30557,7 +30557,7 @@ THREE.Shape.Utils = {
 			var seg1seg2dx = inSeg1Pt1.x - inSeg2Pt1.x;
 			var seg1seg2dy = inSeg1Pt1.y - inSeg2Pt1.y;
 
-			var limit		= seg1dy * seg2dx - seg1dx * seg2dy;
+			const limit		= seg1dy * seg2dx - seg1dx * seg2dy;
 			var perpSeg1	= seg1dy * seg1seg2dx - seg1dx * seg1seg2dy;
 
 			if ( Math.abs(limit) > EPSILON ) {			// not parallel
