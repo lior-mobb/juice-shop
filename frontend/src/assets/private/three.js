@@ -36444,7 +36444,7 @@ THREE.WireframeHelper = function ( object, hex ) {
 
 			for ( var i = start, il = start + count; i < il; i += 3 ) {
 
-				for ( var j = 0; j < 3; j ++ ) {
+				for ( let j = 0; j < 3; j ++ ) {
 
 					edge[ 0 ] = index + indices[ i + j ];
 					edge[ 1 ] = index + indices[ i + ( j + 1 ) % 3 ];
