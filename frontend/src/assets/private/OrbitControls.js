@@ -91,7 +91,7 @@ THREE.OrbitControls = function ( object, domElement ) {
     var scale = 1;
     var pan = new THREE.Vector3();
 
-    var lastPosition = new THREE.Vector3();
+    const lastPosition = new THREE.Vector3();
 
     var STATE = { NONE : -1, ROTATE : 0, DOLLY : 1, PAN : 2, TOUCH_ROTATE : 3, TOUCH_DOLLY : 4, TOUCH_PAN : 5 };
     var state = STATE.NONE;
