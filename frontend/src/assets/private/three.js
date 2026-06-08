@@ -34137,7 +34137,7 @@ THREE.RingGeometry = function ( innerRadius, outerRadius, thetaSegments, phiSegm
 
 			var v1 = segment + i;
 			var v2 = segment + thetaSegments + i;
-			var v3 = segment + thetaSegments + 1 + i;
+			let v3 = segment + thetaSegments + 1 + i;
 
 			this.faces.push( new THREE.Face3( v1, v2, v3, [ n.clone(), n.clone(), n.clone() ] ) );
 			this.faceVertexUvs[ 0 ].push( [ uvs[ v1 ].clone(), uvs[ v2 ].clone(), uvs[ v3 ].clone() ]);
