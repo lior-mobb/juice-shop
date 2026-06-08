@@ -36487,7 +36487,7 @@ THREE.WireframeHelper = function ( object, hex ) {
 
 	} else if ( object.geometry instanceof THREE.BufferGeometry	) { // non-indexed BufferGeometry
 
-		var vertices = object.geometry.attributes.position.array;
+		const vertices = object.geometry.attributes.position.array;
 		var numEdges = vertices.length / 3;
 		var numTris = numEdges / 3;
 
