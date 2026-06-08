@@ -30706,7 +30706,7 @@ THREE.Shape.Utils = {
 		function removeHoles( contour, holes ) {
 
 			var shape = contour.concat(); // work on this shape
-			var hole;
+			let hole;
 
 			function isCutLineInsideAngles( inShapeIdx, inHoleIdx ) {
 				// Check if hole point lies within angle around shape point
