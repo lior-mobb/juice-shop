@@ -37248,7 +37248,7 @@ THREE.LensFlarePlugin = function () {
 
 THREE.ShadowMapPlugin = function () {
 
-	var _gl,
+	let _gl,
 	_renderer,
 	_depthMaterial, _depthMaterialMorph, _depthMaterialSkin, _depthMaterialMorphSkin,
 
