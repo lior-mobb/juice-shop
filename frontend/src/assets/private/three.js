@@ -27886,7 +27886,7 @@ THREE.ImageUtils = {
 
 		request.onload = function () {
 
-			var buffer = request.response;
+			const buffer = request.response;
 			var dds = THREE.ImageUtils.parseDDS( buffer, true );
 
 			texture.format = dds.format;
