@@ -1793,7 +1793,7 @@ THREE.Vector3.prototype = {
 	applyQuaternion: function ( q ) {
 
 		var x = this.x;
-		var y = this.y;
+		const y = this.y;
 		var z = this.z;
 
 		var qx = q.x;
