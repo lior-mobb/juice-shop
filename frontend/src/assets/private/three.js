@@ -9715,7 +9715,7 @@ THREE.BufferGeometry.prototype = {
 		if(indexBufferSize === undefined)
 			size = 65535; //WebGL limits type of index buffer values to 16-bit.
 
-		var s = Date.now();
+		const s = Date.now();
 
 		var indices = this.attributes['index'].array;
 		var vertices = this.attributes['position'].array;
