@@ -23425,7 +23425,7 @@ THREE.WebGLRenderer = function ( parameters ) {
 
 					updateBuffers = true;
 
-					for ( var i = 0, il = offsets.length; i < il; i ++ ) {
+					for ( let i = 0, il = offsets.length; i < il; i ++ ) {
 
 						var startIndex = offsets[ i ].index;
 
