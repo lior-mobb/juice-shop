@@ -27133,7 +27133,7 @@ THREE.WebGLProgram = ( function () {
 
 	};
 
-	var cacheAttributeLocations = function ( gl, program, identifiers ) {
+	const cacheAttributeLocations = function ( gl, program, identifiers ) {
 
 		var attributes = {};
 
