@@ -2098,7 +2098,7 @@ THREE.Vector3.prototype = {
 	crossVectors: function ( a, b ) {
 
 		var ax = a.x, ay = a.y, az = a.z;
-		var bx = b.x, by = b.y, bz = b.z;
+		let bx = b.x, by = b.y, bz = b.z;
 
 		this.x = ay * bz - az * by;
 		this.y = az * bx - ax * bz;
