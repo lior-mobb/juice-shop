@@ -1957,7 +1957,7 @@ THREE.Vector3.prototype = {
 
 	clampScalar: ( function () {
 
-		var min, max;
+		let min, max;
 
 		return function ( minVal, maxVal ) {
 
