@@ -724,7 +724,7 @@ THREE.Quaternion.prototype = {
 		var c1 = Math.cos( euler._x / 2 );
 		var c2 = Math.cos( euler._y / 2 );
 		var c3 = Math.cos( euler._z / 2 );
-		var s1 = Math.sin( euler._x / 2 );
+		const s1 = Math.sin( euler._x / 2 );
 		var s2 = Math.sin( euler._y / 2 );
 		var s3 = Math.sin( euler._z / 2 );
 
