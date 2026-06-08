@@ -30285,7 +30285,7 @@ THREE.Path.prototype.toShapes = function( isCCW, noHoles ) {
 	}
 
 
-	var subPaths = extractSubpaths( this.actions );
+	const subPaths = extractSubpaths( this.actions );
 	if ( subPaths.length == 0 ) return [];
 
 	if ( noHoles === true )	return	toShapesNoHoles( subPaths );
