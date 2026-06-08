@@ -24657,7 +24657,7 @@ THREE.WebGLRenderer = function ( parameters ) {
 
 	function updateObject( object ) {
 
-		var geometry = object.geometry,
+		let geometry = object.geometry,
 			geometryGroup, customAttributesDirty, material;
 
 		if ( geometry instanceof THREE.BufferGeometry ) {
