@@ -24391,7 +24391,7 @@ THREE.WebGLRenderer = function ( parameters ) {
 
 		if ( material instanceof THREE.MeshFaceMaterial ) {
 
-			var materialIndex = geometry instanceof THREE.BufferGeometry ? 0 : buffer.materialIndex;
+			const materialIndex = geometry instanceof THREE.BufferGeometry ? 0 : buffer.materialIndex;
 
 			material = material.materials[ materialIndex ];
 
