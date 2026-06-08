@@ -31358,7 +31358,7 @@ THREE.ClosedSplineCurve3 = THREE.Curve.create(
 
     function ( t ) {
 
-        var v = new THREE.Vector3();
+        const v = new THREE.Vector3();
         var c = [];
         var points = this.points, point, intPoint, weight;
         point = ( points.length - 0 ) * t;
