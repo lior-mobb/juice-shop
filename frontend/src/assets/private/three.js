@@ -10534,7 +10534,7 @@ THREE.Geometry.prototype = {
 		var precisionPoints = 4; // number of decimal points, eg. 4 for epsilon of 0.0001
 		var precision = Math.pow( 10, precisionPoints );
 		var i,il, face;
-		var indices, k, j, jl, u;
+		let indices, k, j, jl, u;
 
 		for ( i = 0, il = this.vertices.length; i < il; i ++ ) {
 
