@@ -15701,7 +15701,7 @@ THREE.Skeleton = function ( boneList, useVertexTexture ) {
 
 	if ( boneList !== undefined ) {
 
-		for ( var b = 0; b < boneList.length; ++b ) {
+		for ( let b = 0; b < boneList.length; ++b ) {
 
 			gbone = boneList[ b ];
 
