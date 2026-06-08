@@ -35545,7 +35545,7 @@ THREE.CameraHelper.prototype.update = function () {
 
 	return function () {
 
-		var scope = this;
+		const scope = this;
 
 		var w = 1, h = 1;
 
