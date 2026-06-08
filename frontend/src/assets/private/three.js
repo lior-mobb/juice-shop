@@ -11945,7 +11945,7 @@ THREE.JSONLoader.prototype.load = function ( url, callback, texturePath ) {
 
 THREE.JSONLoader.prototype.loadAjaxJSON = function ( context, url, callback, texturePath, callbackProgress ) {
 
-	var xhr = new XMLHttpRequest();
+	const xhr = new XMLHttpRequest();
 
 	var length = 0;
 
