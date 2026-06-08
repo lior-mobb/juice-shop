@@ -32311,7 +32311,7 @@ THREE.KeyFrameAnimation.prototype.getNextKeyWith = function( sid, h, key ) {
 
 THREE.KeyFrameAnimation.prototype.getPrevKeyWith = function( sid, h, key ) {
 
-	var keys = this.data.hierarchy[ h ].keys;
+	const keys = this.data.hierarchy[ h ].keys;
 	key = key >= 0 ? key : key + keys.length;
 
 	for ( ; key >= 0; key-- ) {
