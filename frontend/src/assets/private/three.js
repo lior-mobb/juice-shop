@@ -13101,7 +13101,7 @@ THREE.SceneLoader.prototype = {
 
 		if ( data.transform ) {
 
-			var position = data.transform.position,
+			let position = data.transform.position,
 				rotation = data.transform.rotation,
 				scale = data.transform.scale;
 
