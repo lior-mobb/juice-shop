@@ -32072,7 +32072,7 @@ THREE.KeyFrameAnimation = function ( root, data ) {
 
 	// initialize to first keyframes
 
-	for ( var h = 0, hl = this.hierarchy.length; h < hl; h ++ ) {
+	for ( let h = 0, hl = this.hierarchy.length; h < hl; h ++ ) {
 
 		var keys = this.data.hierarchy[h].keys,
 			sids = this.data.hierarchy[h].sids,
