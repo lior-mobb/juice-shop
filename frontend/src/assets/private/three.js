@@ -35187,7 +35187,7 @@ THREE.AxisHelper = function ( size ) {
 
 	size = size || 1;
 
-	var geometry = new THREE.Geometry();
+	const geometry = new THREE.Geometry();
 
 	geometry.vertices.push(
 		new THREE.Vector3(), new THREE.Vector3( size, 0, 0 ),
