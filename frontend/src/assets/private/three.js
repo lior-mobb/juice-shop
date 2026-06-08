@@ -5031,7 +5031,7 @@ THREE.Matrix4.prototype = {
 
 	getMaxScaleOnAxis: function () {
 
-		var te = this.elements;
+		const te = this.elements;
 
 		var scaleXSq = te[0] * te[0] + te[1] * te[1] + te[2] * te[2];
 		var scaleYSq = te[4] * te[4] + te[5] * te[5] + te[6] * te[6];
