@@ -27153,7 +27153,7 @@ THREE.WebGLProgram = ( function () {
 		var _this = renderer;
 		var _gl = _this.context;
 
-		var fragmentShader = material.fragmentShader;
+		const fragmentShader = material.fragmentShader;
 		var vertexShader = material.vertexShader;
 		var uniforms = material.uniforms;
 		var attributes = material.attributes;
