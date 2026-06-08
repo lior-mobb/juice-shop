@@ -33961,7 +33961,7 @@ THREE.LatheGeometry = function ( points, segments, phiStart, phiLength ) {
 
 	for ( var i = 0, il = segments; i < il; i ++ ) {
 
-		for ( var j = 0, jl = points.length - 1; j < jl; j ++ ) {
+		for ( let j = 0, jl = points.length - 1; j < jl; j ++ ) {
 
 			var base = j + np * i;
 			var a = base;
