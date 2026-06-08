@@ -8490,7 +8490,7 @@ THREE.Projector = function () {
 					isFaceMaterial = object.material instanceof THREE.MeshFaceMaterial;
 					objectMaterials = isFaceMaterial === true ? object.material : null;
 
-					for ( var v = 0, vl = vertices.length; v < vl; v ++ ) {
+					for ( let v = 0, vl = vertices.length; v < vl; v ++ ) {
 
 						var vertex = vertices[ v ];
 						renderList.pushVertex( vertex.x, vertex.y, vertex.z );
