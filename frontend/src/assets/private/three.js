@@ -441,7 +441,7 @@ THREE.Color.prototype = {
 		var r = this.r, g = this.g, b = this.b;
 
 		var max = Math.max( r, g, b );
-		var min = Math.min( r, g, b );
+		const min = Math.min( r, g, b );
 
 		var hue, saturation;
 		var lightness = ( min + max ) / 2.0;
