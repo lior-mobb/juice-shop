@@ -38,7 +38,7 @@ self.console = self.console || {
 
 		self.requestAnimationFrame = function ( callback ) {
 
-			var currTime = Date.now(), timeToCall = Math.max( 0, 16 - ( currTime - lastTime ) );
+			let currTime = Date.now(), timeToCall = Math.max( 0, 16 - ( currTime - lastTime ) );
 			var id = self.setTimeout( function() { callback( currTime + timeToCall ); }, timeToCall );
 			lastTime = currTime + timeToCall;
 			return id;
@@ -2645,7 +2645,7 @@ THREE.Vector4.prototype = {
 
 		// as we have reached here there are no singularities so we can handle normally
 
-		var s = Math.sqrt( ( m32 - m23 ) * ( m32 - m23 )
+		let s = Math.sqrt( ( m32 - m23 ) * ( m32 - m23 )
 						 + ( m13 - m31 ) * ( m13 - m31 )
 						 + ( m21 - m12 ) * ( m21 - m12 ) ); // used to normalize
 
@@ -2875,7 +2875,7 @@ THREE.Vector4.prototype = {
 
 	setLength: function ( l ) {
 
-		var oldLength = this.length();
+		const oldLength = this.length();
 
 		if ( oldLength !== 0 && l !== oldLength ) {
 
@@ -3224,7 +3224,7 @@ THREE.Euler.prototype = {
 
 		// WARNING: this discards revolution information -bhouston
 
-		var q = new THREE.Quaternion();
+		const q = new THREE.Quaternion();
 
 		return function ( newOrder ) {
 
@@ -4133,7 +4133,7 @@ THREE.Matrix3.prototype = {
 
 	applyToVector3Array: function() {
 
-		var v1 = new THREE.Vector3();
+		const v1 = new THREE.Vector3();
 
 		return function ( array, offset, length ) {
 
@@ -4678,13 +4678,13 @@ THREE.Matrix4.prototype = {
 	multiplyMatrices: function ( a, b ) {
 
 		var ae = a.elements;
-		var be = b.elements;
+		const be = b.elements;
 		var te = this.elements;
 
 		var a11 = ae[0], a12 = ae[4], a13 = ae[8], a14 = ae[12];
 		var a21 = ae[1], a22 = ae[5], a23 = ae[9], a24 = ae[13];
 		var a31 = ae[2], a32 = ae[6], a33 = ae[10], a34 = ae[14];
-		var a41 = ae[3], a42 = ae[7], a43 = ae[11], a44 = ae[15];
+		let a41 = ae[3], a42 = ae[7], a43 = ae[11], a44 = ae[15];
 
 		var b11 = be[0], b12 = be[4], b13 = be[8], b14 = be[12];
 		var b21 = be[1], b22 = be[5], b23 = be[9], b24 = be[13];
@@ -5114,7 +5114,7 @@ THREE.Matrix4.prototype = {
 		var c = Math.cos( angle );
 		var s = Math.sin( angle );
 		var t = 1 - c;
-		var x = axis.x, y = axis.y, z = axis.z;
+		let x = axis.x, y = axis.y, z = axis.z;
 		var tx = t * x, ty = t * y;
 
 		this.set(
@@ -5164,7 +5164,7 @@ THREE.Matrix4.prototype = {
 
 			var te = this.elements;
 
-			var sx = vector.set( te[0], te[1], te[2] ).length();
+			let sx = vector.set( te[0], te[1], te[2] ).length();
 			var sy = vector.set( te[4], te[5], te[6] ).length();
 			var sz = vector.set( te[8], te[9], te[10] ).length();
 
@@ -5562,7 +5562,7 @@ THREE.Ray.prototype = {
 
 		}
 
-		var t = - ( this.origin.dot( plane.normal ) + plane.constant ) / denominator;
+		const t = - ( this.origin.dot( plane.normal ) + plane.constant ) / denominator;
 
 		// Return if the ray never intersects the plane
 
@@ -6020,7 +6020,7 @@ THREE.Frustum.prototype = {
 	intersectsSphere: function ( sphere ) {
 
 		var planes = this.planes;
-		var center = sphere.center;
+		const center = sphere.center;
 		var negRadius = -sphere.radius;
 
 		for ( var i = 0; i < 6; i ++ ) {
@@ -8654,7 +8654,7 @@ THREE.Projector = function () {
 
 						} else {
 
-							for ( var i = 0, l = ( positions.length / 3 ) - 1; i < l; i ++ ) {
+							for ( let i = 0, l = ( positions.length / 3 ) - 1; i < l; i ++ ) {
 
 								renderList.pushLine( i, i + 1 );
 
@@ -9314,7 +9314,7 @@ THREE.BufferGeometry.prototype = {
 
 			}
 
-			var positions = this.attributes[ "position" ].array;
+			const positions = this.attributes[ "position" ].array;
 
 			if ( positions ) {
 
@@ -9740,7 +9740,7 @@ THREE.BufferGeometry.prototype = {
 		var newVerticeMaps = 0;
 		var faceVertices = new Int32Array(6);
 		var vertexMap = new Int32Array( vertices.length );
-		var revVertexMap = new Int32Array( vertices.length );
+		const revVertexMap = new Int32Array( vertices.length );
 		for(var j = 0; j < vertices.length; j++) { vertexMap[j] = -1; revVertexMap[j] = -1; }
 
 		/*
@@ -9750,7 +9750,7 @@ THREE.BufferGeometry.prototype = {
 		for(var findex = 0; findex < facesCount; findex++) {
 			newVerticeMaps = 0;
 
-			for(var vo = 0; vo < 3; vo++) {
+			for(let vo = 0; vo < 3; vo++) {
 				var vid = indices[ findex*3 + vo ];
 				if(vertexMap[vid] == -1) {
 					//Unmapped vertice
@@ -11492,7 +11492,7 @@ THREE.Loader.prototype = {
 					if ( THREE.Math.isPowerOfTwo( image.width ) === false ||
 						 THREE.Math.isPowerOfTwo( image.height ) === false ) {
 
-						var width = nearest_pow2( image.width );
+						const width = nearest_pow2( image.width );
 						var height = nearest_pow2( image.height );
 
 						texture.image.width = width;
@@ -11685,7 +11685,7 @@ THREE.Loader.prototype = {
 
 		if ( m.mapNormal ) {
 
-			var shader = THREE.ShaderLib[ "normalmap" ];
+			const shader = THREE.ShaderLib[ "normalmap" ];
 			var uniforms = THREE.UniformsUtils.clone( shader.uniforms );
 
 			uniforms[ "tNormal" ].value = mpars.normalMap;
@@ -11851,7 +11851,7 @@ THREE.ImageLoader.prototype = {
 
 	load: function ( url, onLoad, onProgress, onError ) {
 
-		var scope = this;
+		const scope = this;
 
 		var cached = scope.cache.get( url );
 
@@ -12688,7 +12688,7 @@ THREE.ObjectLoader.prototype = {
 
 	parseGeometries: function ( json ) {
 
-		var geometries = {};
+		const geometries = {};
 
 		if ( json !== undefined ) {
 
@@ -13176,7 +13176,7 @@ THREE.SceneLoader.prototype = {
 
 						if ( objJSON.loading === undefined ) {
 
-							var reservedTypes = {
+							const reservedTypes = {
 								"type": 1, "url": 1, "material": 1,
 								"position": 1, "rotation": 1, "scale" : 1,
 								"visible": 1, "children": 1, "userData": 1,
@@ -21335,7 +21335,7 @@ THREE.WebGLRenderer = function ( parameters ) {
 
 	};
 
-	var onRenderTargetDispose = function ( event ) {
+	const onRenderTargetDispose = function ( event ) {
 
 		var renderTarget = event.target;
 
@@ -21498,7 +21498,7 @@ THREE.WebGLRenderer = function ( parameters ) {
 
 	};
 
-	var deallocateMaterial = function ( material ) {
+	const deallocateMaterial = function ( material ) {
 
 		var program = material.program;
 
@@ -23838,7 +23838,7 @@ THREE.WebGLRenderer = function ( parameters ) {
 
 	function disableUnusedAttributes() {
 
-		for ( var i = 0, l = _enabledAttributes.length; i < l; i ++ ) {
+		for ( let i = 0, l = _enabledAttributes.length; i < l; i ++ ) {
 
 			if ( _enabledAttributes[ i ] !== _newAttributes[ i ] ) {
 
@@ -24657,7 +24657,7 @@ THREE.WebGLRenderer = function ( parameters ) {
 
 	function updateObject( object ) {
 
-		var geometry = object.geometry,
+		let geometry = object.geometry,
 			geometryGroup, customAttributesDirty, material;
 
 		if ( geometry instanceof THREE.BufferGeometry ) {
@@ -27153,7 +27153,7 @@ THREE.WebGLProgram = ( function () {
 		var _this = renderer;
 		var _gl = _this.context;
 
-		var fragmentShader = material.fragmentShader;
+		const fragmentShader = material.fragmentShader;
 		var vertexShader = material.vertexShader;
 		var uniforms = material.uniforms;
 		var attributes = material.attributes;
@@ -27188,7 +27188,7 @@ THREE.WebGLProgram = ( function () {
 
 		//
 
-		var program = _gl.createProgram();
+		const program = _gl.createProgram();
 
 		var prefix_vertex, prefix_fragment;
 
@@ -27474,7 +27474,7 @@ THREE.WebGLProgram = ( function () {
 
 THREE.WebGLShader = ( function () {
 
-	var addLineNumbers = function ( string ) {
+	const addLineNumbers = function ( string ) {
 
 		var lines = string.split( '\n' );
 
@@ -28040,7 +28040,7 @@ THREE.ImageUtils = {
 
 					var faces = dds.mipmaps.length / dds.mipmapCount;
 
-					for ( var f = 0; f < faces; f ++ ) {
+					for ( let f = 0; f < faces; f ++ ) {
 
 						images[ f ] = { mipmaps : [] };
 
@@ -29071,7 +29071,7 @@ THREE.Curve.prototype.getPoints = function ( divisions ) {
 
 	if ( !divisions ) divisions = 5;
 
-	var d, pts = [];
+	let d, pts = [];
 
 	for ( d = 0; d <= divisions; d ++ ) {
 
@@ -29158,7 +29158,7 @@ THREE.Curve.prototype.updateArcLengths = function() {
 
 THREE.Curve.prototype.getUtoTmapping = function ( u, distance ) {
 
-	var arcLengths = this.getLengths();
+	const arcLengths = this.getLengths();
 
 	var i = 0, il = arcLengths.length;
 
@@ -29832,7 +29832,7 @@ THREE.Path.prototype.bezierCurveTo = function( aCP1x, aCP1y,
 	var x0 = lastargs[ lastargs.length - 2 ];
 	var y0 = lastargs[ lastargs.length - 1 ];
 
-	var curve = new THREE.CubicBezierCurve( new THREE.Vector2( x0, y0 ),
+	const curve = new THREE.CubicBezierCurve( new THREE.Vector2( x0, y0 ),
 											new THREE.Vector2( aCP1x, aCP1y ),
 											new THREE.Vector2( aCP2x, aCP2y ),
 											new THREE.Vector2( aX, aY ) );
@@ -31173,7 +31173,7 @@ THREE.EllipseCurve.prototype.getPoint = function ( t ) {
 	}
 
 	var tx = this.aX + this.xRadius * Math.cos( angle );
-	var ty = this.aY + this.yRadius * Math.sin( angle );
+	const ty = this.aY + this.yRadius * Math.sin( angle );
 
 	return new THREE.Vector2( tx, ty );
 
@@ -31730,7 +31730,7 @@ THREE.Animation.prototype.reset = function () {
 
 			var type = this.keyTypes[ t ];
 
-			var prevKey = this.data.hierarchy[ h ].keys[ 0 ];
+			let prevKey = this.data.hierarchy[ h ].keys[ 0 ];
 			var nextKey = this.getNextKeyWith( type, h, 1 );
 
 			while ( nextKey.time < this.currentTime && nextKey.index > prevKey.index ) {
@@ -31949,7 +31949,7 @@ THREE.Animation.prototype.update = (function(){
 					}
 					else {
 
-						var proportionalWeight = this.weight / ( this.weight + object.accumulatedRotWeight );
+						const proportionalWeight = this.weight / ( this.weight + object.accumulatedRotWeight );
 						THREE.Quaternion.slerp( object.quaternion, newQuat, object.quaternion, proportionalWeight );
 						object.accumulatedRotWeight += this.weight;
 
@@ -32801,7 +32801,7 @@ THREE.BoxGeometry = function ( width, height, depth, widthSegments, heightSegmen
 
 			for ( ix = 0; ix < gridX; ix++ ) {
 
-				var a = ix + gridX1 * iy;
+				const a = ix + gridX1 * iy;
 				var b = ix + gridX1 * ( iy + 1 );
 				var c = ( ix + 1 ) + gridX1 * ( iy + 1 );
 				var d = ( ix + 1 ) + gridX1 * iy;
@@ -32869,7 +32869,7 @@ THREE.CircleGeometry = function ( radius, segments, thetaStart, thetaLength ) {
 	for ( i = 0; i <= segments; i ++ ) {
 
 		var vertex = new THREE.Vector3();
-		var segment = thetaStart + i / segments * thetaLength;
+		const segment = thetaStart + i / segments * thetaLength;
 
 		vertex.x = radius * Math.cos( segment );
 		vertex.y = radius * Math.sin( segment );
@@ -32985,7 +32985,7 @@ THREE.CylinderGeometry = function ( radiusTop, radiusBottom, height, radialSegme
 
 			var v1 = vertices[ y ][ x ];
 			var v2 = vertices[ y + 1 ][ x ];
-			var v3 = vertices[ y + 1 ][ x + 1 ];
+			const v3 = vertices[ y + 1 ][ x + 1 ];
 			var v4 = vertices[ y ][ x + 1 ];
 
 			var n1 = na.clone();
@@ -32994,7 +32994,7 @@ THREE.CylinderGeometry = function ( radiusTop, radiusBottom, height, radialSegme
 			var n4 = nb.clone();
 
 			var uv1 = uvs[ y ][ x ].clone();
-			var uv2 = uvs[ y + 1 ][ x ].clone();
+			const uv2 = uvs[ y + 1 ][ x ].clone();
 			var uv3 = uvs[ y + 1 ][ x + 1 ].clone();
 			var uv4 = uvs[ y ][ x + 1 ].clone();
 
@@ -34056,7 +34056,7 @@ THREE.PlaneGeometry = function ( width, height, widthSegments, heightSegments ) 
 
 		for ( ix = 0; ix < gridX; ix ++ ) {
 
-			var a = ix + gridX1 * iz;
+			const a = ix + gridX1 * iz;
 			var b = ix + gridX1 * ( iz + 1 );
 			var c = ( ix + 1 ) + gridX1 * ( iz + 1 );
 			var d = ( ix + 1 ) + gridX1 * iz;
@@ -35115,7 +35115,7 @@ THREE.ParametricGeometry = function ( func, slices, stacks ) {
 	THREE.Geometry.call( this );
 
 	var verts = this.vertices;
-	var faces = this.faces;
+	const faces = this.faces;
 	var uvs = this.faceVertexUvs[ 0 ];
 
 	var i, il, j, p;
@@ -36172,7 +36172,7 @@ THREE.VertexNormalsHelper = function ( object, size, hex, linewidth ) {
 
 	this.size = ( size !== undefined ) ? size : 1;
 
-	var color = ( hex !== undefined ) ? hex : 0xff0000;
+	const color = ( hex !== undefined ) ? hex : 0xff0000;
 
 	var width = ( linewidth !== undefined ) ? linewidth : 1;
 
