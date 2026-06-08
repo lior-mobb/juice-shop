@@ -23937,7 +23937,7 @@ THREE.WebGLRenderer = function ( parameters ) {
 
 			};
 
-			var influenceIndex, m = 0;
+			let influenceIndex, m = 0;
 
 			while ( m < material.numSupportedMorphTargets ) {
 
