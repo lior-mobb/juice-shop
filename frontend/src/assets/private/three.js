@@ -7451,7 +7451,7 @@ THREE.EventDispatcher.prototype = {
 
 	};
 
-	var intersectDescendants = function ( object, raycaster, intersects ) {
+	const intersectDescendants = function ( object, raycaster, intersects ) {
 
 		var descendants = object.getDescendants();
 
