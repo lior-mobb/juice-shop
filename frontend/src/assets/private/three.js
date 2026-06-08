@@ -23235,7 +23235,7 @@ THREE.WebGLRenderer = function ( parameters ) {
 
 			if ( material.shading === THREE.FlatShading ) {
 
-				var nx, ny, nz,
+				let nx, ny, nz,
 					nax, nbx, ncx, nay, nby, ncy, naz, nbz, ncz,
 					normalArray,
 					i, il = object.count * 3;
