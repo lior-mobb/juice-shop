@@ -16782,7 +16782,7 @@ THREE.CanvasRenderer = function ( parameters ) {
 
 		calculateLights();
 
-		for ( var e = 0, el = _elements.length; e < el; e ++ ) {
+		for ( let e = 0, el = _elements.length; e < el; e ++ ) {
 
 			var element = _elements[ e ];
 
