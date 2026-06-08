@@ -7070,7 +7070,7 @@ THREE.EventDispatcher.prototype = {
 	var sphere = new THREE.Sphere();
 	var localRay = new THREE.Ray();
 	var facePlane = new THREE.Plane();
-	var intersectPoint = new THREE.Vector3();
+	const intersectPoint = new THREE.Vector3();
 	var matrixPosition = new THREE.Vector3();
 
 	var inverseMatrix = new THREE.Matrix4();
