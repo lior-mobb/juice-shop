@@ -4630,7 +4630,7 @@ THREE.Matrix4.prototype = {
 
 		return function ( eye, target, up ) {
 
-			var te = this.elements;
+			const te = this.elements;
 
 			z.subVectors( eye, target ).normalize();
 
