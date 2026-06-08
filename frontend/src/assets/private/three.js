@@ -36078,7 +36078,7 @@ THREE.SkeletonHelper.prototype.update = function () {
 
 	var geometry = this.geometry;
 
-	var j = 0;
+	let j = 0;
 
 	for ( var i = 0; i < this.skeleton.bones.length; i ++ ) {
 
