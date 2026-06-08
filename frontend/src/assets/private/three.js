@@ -14158,7 +14158,7 @@ THREE.SceneLoader.prototype = {
 
 				}
 
-				var parameters = { fragmentShader: shader.fragmentShader, vertexShader: shader.vertexShader, uniforms: uniforms, lights: true, fog: true };
+				const parameters = { fragmentShader: shader.fragmentShader, vertexShader: shader.vertexShader, uniforms: uniforms, lights: true, fog: true };
 
 				material = new THREE.ShaderMaterial( parameters );
 
