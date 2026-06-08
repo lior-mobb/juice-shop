@@ -33833,7 +33833,7 @@ THREE.ShapeGeometry.prototype.addShape = function ( shape, options ) {
 	var material = options.material;
 	var uvgen = options.UVGenerator === undefined ? THREE.ExtrudeGeometry.WorldUVGenerator : options.UVGenerator;
 
-	var shapebb = this.shapebb;
+	const shapebb = this.shapebb;
 
 	//
 
