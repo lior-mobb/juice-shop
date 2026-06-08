@@ -27826,7 +27826,7 @@ THREE.GeometryUtils = {
 
 		geometry.computeBoundingBox();
 
-		var bb = geometry.boundingBox;
+		const bb = geometry.boundingBox;
 
 		var offset = new THREE.Vector3();
 
