@@ -6227,7 +6227,7 @@ THREE.Plane.prototype = {
 		// Note: this tests if a line intersects the plane, not whether it (or its end-points) are coplanar with it.
 
 		var startSign = this.distanceToPoint( line.start );
-		var endSign = this.distanceToPoint( line.end );
+		const endSign = this.distanceToPoint( line.end );
 
 		return ( startSign < 0 && endSign > 0 ) || ( endSign < 0 && startSign > 0 );
 
