@@ -27188,7 +27188,7 @@ THREE.WebGLProgram = ( function () {
 
 		//
 
-		var program = _gl.createProgram();
+		const program = _gl.createProgram();
 
 		var prefix_vertex, prefix_fragment;
 
