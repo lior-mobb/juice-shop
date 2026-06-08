@@ -35115,7 +35115,7 @@ THREE.ParametricGeometry = function ( func, slices, stacks ) {
 	THREE.Geometry.call( this );
 
 	var verts = this.vertices;
-	var faces = this.faces;
+	const faces = this.faces;
 	var uvs = this.faceVertexUvs[ 0 ];
 
 	var i, il, j, p;
