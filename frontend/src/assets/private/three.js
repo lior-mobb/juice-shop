@@ -25525,7 +25525,7 @@ THREE.WebGLRenderer = function ( parameters ) {
 
 	function getTextureUnit() {
 
-		var textureUnit = _usedTextureUnits;
+		const textureUnit = _usedTextureUnits;
 
 		if ( textureUnit >= _maxTextures ) {
 
