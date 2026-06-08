@@ -2110,7 +2110,7 @@ THREE.Vector3.prototype = {
 
 	projectOnVector: function () {
 
-		var v1, dot;
+		let v1, dot;
 
 		return function ( vector ) {
 
