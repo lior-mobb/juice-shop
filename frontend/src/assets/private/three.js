@@ -7000,7 +7000,7 @@ THREE.EventDispatcher.prototype = {
 
 		if ( this._listeners === undefined ) return;
 
-		var listeners = this._listeners;
+		const listeners = this._listeners;
 		var listenerArray = listeners[ type ];
 
 		if ( listenerArray !== undefined ) {
