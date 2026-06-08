@@ -24151,7 +24151,7 @@ THREE.WebGLRenderer = function ( parameters ) {
 
 		if ( scene.overrideMaterial ) {
 
-			var material = scene.overrideMaterial;
+			const material = scene.overrideMaterial;
 
 			this.setBlending( material.blending, material.blendEquation, material.blendSrc, material.blendDst );
 			this.setDepthTest( material.depthTest );
