@@ -36711,7 +36711,7 @@ THREE.MorphBlendMesh.prototype.autoCreateAnimations = function ( fps ) {
 
 			if ( ! frameRanges[ name ] ) frameRanges[ name ] = { start: Infinity, end: -Infinity };
 
-			var range = frameRanges[ name ];
+			const range = frameRanges[ name ];
 
 			if ( i < range.start ) range.start = i;
 			if ( i > range.end ) range.end = i;
