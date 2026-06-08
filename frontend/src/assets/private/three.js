@@ -11492,7 +11492,7 @@ THREE.Loader.prototype = {
 					if ( THREE.Math.isPowerOfTwo( image.width ) === false ||
 						 THREE.Math.isPowerOfTwo( image.height ) === false ) {
 
-						var width = nearest_pow2( image.width );
+						const width = nearest_pow2( image.width );
 						var height = nearest_pow2( image.height );
 
 						texture.image.width = width;
