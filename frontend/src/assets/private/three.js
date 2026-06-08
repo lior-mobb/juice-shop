@@ -5284,7 +5284,7 @@ THREE.Matrix4.prototype = {
 
 	clone: function () {
 
-		var te = this.elements;
+		const te = this.elements;
 
 		return new THREE.Matrix4(
 
