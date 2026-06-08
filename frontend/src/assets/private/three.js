@@ -10695,7 +10695,7 @@ THREE.Geometry.prototype = {
 
 		}
 
-		var uvs = this.faceVertexUvs[ 0 ];
+		const uvs = this.faceVertexUvs[ 0 ];
 
 		for ( var i = 0, il = uvs.length; i < il; i ++ ) {
 
