@@ -36811,7 +36811,7 @@ THREE.MorphBlendMesh.prototype.setAnimationTime = function ( name, time ) {
 
 THREE.MorphBlendMesh.prototype.getAnimationTime = function ( name ) {
 
-	var time = 0;
+	let time = 0;
 
 	var animation = this.animationsMap[ name ];
 
