@@ -28779,7 +28779,7 @@ THREE.FontUtils.generateShapes = function( text, parameters ) {
 	var curveSegments = parameters.curveSegments !== undefined ? parameters.curveSegments: 4;
 
 	var font = parameters.font !== undefined ? parameters.font : "helvetiker";
-	var weight = parameters.weight !== undefined ? parameters.weight : "normal";
+	const weight = parameters.weight !== undefined ? parameters.weight : "normal";
 	var style = parameters.style !== undefined ? parameters.style : "normal";
 
 	THREE.FontUtils.size = size;
