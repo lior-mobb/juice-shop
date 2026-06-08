@@ -28604,7 +28604,7 @@ THREE.FontUtils = {
 
 		// RenderText
 
-		var i, p,
+		let i, p,
 			face = this.getFace(),
 			scale = this.size / face.resolution,
 			offset = 0,
