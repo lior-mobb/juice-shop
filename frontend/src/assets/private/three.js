@@ -36649,7 +36649,7 @@ THREE.MorphBlendMesh = function( geometry, material ) {
 	var name = "__default";
 
 	var startFrame = 0;
-	var endFrame = numFrames - 1;
+	const endFrame = numFrames - 1;
 
 	var fps = numFrames / 1;
 
