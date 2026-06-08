@@ -5411,7 +5411,7 @@ THREE.Ray.prototype = {
 		var b0 = diff.dot( this.direction );
 		var b1 = - diff.dot( segDir );
 		var c = diff.lengthSq();
-		var det = Math.abs( 1 - a01 * a01 );
+		const det = Math.abs( 1 - a01 * a01 );
 		var s0, s1, sqrDist, extDet;
 
 		if ( det >= 0 ) {
