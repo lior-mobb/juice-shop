@@ -33643,7 +33643,7 @@ THREE.ExtrudeGeometry.prototype.addShape = function ( shape, options ) {
 
 			//console.log('b', i,j, i-1, k,vertices.length);
 
-			var s = 0, sl = steps  + bevelSegments * 2;
+			let s = 0, sl = steps  + bevelSegments * 2;
 
 			for ( s = 0; s < sl; s ++ ) {
 
