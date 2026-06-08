@@ -32869,7 +32869,7 @@ THREE.CircleGeometry = function ( radius, segments, thetaStart, thetaLength ) {
 	for ( i = 0; i <= segments; i ++ ) {
 
 		var vertex = new THREE.Vector3();
-		var segment = thetaStart + i / segments * thetaLength;
+		const segment = thetaStart + i / segments * thetaLength;
 
 		vertex.x = radius * Math.cos( segment );
 		vertex.y = radius * Math.sin( segment );
