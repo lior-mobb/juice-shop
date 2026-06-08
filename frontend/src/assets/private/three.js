@@ -28158,7 +28158,7 @@ THREE.ImageUtils = {
 
 		var DDS_MAGIC = 0x20534444;
 
-		var DDSD_CAPS = 0x1,
+		let DDSD_CAPS = 0x1,
 			DDSD_HEIGHT = 0x2,
 			DDSD_WIDTH = 0x4,
 			DDSD_PITCH = 0x8,
