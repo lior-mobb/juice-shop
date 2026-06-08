@@ -28793,7 +28793,7 @@ THREE.FontUtils.generateShapes = function( text, parameters ) {
 
 	var data = THREE.FontUtils.drawText( text );
 
-	var paths = data.paths;
+	const paths = data.paths;
 	var shapes = [];
 
 	for ( var p = 0, pl = paths.length; p < pl; p ++ ) {
