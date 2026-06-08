@@ -28791,7 +28791,7 @@ THREE.FontUtils.generateShapes = function( text, parameters ) {
 
 	// Get a Font data json object
 
-	var data = THREE.FontUtils.drawText( text );
+	const data = THREE.FontUtils.drawText( text );
 
 	var paths = data.paths;
 	var shapes = [];
