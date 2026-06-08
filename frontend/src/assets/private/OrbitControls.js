@@ -72,7 +72,7 @@ THREE.OrbitControls = function ( object, domElement ) {
 
     var scope = this;
 
-    var EPS = 0.000001;
+    const EPS = 0.000001;
 
     var rotateStart = new THREE.Vector2();
     var rotateEnd = new THREE.Vector2();
@@ -83,7 +83,7 @@ THREE.OrbitControls = function ( object, domElement ) {
     var panDelta = new THREE.Vector2();
 
     var dollyStart = new THREE.Vector2();
-    var dollyEnd = new THREE.Vector2();
+    const dollyEnd = new THREE.Vector2();
     var dollyDelta = new THREE.Vector2();
 
     var phiDelta = 0;
@@ -91,10 +91,10 @@ THREE.OrbitControls = function ( object, domElement ) {
     var scale = 1;
     var pan = new THREE.Vector3();
 
-    var lastPosition = new THREE.Vector3();
+    const lastPosition = new THREE.Vector3();
 
     var STATE = { NONE : -1, ROTATE : 0, DOLLY : 1, PAN : 2, TOUCH_ROTATE : 3, TOUCH_DOLLY : 4, TOUCH_PAN : 5 };
-    var state = STATE.NONE;
+    let state = STATE.NONE;
 
     // events
 
@@ -154,14 +154,14 @@ THREE.OrbitControls = function ( object, domElement ) {
     // right and down are positive
     this.pan = function ( delta ) {
 
-        var element = scope.domElement === document ? scope.domElement.body : scope.domElement;
+        const element = scope.domElement === document ? scope.domElement.body : scope.domElement;
 
         if ( scope.object.fov !== undefined ) {
 
             // perspective
             var position = scope.object.position;
             var offset = position.clone().sub( scope.target );
-            var targetDistance = offset.length();
+            let targetDistance = offset.length();
 
             // half of the fov is center to top of screen
             targetDistance *= Math.tan( (scope.object.fov/2) * Math.PI / 180.0 );
