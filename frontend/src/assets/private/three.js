@@ -30784,7 +30784,7 @@ THREE.Shape.Utils = {
 			}
 
 			var minShapeIndex = 0;
-			var counter = indepHoles.length * 2;
+			let counter = indepHoles.length * 2;
 			while ( indepHoles.length > 0 ) {
 				counter --;
 				if ( counter < 0 ) {
