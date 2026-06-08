@@ -35381,7 +35381,7 @@ THREE.BoxHelper.prototype.update = function ( object ) {
 
 	var min = geometry.boundingBox.min;
 	var max = geometry.boundingBox.max;
-	var vertices = this.vertices;
+	const vertices = this.vertices;
 
 	vertices[ 0 ].set( max.x, max.y, max.z );
 	vertices[ 1 ].set( min.x, max.y, max.z );
