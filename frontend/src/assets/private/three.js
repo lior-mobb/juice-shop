@@ -32229,7 +32229,7 @@ THREE.KeyFrameAnimation.prototype.update = function ( delta ) {
 
 	//
 
-	var duration = this.data.length;
+	const duration = this.data.length;
 
 	if ( this.loop === true && this.currentTime > duration ) {
 
