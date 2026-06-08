@@ -8782,7 +8782,7 @@ THREE.Projector = function () {
 
 		if ( _vertexCount === _vertexPoolLength ) {
 
-			var vertex = new THREE.RenderableVertex();
+			const vertex = new THREE.RenderableVertex();
 			_vertexPool.push( vertex );
 			_vertexPoolLength ++;
 			_vertexCount ++;
