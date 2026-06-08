@@ -6050,7 +6050,7 @@ THREE.Frustum.prototype = {
 			
 			for ( var i = 0; i < 6 ; i ++ ) {
 			
-				var plane = planes[i];
+				const plane = planes[i];
 				
 				p1.x = plane.normal.x > 0 ? box.min.x : box.max.x;
 				p2.x = plane.normal.x > 0 ? box.max.x : box.min.x;
