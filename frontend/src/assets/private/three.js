@@ -28600,7 +28600,7 @@ THREE.FontUtils = {
 
 	drawText : function( text ) {
 
-		var characterPts = [], allPts = [];
+		let characterPts = [], allPts = [];
 
 		// RenderText
 
