@@ -10466,7 +10466,7 @@ THREE.Geometry.prototype = {
 
 			}
 
-			for ( var j = 0, jl = faceVertexNormals.length; j < jl; j ++ ) {
+			for ( let j = 0, jl = faceVertexNormals.length; j < jl; j ++ ) {
 
 				normal = faceVertexNormals[ j ].clone();
 
