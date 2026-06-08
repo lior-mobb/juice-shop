@@ -15833,7 +15833,7 @@ THREE.SkinnedMesh = function ( geometry, material, useVertexTexture ) {
 
 	for ( var b = 0; b < this.skeleton.bones.length; ++b ) {
 
-		var bone = this.skeleton.bones[ b ];
+		const bone = this.skeleton.bones[ b ];
 
 		if ( bone.parent === undefined ) {
 
