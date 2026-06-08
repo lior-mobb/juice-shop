@@ -12546,7 +12546,7 @@ THREE.BufferGeometryLoader.prototype = {
 
 		for ( var key in attributes ) {
 
-			var attribute = attributes[ key ];
+			const attribute = attributes[ key ];
 
 			geometry.attributes[ key ] = {
 				itemSize: attribute.itemSize,
