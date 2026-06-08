@@ -4349,7 +4349,7 @@ THREE.Matrix4 = function ( n11, n12, n13, n14, n21, n22, n23, n24, n31, n32, n33
 	// TODO: if n11 is undefined, then just set to identity, otherwise copy all other values into matrix
 	//   we should not support semi specification of Matrix4, it is just weird.
 
-	var te = this.elements;
+	const te = this.elements;
 
 	te[0] = ( n11 !== undefined ) ? n11 : 1; te[4] = n12 || 0; te[8] = n13 || 0; te[12] = n14 || 0;
 	te[1] = n21 || 0; te[5] = ( n22 !== undefined ) ? n22 : 1; te[9] = n23 || 0; te[13] = n24 || 0;
