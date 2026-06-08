@@ -36413,7 +36413,7 @@ THREE.WireframeHelper = function ( object, hex ) {
 
 		for ( var i = 0, l = numEdges; i < l; i ++ ) {
 
-			for ( var j = 0; j < 2; j ++ ) {
+			for ( let j = 0; j < 2; j ++ ) {
 
 				var vertex = vertices[ edges [ 2 * i + j] ];
 
