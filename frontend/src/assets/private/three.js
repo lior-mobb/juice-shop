@@ -13176,7 +13176,7 @@ THREE.SceneLoader.prototype = {
 
 						if ( objJSON.loading === undefined ) {
 
-							var reservedTypes = {
+							const reservedTypes = {
 								"type": 1, "url": 1, "material": 1,
 								"position": 1, "rotation": 1, "scale" : 1,
 								"visible": 1, "children": 1, "userData": 1,
