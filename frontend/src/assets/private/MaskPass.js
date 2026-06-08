@@ -77,7 +77,7 @@ THREE.ClearMaskPass.prototype = {
 
 	render: function ( renderer, writeBuffer, readBuffer, delta ) {
 
-		var context = renderer.context;
+		const context = renderer.context;
 
 		context.disable( context.STENCIL_TEST );
 
