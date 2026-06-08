@@ -36651,7 +36651,7 @@ THREE.MorphBlendMesh = function( geometry, material ) {
 	var startFrame = 0;
 	var endFrame = numFrames - 1;
 
-	var fps = numFrames / 1;
+	const fps = numFrames / 1;
 
 	this.createAnimation( name, startFrame, endFrame, fps );
 	this.setAnimationWeight( name, 1 );
