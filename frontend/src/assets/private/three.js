@@ -5358,7 +5358,7 @@ THREE.Ray.prototype = {
 
 		var result = optionalTarget || new THREE.Vector3();
 		result.subVectors( point, this.origin );
-		var directionDistance = result.dot( this.direction );
+		const directionDistance = result.dot( this.direction );
 
 		if ( directionDistance < 0 ) {
 
