@@ -30310,7 +30310,7 @@ THREE.Path.prototype.toShapes = function( isCCW, noHoles ) {
 	// console.log("Holes first", holesFirst);
 	
 	var betterShapeHoles = [];
-	var newShapes = [];
+	const newShapes = [];
 	var newShapeHoles = [];
 	var mainIdx = 0;
 	var tmpPoints;
