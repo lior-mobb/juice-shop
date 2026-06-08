@@ -35,7 +35,7 @@ THREE.EffectComposer.prototype = {
 
 	swapBuffers: function() {
 
-		var tmp = this.readBuffer;
+		const tmp = this.readBuffer;
 		this.readBuffer = this.writeBuffer;
 		this.writeBuffer = tmp;
 
