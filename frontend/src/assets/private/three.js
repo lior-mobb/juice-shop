@@ -5112,7 +5112,7 @@ THREE.Matrix4.prototype = {
 		// Based on http://www.gamedev.net/reference/articles/article1199.asp
 
 		var c = Math.cos( angle );
-		var s = Math.sin( angle );
+		const s = Math.sin( angle );
 		var t = 1 - c;
 		var x = axis.x, y = axis.y, z = axis.z;
 		var tx = t * x, ty = t * y;
