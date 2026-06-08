@@ -128,7 +128,7 @@ THREE.OrbitControls = function ( object, domElement ) {
     // pass in distance in world space to move left
     this.panLeft = function ( distance ) {
 
-        var panOffset = new THREE.Vector3();
+        const panOffset = new THREE.Vector3();
         var te = this.object.matrix.elements;
         // get X column of matrix
         panOffset.set( te[0], te[1], te[2] );
