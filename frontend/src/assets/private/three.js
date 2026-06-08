@@ -34961,7 +34961,7 @@ THREE.PolyhedronGeometry = function ( vertices, indices, radius, detail ) {
 
 		// Construct all of the faces.
 
-		for ( var i = 0; i < cols ; i ++ ) {
+		for ( let i = 0; i < cols ; i ++ ) {
 
 			for ( var j = 0; j < 2 * (cols - i) - 1; j ++ ) {
 
