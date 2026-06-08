@@ -27474,7 +27474,7 @@ THREE.WebGLProgram = ( function () {
 
 THREE.WebGLShader = ( function () {
 
-	var addLineNumbers = function ( string ) {
+	const addLineNumbers = function ( string ) {
 
 		var lines = string.split( '\n' );
 
