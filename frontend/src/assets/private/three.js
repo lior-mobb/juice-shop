@@ -9825,7 +9825,7 @@ THREE.BufferGeometry.prototype = {
 
 		var x, y, z, n;
 
-		for ( var i = 0, il = normals.length; i < il; i += 3 ) {
+		for ( let i = 0, il = normals.length; i < il; i += 3 ) {
 
 			x = normals[ i ];
 			y = normals[ i + 1 ];
