@@ -29832,7 +29832,7 @@ THREE.Path.prototype.bezierCurveTo = function( aCP1x, aCP1y,
 	var x0 = lastargs[ lastargs.length - 2 ];
 	var y0 = lastargs[ lastargs.length - 1 ];
 
-	var curve = new THREE.CubicBezierCurve( new THREE.Vector2( x0, y0 ),
+	const curve = new THREE.CubicBezierCurve( new THREE.Vector2( x0, y0 ),
 											new THREE.Vector2( aCP1x, aCP1y ),
 											new THREE.Vector2( aCP2x, aCP2y ),
 											new THREE.Vector2( aX, aY ) );
