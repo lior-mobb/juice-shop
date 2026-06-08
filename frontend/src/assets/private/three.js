@@ -27975,7 +27975,7 @@ THREE.ImageUtils = {
 
 		texture.generateMipmaps = false;
 
-		var generateCubeFaceCallback = function ( rq, img ) {
+		const generateCubeFaceCallback = function ( rq, img ) {
 
 			return function () {
 
