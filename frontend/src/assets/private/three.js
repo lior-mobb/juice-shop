@@ -4103,7 +4103,7 @@ THREE.Matrix3.prototype = {
 
 	copy: function ( m ) {
 
-		var me = m.elements;
+		const me = m.elements;
 
 		this.set(
 
