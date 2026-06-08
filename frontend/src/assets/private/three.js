@@ -36440,7 +36440,7 @@ THREE.WireframeHelper = function ( object, hex ) {
 
 			var start = offsets[ o ].start;
 			var count = offsets[ o ].count;
-			var index = offsets[ o ].index;
+			const index = offsets[ o ].index;
 
 			for ( var i = start, il = start + count; i < il; i += 3 ) {
 
