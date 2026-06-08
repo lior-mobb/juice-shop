@@ -24959,7 +24959,7 @@ THREE.WebGLRenderer = function ( parameters ) {
 
 		}
 
-		var code = chunks.join();
+		const code = chunks.join();
 
 		var program;
 
