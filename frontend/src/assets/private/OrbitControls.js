@@ -210,7 +210,7 @@ THREE.OrbitControls = function ( object, domElement ) {
 
     this.update = function () {
 
-        var position = this.object.position;
+        const position = this.object.position;
         var offset = position.clone().sub( this.target );
 
         // angle from z-axis around y-axis
