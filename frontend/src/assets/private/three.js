@@ -34198,7 +34198,7 @@ THREE.SphereGeometry = function ( radius, widthSegments, heightSegments, phiStar
 
 		for ( x = 0; x <= widthSegments; x ++ ) {
 
-			var u = x / widthSegments;
+			const u = x / widthSegments;
 			var v = y / heightSegments;
 
 			var vertex = new THREE.Vector3();
