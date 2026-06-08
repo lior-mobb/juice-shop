@@ -31173,7 +31173,7 @@ THREE.EllipseCurve.prototype.getPoint = function ( t ) {
 	}
 
 	var tx = this.aX + this.xRadius * Math.cos( angle );
-	var ty = this.aY + this.yRadius * Math.sin( angle );
+	const ty = this.aY + this.yRadius * Math.sin( angle );
 
 	return new THREE.Vector2( tx, ty );
 
