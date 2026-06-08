@@ -23312,7 +23312,7 @@ THREE.WebGLRenderer = function ( parameters ) {
 
 		for ( var attributeName in programAttributes ) {
 
-			var attributePointer = programAttributes[ attributeName ];
+			const attributePointer = programAttributes[ attributeName ];
 			var attributeItem = geometryAttributes[ attributeName ];
 
 			if ( attributePointer >= 0 ) {
