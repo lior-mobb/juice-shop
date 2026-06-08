@@ -21498,7 +21498,7 @@ THREE.WebGLRenderer = function ( parameters ) {
 
 	};
 
-	var deallocateMaterial = function ( material ) {
+	const deallocateMaterial = function ( material ) {
 
 		var program = material.program;
 
