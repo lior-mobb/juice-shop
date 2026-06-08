@@ -3850,7 +3850,7 @@ THREE.Box3.prototype = {
 
 	size: function ( optionalTarget ) {
 
-		var result = optionalTarget || new THREE.Vector3();
+		const result = optionalTarget || new THREE.Vector3();
 		return result.subVectors( this.max, this.min );
 
 	},
