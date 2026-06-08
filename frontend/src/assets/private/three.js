@@ -5249,7 +5249,7 @@ THREE.Matrix4.prototype = {
 		var p = far - near;
 
 		var x = ( right + left ) / w;
-		var y = ( top + bottom ) / h;
+		const y = ( top + bottom ) / h;
 		var z = ( far + near ) / p;
 
 		te[0] = 2 / w;	te[4] = 0;	te[8] = 0;	te[12] = -x;
