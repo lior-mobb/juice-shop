@@ -5114,7 +5114,7 @@ THREE.Matrix4.prototype = {
 		var c = Math.cos( angle );
 		var s = Math.sin( angle );
 		var t = 1 - c;
-		var x = axis.x, y = axis.y, z = axis.z;
+		let x = axis.x, y = axis.y, z = axis.z;
 		var tx = t * x, ty = t * y;
 
 		this.set(
