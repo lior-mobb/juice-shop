@@ -721,7 +721,7 @@ THREE.Quaternion.prototype = {
 		// 	20696-function-to-convert-between-dcm-euler-angles-quaternions-and-euler-vectors/
 		//	content/SpinCalc.m
 
-		var c1 = Math.cos( euler._x / 2 );
+		const c1 = Math.cos( euler._x / 2 );
 		var c2 = Math.cos( euler._y / 2 );
 		var c3 = Math.cos( euler._z / 2 );
 		var s1 = Math.sin( euler._x / 2 );
