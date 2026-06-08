@@ -30600,7 +30600,7 @@ THREE.Shape.Utils = {
 
 				// they are collinear or degenerate
 				var seg1Pt = ( (seg1dx == 0) && (seg1dy == 0) );	// segment1 ist just a point?
-				var seg2Pt = ( (seg2dx == 0) && (seg2dy == 0) );	// segment2 ist just a point?
+				const seg2Pt = ( (seg2dx == 0) && (seg2dy == 0) );	// segment2 ist just a point?
 				// both segments are points
 				if ( seg1Pt && seg2Pt ) {
 					if ( (inSeg1Pt1.x != inSeg2Pt1.x) ||
