@@ -5951,7 +5951,7 @@ THREE.Frustum.prototype = {
 
 	set: function ( p0, p1, p2, p3, p4, p5 ) {
 
-		var planes = this.planes;
+		const planes = this.planes;
 
 		planes[0].copy( p0 );
 		planes[1].copy( p1 );
