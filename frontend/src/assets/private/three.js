@@ -8526,7 +8526,7 @@ THREE.Projector = function () {
 							_vB.set( 0, 0, 0 );
 							_vC.set( 0, 0, 0 );
 
-							for ( var t = 0, tl = morphTargets.length; t < tl; t ++ ) {
+							for ( let t = 0, tl = morphTargets.length; t < tl; t ++ ) {
 
 								var influence = morphInfluences[ t ];
 
