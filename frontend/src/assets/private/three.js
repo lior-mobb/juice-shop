@@ -36283,7 +36283,7 @@ THREE.VertexTangentsHelper = function ( object, size, hex, linewidth ) {
 
 	var faces = object.geometry.faces;
 
-	for ( var i = 0, l = faces.length; i < l; i ++ ) {
+	for ( let i = 0, l = faces.length; i < l; i ++ ) {
 
 		var face = faces[ i ];
 
