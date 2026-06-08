@@ -35943,7 +35943,7 @@ THREE.HemisphereLightHelper.prototype.dispose = function () {
 
 THREE.HemisphereLightHelper.prototype.update = function () {
 
-	var vector = new THREE.Vector3();
+	const vector = new THREE.Vector3();
 
 	return function () {
 
