@@ -28008,7 +28008,7 @@ THREE.ImageUtils = {
 
 			for ( var i = 0, il = array.length; i < il; ++ i ) {
 
-				var cubeImage = {};
+				const cubeImage = {};
 				images[ i ] = cubeImage;
 
 				var request = new XMLHttpRequest();
