@@ -32962,7 +32962,7 @@ THREE.CylinderGeometry = function ( radiusTop, radiusBottom, height, radialSegme
 	}
 
 	var tanTheta = ( radiusBottom - radiusTop ) / height;
-	var na, nb;
+	let na, nb;
 
 	for ( x = 0; x < radialSegments; x ++ ) {
 
