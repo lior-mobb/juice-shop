@@ -28828,7 +28828,7 @@ THREE.FontUtils.generateShapes = function( text, parameters ) {
 
 	// takes in an contour array and returns
 
-	var process = function( contour, indices ) {
+	const process = function( contour, indices ) {
 
 		var n = contour.length;
 
