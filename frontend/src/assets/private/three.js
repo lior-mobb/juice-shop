@@ -6020,7 +6020,7 @@ THREE.Frustum.prototype = {
 	intersectsSphere: function ( sphere ) {
 
 		var planes = this.planes;
-		var center = sphere.center;
+		const center = sphere.center;
 		var negRadius = -sphere.radius;
 
 		for ( var i = 0; i < 6; i ++ ) {
