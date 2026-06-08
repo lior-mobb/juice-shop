@@ -31827,7 +31827,7 @@ THREE.Animation.prototype.update = (function(){
 		for ( var h = 0, hl = this.hierarchy.length; h < hl; h ++ ) {
 
 			var object = this.hierarchy[ h ];
-			var animationCache = object.animationCache[this.data.name];
+			const animationCache = object.animationCache[this.data.name];
 
 			// loop through pos/rot/scl
 
