@@ -23380,7 +23380,7 @@ THREE.WebGLRenderer = function ( parameters ) {
 
 		if ( object instanceof THREE.Mesh ) {
 
-			var index = geometryAttributes[ "index" ];
+			const index = geometryAttributes[ "index" ];
 
 			if ( index ) {
 
