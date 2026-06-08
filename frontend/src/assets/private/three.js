@@ -33288,7 +33288,7 @@ THREE.ExtrudeGeometry.prototype.addShape = function ( shape, options ) {
 		var v_prev_lensq = ( v_prev_x * v_prev_x + v_prev_y * v_prev_y );
 		
 		// check for colinear edges
-		var colinear0 = ( v_prev_x * v_next_y - v_prev_y * v_next_x );
+		const colinear0 = ( v_prev_x * v_next_y - v_prev_y * v_next_x );
 		
 		if ( Math.abs( colinear0 ) > EPSILON ) {		// not colinear
 			
