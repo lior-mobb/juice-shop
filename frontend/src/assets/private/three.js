@@ -16786,7 +16786,7 @@ THREE.CanvasRenderer = function ( parameters ) {
 
 			var element = _elements[ e ];
 
-			var material = element.material;
+			const material = element.material;
 
 			if ( material === undefined || material.opacity === 0 ) continue;
 
