@@ -33707,7 +33707,7 @@ THREE.ExtrudeGeometry.prototype.addShape = function ( shape, options ) {
 THREE.ExtrudeGeometry.WorldUVGenerator = {
 
 	generateTopUV: function( geometry, extrudedShape, extrudeOptions, indexA, indexB, indexC ) {
-		var ax = geometry.vertices[ indexA ].x,
+		let ax = geometry.vertices[ indexA ].x,
 			ay = geometry.vertices[ indexA ].y,
 
 			bx = geometry.vertices[ indexB ].x,
