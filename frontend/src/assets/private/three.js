@@ -35541,7 +35541,7 @@ THREE.CameraHelper.prototype.update = function () {
 
 	var vector = new THREE.Vector3();
 	var camera = new THREE.Camera();
-	var projector = new THREE.Projector();
+	const projector = new THREE.Projector();
 
 	return function () {
 
