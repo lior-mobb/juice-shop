@@ -23855,7 +23855,7 @@ THREE.WebGLRenderer = function ( parameters ) {
 
 		// set base
 
-		var attributes = material.program.attributes;
+		const attributes = material.program.attributes;
 
 		if ( object.morphTargetBase !== -1 && attributes.position >= 0 ) {
 
