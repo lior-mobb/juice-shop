@@ -10050,7 +10050,7 @@ THREE.Geometry.prototype = {
 
 	computeFaceNormals: function () {
 
-		var cb = new THREE.Vector3(), ab = new THREE.Vector3();
+		let cb = new THREE.Vector3(), ab = new THREE.Vector3();
 
 		for ( var f = 0, fl = this.faces.length; f < fl; f ++ ) {
 
