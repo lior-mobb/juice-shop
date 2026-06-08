@@ -82,14 +82,14 @@ THREE.OrbitControls = function ( object, domElement ) {
     var panEnd = new THREE.Vector2();
     var panDelta = new THREE.Vector2();
 
-    var dollyStart = new THREE.Vector2();
+    const dollyStart = new THREE.Vector2();
     var dollyEnd = new THREE.Vector2();
     var dollyDelta = new THREE.Vector2();
 
     var phiDelta = 0;
     var thetaDelta = 0;
     var scale = 1;
-    var pan = new THREE.Vector3();
+    const pan = new THREE.Vector3();
 
     var lastPosition = new THREE.Vector3();
 
@@ -128,7 +128,7 @@ THREE.OrbitControls = function ( object, domElement ) {
     // pass in distance in world space to move left
     this.panLeft = function ( distance ) {
 
-        var panOffset = new THREE.Vector3();
+        const panOffset = new THREE.Vector3();
         var te = this.object.matrix.elements;
         // get X column of matrix
         panOffset.set( te[0], te[1], te[2] );
@@ -160,7 +160,7 @@ THREE.OrbitControls = function ( object, domElement ) {
 
             // perspective
             var position = scope.object.position;
-            var offset = position.clone().sub( scope.target );
+            const offset = position.clone().sub( scope.target );
             var targetDistance = offset.length();
 
             // half of the fov is center to top of screen
@@ -236,7 +236,7 @@ THREE.OrbitControls = function ( object, domElement ) {
         // restrict phi to be betwee EPS and PI-EPS
         phi = Math.max( EPS, Math.min( Math.PI - EPS, phi ) );
 
-        var radius = offset.length() * scale;
+        let radius = offset.length() * scale;
 
         // restrict radius to be between desired limits
         radius = Math.max( this.minDistance, Math.min( this.maxDistance, radius ) );
@@ -320,7 +320,7 @@ THREE.OrbitControls = function ( object, domElement ) {
 
         event.preventDefault();
 
-        var element = scope.domElement === document ? scope.domElement.body : scope.domElement;
+        const element = scope.domElement === document ? scope.domElement.body : scope.domElement;
 
         if ( state === STATE.ROTATE ) {
 
@@ -389,7 +389,7 @@ THREE.OrbitControls = function ( object, domElement ) {
 
         if ( scope.enabled === false || scope.noZoom === true ) return;
 
-        var delta = 0;
+        let delta = 0;
 
         if ( event.wheelDelta ) { // WebKit / Opera / Explorer 9
 

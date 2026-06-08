@@ -19,7 +19,7 @@ THREE.MaskPass.prototype = {
 
 	render: function ( renderer, writeBuffer, readBuffer, delta ) {
 
-		var context = renderer.context;
+		const context = renderer.context;
 
 		// don't update color or depth
 

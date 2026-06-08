@@ -321,7 +321,7 @@ THREE.Color.prototype = {
 
 		if ( /^rgb\((\d+)\%, ?(\d+)\%, ?(\d+)\%\)$/i.test( style ) ) {
 
-			var color = /^rgb\((\d+)\%, ?(\d+)\%, ?(\d+)\%\)$/i.exec( style );
+			const color = /^rgb\((\d+)\%, ?(\d+)\%, ?(\d+)\%\)$/i.exec( style );
 
 			this.r = Math.min( 100, parseInt( color[ 1 ], 10 ) ) / 100;
 			this.g = Math.min( 100, parseInt( color[ 2 ], 10 ) ) / 100;
@@ -1825,7 +1825,7 @@ THREE.Vector3.prototype = {
 
 		var x = this.x, y = this.y, z = this.z;
 
-		var e = m.elements;
+		const e = m.elements;
 
 		this.x = e[0] * x + e[4] * y + e[8]  * z;
 		this.y = e[1] * x + e[5] * y + e[9]  * z;
@@ -4349,7 +4349,7 @@ THREE.Matrix4 = function ( n11, n12, n13, n14, n21, n22, n23, n24, n31, n32, n33
 	// TODO: if n11 is undefined, then just set to identity, otherwise copy all other values into matrix
 	//   we should not support semi specification of Matrix4, it is just weird.
 
-	var te = this.elements;
+	const te = this.elements;
 
 	te[0] = ( n11 !== undefined ) ? n11 : 1; te[4] = n12 || 0; te[8] = n13 || 0; te[12] = n14 || 0;
 	te[1] = n21 || 0; te[5] = ( n22 !== undefined ) ? n22 : 1; te[9] = n23 || 0; te[13] = n24 || 0;
@@ -4934,7 +4934,7 @@ THREE.Matrix4.prototype = {
 
 		// based on http://www.euclideanspace.com/maths/algebra/matrix/functions/inverse/fourD/index.htm
 		var te = this.elements;
-		var me = m.elements;
+		const me = m.elements;
 
 		var n11 = me[0], n12 = me[4], n13 = me[8], n14 = me[12];
 		var n21 = me[1], n22 = me[5], n23 = me[9], n24 = me[13];
@@ -5158,7 +5158,7 @@ THREE.Matrix4.prototype = {
 	decompose: function () {
 
 		var vector = new THREE.Vector3();
-		var matrix = new THREE.Matrix4();
+		const matrix = new THREE.Matrix4();
 
 		return function ( position, quaternion, scale ) {
 
@@ -5249,7 +5249,7 @@ THREE.Matrix4.prototype = {
 		var p = far - near;
 
 		var x = ( right + left ) / w;
-		var y = ( top + bottom ) / h;
+		const y = ( top + bottom ) / h;
 		var z = ( far + near ) / p;
 
 		te[0] = 2 / w;	te[4] = 0;	te[8] = 0;	te[12] = -x;
@@ -5376,7 +5376,7 @@ THREE.Ray.prototype = {
 
 		return function ( point ) {
 
-			var directionDistance = v1.subVectors( point, this.origin ).dot( this.direction );
+			const directionDistance = v1.subVectors( point, this.origin ).dot( this.direction );
 
 			// point behind the ray
 
@@ -6227,7 +6227,7 @@ THREE.Plane.prototype = {
 		// Note: this tests if a line intersects the plane, not whether it (or its end-points) are coplanar with it.
 
 		var startSign = this.distanceToPoint( line.start );
-		var endSign = this.distanceToPoint( line.end );
+		const endSign = this.distanceToPoint( line.end );
 
 		return ( startSign < 0 && endSign > 0 ) || ( endSign < 0 && startSign > 0 );
 
@@ -6724,7 +6724,7 @@ THREE.Triangle.barycoordFromPoint = function() {
 		var dot11 = v1.dot( v1 );
 		var dot12 = v1.dot( v2 );
 
-		var denom = ( dot00 * dot11 - dot01 * dot01 );
+		const denom = ( dot00 * dot11 - dot01 * dot01 );
 
 		var result = optionalTarget || new THREE.Vector3();
 
@@ -7021,7 +7021,7 @@ THREE.EventDispatcher.prototype = {
 			
 		if ( this._listeners === undefined ) return;
 
-		var listeners = this._listeners;
+		const listeners = this._listeners;
 		var listenerArray = listeners[ event.type ];
 
 		if ( listenerArray !== undefined ) {
@@ -8369,7 +8369,7 @@ THREE.Projector = function () {
 
 	this.projectScene = function ( scene, camera, sortObjects, sortElements ) {
 
-		var object, geometry, vertices, faces, face, faceVertexNormals, faceVertexUvs,
+		let object, geometry, vertices, faces, face, faceVertexNormals, faceVertexUvs,
 		isFaceMaterial, objectMaterials;
 
 		_faceCount = 0;
@@ -8518,7 +8518,7 @@ THREE.Projector = function () {
 							var morphTargets = geometry.morphTargets;
 							var morphInfluences = object.morphTargetInfluences;
 
-							var v1p = v1.position;
+							const v1p = v1.position;
 							var v2p = v2.position;
 							var v3p = v3.position;
 
@@ -10534,7 +10534,7 @@ THREE.Geometry.prototype = {
 		var precisionPoints = 4; // number of decimal points, eg. 4 for epsilon of 0.0001
 		var precision = Math.pow( 10, precisionPoints );
 		var i,il, face;
-		var indices, k, j, jl, u;
+		let indices, k, j, jl, u;
 
 		for ( i = 0, il = this.vertices.length; i < il; i ++ ) {
 
@@ -10679,7 +10679,7 @@ THREE.Geometry.prototype = {
 
 		var geometry = new THREE.Geometry();
 
-		var vertices = this.vertices;
+		const vertices = this.vertices;
 
 		for ( var i = 0, il = vertices.length; i < il; i ++ ) {
 
@@ -11966,7 +11966,7 @@ THREE.JSONLoader.prototype.loadAjaxJSON = function ( context, url, callback, tex
 
 					}
 
-					var result = context.parse( json, texturePath );
+					const result = context.parse( json, texturePath );
 					callback( result.geometry, result.materials );
 
 				} else {
@@ -12358,7 +12358,7 @@ THREE.JSONLoader.prototype.parse = function ( json, texturePath ) {
 				var a =                               json.skinIndices[ i     ];
 				var b = ( influencesPerVertex > 1 ) ? json.skinIndices[ i + 1 ] : 0;
 				var c = ( influencesPerVertex > 2 ) ? json.skinIndices[ i + 2 ] : 0;
-				var d = ( influencesPerVertex > 3 ) ? json.skinIndices[ i + 3 ] : 0;
+				const d = ( influencesPerVertex > 3 ) ? json.skinIndices[ i + 3 ] : 0;
 
 				geometry.skinIndices.push( new THREE.Vector4( a, b, c, d ) );
 
@@ -14096,7 +14096,7 @@ THREE.SceneLoader.prototype = {
 
 				var diffuse = matJSON.parameters.color;
 				var specular = matJSON.parameters.specular;
-				var ambient = matJSON.parameters.ambient;
+				const ambient = matJSON.parameters.ambient;
 				var shininess = matJSON.parameters.shininess;
 
 				uniforms[ "tNormal" ].value = result.textures[ matJSON.parameters.normalMap ];
@@ -15697,7 +15697,7 @@ THREE.Skeleton = function ( boneList, useVertexTexture ) {
 	this.bones = [];
 	this.boneMatrices = [];
 
-	var bone, gbone, p, q, s;
+	let bone, gbone, p, q, s;
 
 	if ( boneList !== undefined ) {
 
@@ -15833,7 +15833,7 @@ THREE.SkinnedMesh = function ( geometry, material, useVertexTexture ) {
 
 	for ( var b = 0; b < this.skeleton.bones.length; ++b ) {
 
-		var bone = this.skeleton.bones[ b ];
+		const bone = this.skeleton.bones[ b ];
 
 		if ( bone.parent === undefined ) {
 
@@ -16916,7 +16916,7 @@ THREE.CanvasRenderer = function ( parameters ) {
 
 			if ( light instanceof THREE.DirectionalLight ) {
 
-				var lightPosition = _vector3.setFromMatrixPosition( light.matrixWorld ).normalize();
+				const lightPosition = _vector3.setFromMatrixPosition( light.matrixWorld ).normalize();
 
 				var amount = normal.dot( lightPosition );
 
@@ -21391,7 +21391,7 @@ THREE.WebGLRenderer = function ( parameters ) {
 
 	};
 
-	var deallocateGeometry = function ( geometry ) {
+	const deallocateGeometry = function ( geometry ) {
 
 		geometry.__webglInit = undefined;
 
@@ -23937,7 +23937,7 @@ THREE.WebGLRenderer = function ( parameters ) {
 
 			};
 
-			var influenceIndex, m = 0;
+			let influenceIndex, m = 0;
 
 			while ( m < material.numSupportedMorphTargets ) {
 
@@ -24668,7 +24668,7 @@ THREE.WebGLRenderer = function ( parameters ) {
 
 			// check all geometry groups
 
-			for( var i = 0, il = geometry.geometryGroupsList.length; i < il; i ++ ) {
+			for( let i = 0, il = geometry.geometryGroupsList.length; i < il; i ++ ) {
 
 				geometryGroup = geometry.geometryGroupsList[ i ];
 
@@ -27922,7 +27922,7 @@ THREE.ImageUtils = {
 		var images = [];
 		images.loadCount = 0;
 
-		var loader = new THREE.ImageLoader();
+		const loader = new THREE.ImageLoader();
 		loader.crossOrigin = this.crossOrigin;
 		
 		var texture = new THREE.Texture();
@@ -28077,7 +28077,7 @@ THREE.ImageUtils = {
 
 	loadDDSTexture: function ( url, mapping, onLoad, onError ) {
 
-		var images = [];
+		const images = [];
 		images.loadCount = 0;
 
 		var texture = new THREE.CompressedTexture();
@@ -29377,7 +29377,7 @@ THREE.CurvePath.prototype.closePath = function() {
 	// TODO Test
 	// and verify for vector3 (needs to implement equals)
 	// Add a line curve if start and end of lines are not connected
-	var startPoint = this.curves[0].getPoint(0);
+	const startPoint = this.curves[0].getPoint(0);
 	var endPoint = this.curves[this.curves.length-1].getPoint(1);
 	
 	if (!startPoint.equals(endPoint)) {
@@ -29635,7 +29635,7 @@ THREE.CurvePath.prototype.getWrapPoints = function ( oldPts, path ) {
 
 	var bounds = this.getBoundingBox();
 
-	var i, il, p, oldX, oldY, xNorm;
+	let i, il, p, oldX, oldY, xNorm;
 
 	for ( i = 0, il = oldPts.length; i < il; i ++ ) {
 
@@ -29782,7 +29782,7 @@ THREE.Path.prototype.fromPoints = function ( vectors ) {
 
 THREE.Path.prototype.moveTo = function ( x, y ) {
 
-	var args = Array.prototype.slice.call( arguments );
+	const args = Array.prototype.slice.call( arguments );
 	this.actions.push( { action: THREE.PathActions.MOVE_TO, args: args } );
 
 };
@@ -29867,7 +29867,7 @@ THREE.Path.prototype.arc = function ( aX, aY, aRadius,
 
 	var lastargs = this.actions[ this.actions.length - 1].args;
 	var x0 = lastargs[ lastargs.length - 2 ];
-	var y0 = lastargs[ lastargs.length - 1 ];
+	const y0 = lastargs[ lastargs.length - 1 ];
 
 	this.absarc(aX + x0, aY + y0, aRadius,
 		aStartAngle, aEndAngle, aClockwise );
@@ -30182,7 +30182,7 @@ THREE.Path.prototype.toShapes = function( isCCW, noHoles ) {
 
 	function extractSubpaths( inActions ) {
 
-		var i, il, item, action, args;
+		let i, il, item, action, args;
 
 		var subPaths = [], lastPath = new THREE.Path();
 
@@ -31055,7 +31055,7 @@ THREE.QuadraticBezierCurve.prototype.getTangent = function( t ) {
 
 	// returns unit vector
 
-	var tangent = new THREE.Vector2( tx, ty );
+	const tangent = new THREE.Vector2( tx, ty );
 	tangent.normalize();
 
 	return tangent;
@@ -31826,7 +31826,7 @@ THREE.Animation.prototype.update = (function(){
 
 		for ( var h = 0, hl = this.hierarchy.length; h < hl; h ++ ) {
 
-			var object = this.hierarchy[ h ];
+			const object = this.hierarchy[ h ];
 			var animationCache = object.animationCache[this.data.name];
 
 			// loop through pos/rot/scl
@@ -32229,7 +32229,7 @@ THREE.KeyFrameAnimation.prototype.update = function ( delta ) {
 
 	//
 
-	var duration = this.data.length;
+	const duration = this.data.length;
 
 	if ( this.loop === true && this.currentTime > duration ) {
 
@@ -32808,7 +32808,7 @@ THREE.BoxGeometry = function ( width, height, depth, widthSegments, heightSegmen
 
 				var uva = new THREE.Vector2( ix / gridX, 1 - iy / gridY );
 				var uvb = new THREE.Vector2( ix / gridX, 1 - ( iy + 1 ) / gridY );
-				var uvc = new THREE.Vector2( ( ix + 1 ) / gridX, 1 - ( iy + 1 ) / gridY );
+				const uvc = new THREE.Vector2( ( ix + 1 ) / gridX, 1 - ( iy + 1 ) / gridY );
 				var uvd = new THREE.Vector2( ( ix + 1 ) / gridX, 1 - iy / gridY );
 
 				var face = new THREE.Face3( a + offset, b + offset, d + offset );
@@ -32962,7 +32962,7 @@ THREE.CylinderGeometry = function ( radiusTop, radiusBottom, height, radialSegme
 	}
 
 	var tanTheta = ( radiusBottom - radiusTop ) / height;
-	var na, nb;
+	let na, nb;
 
 	for ( x = 0; x < radialSegments; x ++ ) {
 
@@ -33197,7 +33197,7 @@ THREE.ExtrudeGeometry.prototype.addShape = function ( shape, options ) {
 
 	var ahole, h, hl; // looping of holes
 	var scope = this;
-	var bevelPoints = [];
+	const bevelPoints = [];
 
 	var shapesOffset = this.vertices.length;
 
@@ -33282,7 +33282,7 @@ THREE.ExtrudeGeometry.prototype.addShape = function ( shape, options ) {
 		// good reading for geometry algorithms (here: line-line intersection)
 		// http://geomalgorithms.com/a05-_intersect-1.html
 
-		var v_prev_x = inPt.x - inPrev.x, v_prev_y = inPt.y - inPrev.y;
+		let v_prev_x = inPt.x - inPrev.x, v_prev_y = inPt.y - inPrev.y;
 		var v_next_x = inNext.x - inPt.x, v_next_y = inNext.y - inPt.y;
 		
 		var v_prev_lensq = ( v_prev_x * v_prev_x + v_prev_y * v_prev_y );
@@ -33961,7 +33961,7 @@ THREE.LatheGeometry = function ( points, segments, phiStart, phiLength ) {
 
 	for ( var i = 0, il = segments; i < il; i ++ ) {
 
-		for ( var j = 0, jl = points.length - 1; j < jl; j ++ ) {
+		for ( let j = 0, jl = points.length - 1; j < jl; j ++ ) {
 
 			var base = j + np * i;
 			var a = base;
@@ -34027,7 +34027,7 @@ THREE.PlaneGeometry = function ( width, height, widthSegments, heightSegments ) 
 	var width_half = width / 2;
 	var height_half = height / 2;
 
-	var gridX = widthSegments || 1;
+	const gridX = widthSegments || 1;
 	var gridZ = heightSegments || 1;
 
 	var gridX1 = gridX + 1;
@@ -34064,7 +34064,7 @@ THREE.PlaneGeometry = function ( width, height, widthSegments, heightSegments ) 
 			var uva = new THREE.Vector2( ix / gridX, 1 - iz / gridZ );
 			var uvb = new THREE.Vector2( ix / gridX, 1 - ( iz + 1 ) / gridZ );
 			var uvc = new THREE.Vector2( ( ix + 1 ) / gridX, 1 - ( iz + 1 ) / gridZ );
-			var uvd = new THREE.Vector2( ( ix + 1 ) / gridX, 1 - iz / gridZ );
+			const uvd = new THREE.Vector2( ( ix + 1 ) / gridX, 1 - iz / gridZ );
 
 			var face = new THREE.Face3( a, b, d );
 			face.normal.copy( normal );
@@ -34199,7 +34199,7 @@ THREE.SphereGeometry = function ( radius, widthSegments, heightSegments, phiStar
 		for ( x = 0; x <= widthSegments; x ++ ) {
 
 			var u = x / widthSegments;
-			var v = y / heightSegments;
+			const v = y / heightSegments;
 
 			var vertex = new THREE.Vector3();
 			vertex.x = - radius * Math.cos( phiStart + u * phiLength ) * Math.sin( thetaStart + v * thetaLength );
@@ -34229,7 +34229,7 @@ THREE.SphereGeometry = function ( radius, widthSegments, heightSegments, phiStar
 
 			var n1 = this.vertices[ v1 ].clone().normalize();
 			var n2 = this.vertices[ v2 ].clone().normalize();
-			var n3 = this.vertices[ v3 ].clone().normalize();
+			const n3 = this.vertices[ v3 ].clone().normalize();
 			var n4 = this.vertices[ v4 ].clone().normalize();
 
 			var uv1 = uvs[ y ][ x + 1 ].clone();
@@ -34476,7 +34476,7 @@ THREE.TorusKnotGeometry = function ( radius, tube, radialSegments, tubularSegmen
 		for ( var j = 0; j < tubularSegments; ++ j ) {
 
 			var ip = ( i + 1 ) % radialSegments;
-			var jp = ( j + 1 ) % tubularSegments;
+			const jp = ( j + 1 ) % tubularSegments;
 
 			var a = grid[ i ][ j ];
 			var b = grid[ ip ][ j ];
@@ -34486,7 +34486,7 @@ THREE.TorusKnotGeometry = function ( radius, tube, radialSegments, tubularSegmen
 			var uva = new THREE.Vector2( i / radialSegments, j / tubularSegments );
 			var uvb = new THREE.Vector2( ( i + 1 ) / radialSegments, j / tubularSegments );
 			var uvc = new THREE.Vector2( ( i + 1 ) / radialSegments, ( j + 1 ) / tubularSegments );
-			var uvd = new THREE.Vector2( i / radialSegments, ( j + 1 ) / tubularSegments );
+			const uvd = new THREE.Vector2( i / radialSegments, ( j + 1 ) / tubularSegments );
 
 			this.faces.push( new THREE.Face3( a, b, d ) );
 			this.faceVertexUvs[ 0 ].push( [ uva, uvb, uvd ] );
@@ -35408,7 +35408,7 @@ THREE.BoxHelper.prototype.update = function ( object ) {
 
 THREE.BoundingBoxHelper = function ( object, hex ) {
 
-	var color = ( hex !== undefined ) ? hex : 0x888888;
+	const color = ( hex !== undefined ) ? hex : 0x888888;
 
 	this.object = object;
 
@@ -35732,7 +35732,7 @@ THREE.EdgesHelper = function ( object, hex ) {
 			edge[ 1 ] = face[ keys[ ( j + 1 ) % 3 ] ];
 			edge.sort( sortFunction );
 
-			var key = edge.toString();
+			const key = edge.toString();
 
 			if ( hash[ key ] === undefined ) {
 
@@ -35919,7 +35919,7 @@ THREE.HemisphereLightHelper = function ( light, sphereSize, arrowLength, domeSiz
 	var geometry = new THREE.SphereGeometry( sphereSize, 4, 2 );
 	geometry.applyMatrix( new THREE.Matrix4().makeRotationX( - Math.PI / 2 ) );
 
-	for ( var i = 0, il = 8; i < il; i ++ ) {
+	for ( let i = 0, il = 8; i < il; i ++ ) {
 
 		geometry.faces[ i ].color = this.colors[ i < 4 ? 0 : 1 ];
 
@@ -36324,7 +36324,7 @@ THREE.VertexTangentsHelper.prototype.update = ( function ( object ) {
 
 		var worldMatrix = this.object.matrixWorld;
 
-		var idx = 0;
+		let idx = 0;
 
 		for ( var i = 0, l = faces.length; i < l; i ++ ) {
 
@@ -36332,7 +36332,7 @@ THREE.VertexTangentsHelper.prototype.update = ( function ( object ) {
 
 			for ( var j = 0, jl = face.vertexTangents.length; j < jl; j ++ ) {
 
-				var vertexId = face[ keys[ j ] ];
+				const vertexId = face[ keys[ j ] ];
 				var vertex = verts[ vertexId ];
 
 				var tangent = face.vertexTangents[ j ];
@@ -36811,7 +36811,7 @@ THREE.MorphBlendMesh.prototype.setAnimationTime = function ( name, time ) {
 
 THREE.MorphBlendMesh.prototype.getAnimationTime = function ( name ) {
 
-	var time = 0;
+	let time = 0;
 
 	var animation = this.animationsMap[ name ];
 
@@ -36957,7 +36957,7 @@ THREE.LensFlarePlugin = function () {
 		_lensFlare.vertices = new Float32Array( 8 + 8 );
 		_lensFlare.faces = new Uint16Array( 6 );
 
-		var i = 0;
+		let i = 0;
 		_lensFlare.vertices[ i++ ] = -1; _lensFlare.vertices[ i++ ] = -1;	// vertex
 		_lensFlare.vertices[ i++ ] = 0;  _lensFlare.vertices[ i++ ] = 0;	// uv... etc.
 
@@ -38124,7 +38124,7 @@ THREE.DepthPassPlugin = function () {
 		_renderer = renderer;
 
 		var depthShader = THREE.ShaderLib[ "depthRGBA" ];
-		var depthUniforms = THREE.UniformsUtils.clone( depthShader.uniforms );
+		const depthUniforms = THREE.UniformsUtils.clone( depthShader.uniforms );
 
 		_depthMaterial = new THREE.ShaderMaterial( { fragmentShader: depthShader.fragmentShader, vertexShader: depthShader.vertexShader, uniforms: depthUniforms } );
 		_depthMaterialMorph = new THREE.ShaderMaterial( { fragmentShader: depthShader.fragmentShader, vertexShader: depthShader.vertexShader, uniforms: depthUniforms, morphTargets: true } );
