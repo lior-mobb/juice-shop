@@ -36409,7 +36409,7 @@ THREE.WireframeHelper = function ( object, hex ) {
 
 		geometry.addAttribute( 'position', new THREE.Float32Attribute( numEdges * 2, 3 ) );
 
-		var coords = geometry.attributes.position.array;
+		const coords = geometry.attributes.position.array;
 
 		for ( let i = 0, l = numEdges; i < l; i ++ ) {
 
