@@ -30225,7 +30225,7 @@ THREE.Path.prototype.toShapes = function( isCCW, noHoles ) {
 
 		for ( var i = 0, il = inSubpaths.length; i < il; i ++ ) {
 
-			var tmpPath = inSubpaths[ i ];
+			const tmpPath = inSubpaths[ i ];
 
 			var tmpShape = new THREE.Shape();
 			tmpShape.actions = tmpPath.actions;
