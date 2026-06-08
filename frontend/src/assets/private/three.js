@@ -36174,7 +36174,7 @@ THREE.VertexNormalsHelper = function ( object, size, hex, linewidth ) {
 
 	var color = ( hex !== undefined ) ? hex : 0xff0000;
 
-	var width = ( linewidth !== undefined ) ? linewidth : 1;
+	const width = ( linewidth !== undefined ) ? linewidth : 1;
 
 	var geometry = new THREE.Geometry();
 
