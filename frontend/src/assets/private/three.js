@@ -12518,7 +12518,7 @@ THREE.BufferGeometryLoader.prototype = {
 
 	load: function ( url, onLoad, onProgress, onError ) {
 
-		var scope = this;
+		const scope = this;
 
 		var loader = new THREE.XHRLoader();
 		loader.setCrossOrigin( this.crossOrigin );
