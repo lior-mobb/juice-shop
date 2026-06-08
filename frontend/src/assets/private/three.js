@@ -33282,7 +33282,7 @@ THREE.ExtrudeGeometry.prototype.addShape = function ( shape, options ) {
 		// good reading for geometry algorithms (here: line-line intersection)
 		// http://geomalgorithms.com/a05-_intersect-1.html
 
-		var v_prev_x = inPt.x - inPrev.x, v_prev_y = inPt.y - inPrev.y;
+		let v_prev_x = inPt.x - inPrev.x, v_prev_y = inPt.y - inPrev.y;
 		var v_next_x = inNext.x - inPt.x, v_next_y = inNext.y - inPt.y;
 		
 		var v_prev_lensq = ( v_prev_x * v_prev_x + v_prev_y * v_prev_y );
