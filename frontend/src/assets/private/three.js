@@ -8798,7 +8798,7 @@ THREE.Projector = function () {
 
 		if ( _faceCount === _facePoolLength ) {
 
-			var face = new THREE.RenderableFace();
+			const face = new THREE.RenderableFace();
 			_facePool.push( face );
 			_facePoolLength ++;
 			_faceCount ++;
