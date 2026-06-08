@@ -4190,7 +4190,7 @@ THREE.Matrix3.prototype = {
 		// ( based on http://code.google.com/p/webgl-mjs/ )
 
 		var me = matrix.elements;
-		var te = this.elements;
+		const te = this.elements;
 
 		te[ 0 ] =   me[10] * me[5] - me[6] * me[9];
 		te[ 1 ] = - me[10] * me[1] + me[2] * me[9];
