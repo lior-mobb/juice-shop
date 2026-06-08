@@ -30718,7 +30718,7 @@ THREE.Shape.Utils = {
 				var nextShapeIdx = inShapeIdx + 1;
 				if ( nextShapeIdx > lastShapeIdx )	nextShapeIdx = 0;
 
-				var insideAngle = isPointInsideAngle( shape[inShapeIdx], shape[ prevShapeIdx ], shape[ nextShapeIdx ], hole[inHoleIdx] );
+				let insideAngle = isPointInsideAngle( shape[inShapeIdx], shape[ prevShapeIdx ], shape[ nextShapeIdx ], hole[inHoleIdx] );
 				if (! insideAngle ) {
 					// console.log( "Vertex (Shape): " + inShapeIdx + ", Point: " + hole[inHoleIdx].x + "/" + hole[inHoleIdx].y );
 					return	false;
