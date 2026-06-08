@@ -31475,7 +31475,7 @@ THREE.AnimationHandler = ( function () {
 
 		// setup hierarchy
 
-		var hierarchy = [];
+		const hierarchy = [];
 
 		if ( root instanceof THREE.SkinnedMesh ) {
 
