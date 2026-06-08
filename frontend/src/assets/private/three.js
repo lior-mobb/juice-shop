@@ -32737,7 +32737,7 @@ THREE.BoxGeometry = function ( width, height, depth, widthSegments, heightSegmen
 	this.heightSegments = heightSegments || 1;
 	this.depthSegments = depthSegments || 1;
 
-	var scope = this;
+	const scope = this;
 
 	var width_half = width / 2;
 	var height_half = height / 2;
