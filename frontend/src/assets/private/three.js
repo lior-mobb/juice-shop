@@ -31730,7 +31730,7 @@ THREE.Animation.prototype.reset = function () {
 
 			var type = this.keyTypes[ t ];
 
-			var prevKey = this.data.hierarchy[ h ].keys[ 0 ];
+			let prevKey = this.data.hierarchy[ h ].keys[ 0 ];
 			var nextKey = this.getNextKeyWith( type, h, 1 );
 
 			while ( nextKey.time < this.currentTime && nextKey.index > prevKey.index ) {
