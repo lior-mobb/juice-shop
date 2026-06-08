@@ -38206,7 +38206,7 @@ THREE.DepthPassPlugin = function () {
 
 		// render regular objects
 
-		var objectMaterial, useMorphing, useSkinning;
+		let objectMaterial, useMorphing, useSkinning;
 
 		for ( j = 0, jl = renderList.length; j < jl; j ++ ) {
 
