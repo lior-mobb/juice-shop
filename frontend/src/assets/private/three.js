@@ -4424,7 +4424,7 @@ THREE.Matrix4.prototype = {
 
 		return function ( m ) {
 
-			var te = this.elements;
+			const te = this.elements;
 			var me = m.elements;
 
 			var scaleX = 1 / v1.set( me[0], me[1], me[2] ).length();
