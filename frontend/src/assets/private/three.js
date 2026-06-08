@@ -29844,7 +29844,7 @@ THREE.Path.prototype.bezierCurveTo = function( aCP1x, aCP1y,
 
 THREE.Path.prototype.splineThru = function( pts /*Array of Vector*/ ) {
 
-	var args = Array.prototype.slice.call( arguments );
+	const args = Array.prototype.slice.call( arguments );
 	var lastargs = this.actions[ this.actions.length - 1 ].args;
 
 	var x0 = lastargs[ lastargs.length - 2 ];
