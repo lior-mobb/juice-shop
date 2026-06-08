@@ -27100,7 +27100,7 @@ THREE.WebGLProgram = ( function () {
 
 	var programIdCount = 0;
 
-	var generateDefines = function ( defines ) {
+	const generateDefines = function ( defines ) {
 
 		var value, chunk, chunks = [];
 
