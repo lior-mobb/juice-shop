@@ -23838,7 +23838,7 @@ THREE.WebGLRenderer = function ( parameters ) {
 
 	function disableUnusedAttributes() {
 
-		for ( var i = 0, l = _enabledAttributes.length; i < l; i ++ ) {
+		for ( let i = 0, l = _enabledAttributes.length; i < l; i ++ ) {
 
 			if ( _enabledAttributes[ i ] !== _newAttributes[ i ] ) {
 
