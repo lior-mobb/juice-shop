@@ -29128,7 +29128,7 @@ THREE.Curve.prototype.getLengths = function ( divisions ) {
 	this.needsUpdate = false;
 
 	var cache = [];
-	var current, last = this.getPoint( 0 );
+	let current, last = this.getPoint( 0 );
 	var p, sum = 0;
 
 	cache.push( 0 );
