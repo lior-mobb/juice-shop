@@ -35825,7 +35825,7 @@ THREE.FaceNormalsHelper.prototype.update = function () {
 
 	var vertices = this.geometry.vertices;
 
-	var object = this.object;
+	const object = this.object;
 	var objectVertices = object.geometry.vertices;
 	var objectFaces = object.geometry.faces;
 	var objectWorldMatrix = object.matrixWorld;
