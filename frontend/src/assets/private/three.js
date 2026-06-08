@@ -4678,7 +4678,7 @@ THREE.Matrix4.prototype = {
 	multiplyMatrices: function ( a, b ) {
 
 		var ae = a.elements;
-		var be = b.elements;
+		const be = b.elements;
 		var te = this.elements;
 
 		var a11 = ae[0], a12 = ae[4], a13 = ae[8], a14 = ae[12];
