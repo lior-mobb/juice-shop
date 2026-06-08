@@ -32023,7 +32023,7 @@ THREE.Animation.prototype.getNextKeyWith = function ( type, h, key ) {
 
 THREE.Animation.prototype.getPrevKeyWith = function ( type, h, key ) {
 
-	var keys = this.data.hierarchy[ h ].keys;
+	const keys = this.data.hierarchy[ h ].keys;
 
 	if ( this.interpolationType === THREE.AnimationHandler.CATMULLROM ||
 		this.interpolationType === THREE.AnimationHandler.CATMULLROM_FORWARD ) {
