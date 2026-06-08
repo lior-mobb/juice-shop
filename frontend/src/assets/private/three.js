@@ -3481,7 +3481,7 @@ THREE.Box2.prototype = {
 
 		return function ( center, size ) {
 
-			var halfSize = v1.copy( size ).multiplyScalar( 0.5 );
+			const halfSize = v1.copy( size ).multiplyScalar( 0.5 );
 			this.min.copy( center ).sub( halfSize );
 			this.max.copy( center ).add( halfSize );
 
