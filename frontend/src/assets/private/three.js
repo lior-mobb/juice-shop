@@ -20973,7 +20973,7 @@ THREE.WebGLRenderer = function ( parameters ) {
 
 	// initialize
 
-	var _gl;
+	let _gl;
 
 	var _glExtensionTextureFloat;
 	var _glExtensionTextureFloatLinear;
