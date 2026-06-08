@@ -2247,7 +2247,7 @@ THREE.Vector3.prototype = {
 
 		var offset = index * 4;
 
-		var me = matrix.elements;
+		const me = matrix.elements;
 
 		this.x = me[ offset ];
 		this.y = me[ offset + 1 ];
