@@ -11771,7 +11771,7 @@ THREE.XHRLoader.prototype = {
 
 	load: function ( url, onLoad, onProgress, onError ) {
 
-		var scope = this;
+		const scope = this;
 
 		var cached = scope.cache.get( url );
 
