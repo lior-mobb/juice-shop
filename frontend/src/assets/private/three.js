@@ -9682,7 +9682,7 @@ THREE.BufferGeometry.prototype = {
 
 		for ( j = 0, jl = offsets.length; j < jl; ++ j ) {
 
-			var start = offsets[ j ].start;
+			const start = offsets[ j ].start;
 			var count = offsets[ j ].count;
 			var index = offsets[ j ].index;
 
