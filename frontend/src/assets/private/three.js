@@ -28408,7 +28408,7 @@ THREE.ImageUtils = {
 		context.drawImage( image, 0, 0 );
 
 		var data = context.getImageData( 0, 0, width, height ).data;
-		var imageData = context.createImageData( width, height );
+		const imageData = context.createImageData( width, height );
 		var output = imageData.data;
 
 		for ( var x = 0; x < width; x ++ ) {
