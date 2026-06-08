@@ -6215,7 +6215,7 @@ THREE.Plane.prototype = {
 
 	orthoPoint: function ( point, optionalTarget ) {
 
-		var perpendicularMagnitude = this.distanceToPoint( point );
+		const perpendicularMagnitude = this.distanceToPoint( point );
 
 		var result = optionalTarget || new THREE.Vector3();
 		return result.copy( this.normal ).multiplyScalar( perpendicularMagnitude );
