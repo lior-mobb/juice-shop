@@ -129,7 +129,7 @@ THREE.OrbitControls = function ( object, domElement ) {
     this.panLeft = function ( distance ) {
 
         var panOffset = new THREE.Vector3();
-        var te = this.object.matrix.elements;
+        const te = this.object.matrix.elements;
         // get X column of matrix
         panOffset.set( te[0], te[1], te[2] );
         panOffset.multiplyScalar(-distance);
