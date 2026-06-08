@@ -36332,7 +36332,7 @@ THREE.VertexTangentsHelper.prototype.update = ( function ( object ) {
 
 			for ( var j = 0, jl = face.vertexTangents.length; j < jl; j ++ ) {
 
-				var vertexId = face[ keys[ j ] ];
+				const vertexId = face[ keys[ j ] ];
 				var vertex = verts[ vertexId ];
 
 				var tangent = face.vertexTangents[ j ];
