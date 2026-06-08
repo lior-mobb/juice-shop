@@ -2519,7 +2519,7 @@ THREE.Vector4.prototype = {
 
 		this.w = 2 * Math.acos( q.w );
 
-		var s = Math.sqrt( 1 - q.w * q.w );
+		const s = Math.sqrt( 1 - q.w * q.w );
 
 		if ( s < 0.0001 ) {
 
