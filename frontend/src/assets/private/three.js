@@ -33144,7 +33144,7 @@ THREE.ExtrudeGeometry.prototype.addShape = function ( shape, options ) {
 
 	var curveSegments = options.curveSegments !== undefined ? options.curveSegments : 12;
 
-	var steps = options.steps !== undefined ? options.steps : 1;
+	const steps = options.steps !== undefined ? options.steps : 1;
 
 	var extrudePath = options.extrudePath;
 	var extrudePts, extrudeByPath = false;
