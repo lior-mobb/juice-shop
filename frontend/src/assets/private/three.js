@@ -29398,7 +29398,7 @@ THREE.CurvePath.prototype.closePath = function() {
 THREE.CurvePath.prototype.getPoint = function( t ) {
 
 	var d = t * this.getLength();
-	var curveLengths = this.getCurveLengths();
+	const curveLengths = this.getCurveLengths();
 	var i = 0, diff, curve;
 
 	// To think about boundaries points.
