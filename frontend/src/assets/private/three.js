@@ -14094,7 +14094,7 @@ THREE.SceneLoader.prototype = {
 				var shader = THREE.ShaderLib[ "normalmap" ];
 				var uniforms = THREE.UniformsUtils.clone( shader.uniforms );
 
-				var diffuse = matJSON.parameters.color;
+				const diffuse = matJSON.parameters.color;
 				var specular = matJSON.parameters.specular;
 				var ambient = matJSON.parameters.ambient;
 				var shininess = matJSON.parameters.shininess;
