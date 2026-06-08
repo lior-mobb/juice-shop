@@ -32192,7 +32192,7 @@ THREE.KeyFrameAnimation.prototype.stop = function() {
 	for ( var h = 0; h < this.data.hierarchy.length; h++ ) {
 		
 		var obj = this.hierarchy[ h ];
-		var node = this.data.hierarchy[ h ];
+		const node = this.data.hierarchy[ h ];
 
 		if ( node.animationCache !== undefined ) {
 
