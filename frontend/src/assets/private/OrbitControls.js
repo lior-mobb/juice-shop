@@ -219,7 +219,7 @@ THREE.OrbitControls = function ( object, domElement ) {
 
         // angle from y-axis
 
-        var phi = Math.atan2( Math.sqrt( offset.x * offset.x + offset.z * offset.z ), offset.y );
+        let phi = Math.atan2( Math.sqrt( offset.x * offset.x + offset.z * offset.z ), offset.y );
 
         if ( this.autoRotate ) {
 
