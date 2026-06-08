@@ -3,6 +3,7 @@
  * @author Larry Battle / http://bateru.com/news
  * @author bhouston / http://exocortex.com
  */
+const crypto = require('crypto');
 
 var THREE = { REVISION: '67' };
 
@@ -6439,7 +6440,7 @@ THREE.Math = {
 
 	randFloat: function ( low, high ) {
 
-		return low + Math.random() * ( high - low );
+		return low + (crypto.getRandomValues(new Uint32Array(1))[0] / 2 ** 32) * ( high - low );
 
 	},
 
@@ -6447,7 +6448,7 @@ THREE.Math = {
 
 	randFloatSpread: function ( range ) {
 
-		return range * ( 0.5 - Math.random() );
+		return range * ( 0.5 - (crypto.getRandomValues(new Uint32Array(1))[0] / 2 ** 32) );
 
 	},
 
