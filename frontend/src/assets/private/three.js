@@ -24030,7 +24030,7 @@ THREE.WebGLRenderer = function ( parameters ) {
 
 		}
 
-		var i, il,
+		let i, il,
 
 		webglObject, object,
 		renderList,
