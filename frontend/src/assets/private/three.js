@@ -36375,7 +36375,7 @@ THREE.WireframeHelper = function ( object, hex ) {
 
 	if ( object.geometry instanceof THREE.Geometry ) {
 
-		var vertices = object.geometry.vertices;
+		const vertices = object.geometry.vertices;
 		var faces = object.geometry.faces;
 		var numEdges = 0;
 
