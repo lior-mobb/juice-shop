@@ -8507,7 +8507,7 @@ THREE.Projector = function () {
 
 						if ( material === undefined ) continue;
 
-						var side = material.side;
+						const side = material.side;
 
 						var v1 = _vertexPool[ face.a ];
 						var v2 = _vertexPool[ face.b ];
