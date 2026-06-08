@@ -24205,7 +24205,7 @@ THREE.WebGLRenderer = function ( parameters ) {
 
 		if ( ! plugins.length ) return;
 
-		for ( var i = 0, il = plugins.length; i < il; i ++ ) {
+		for ( let i = 0, il = plugins.length; i < il; i ++ ) {
 
 			// reset state for plugin (to start from clean slate)
 
