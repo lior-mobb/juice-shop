@@ -26433,7 +26433,7 @@ THREE.WebGLRenderer = function ( parameters ) {
 
 				var cubeImage = [];
 
-				for ( var i = 0; i < 6; i ++ ) {
+				for ( let i = 0; i < 6; i ++ ) {
 
 					if ( _this.autoScaleCubemaps && ! isCompressed ) {
 
