@@ -4407,7 +4407,7 @@ THREE.Matrix4.prototype = {
 
 	copyPosition: function ( m ) {
 
-		var te = this.elements;
+		const te = this.elements;
 		var me = m.elements;
 
 		te[12] = me[12];
