@@ -39,7 +39,7 @@ self.console = self.console || {
 		self.requestAnimationFrame = function ( callback ) {
 
 			var currTime = Date.now(), timeToCall = Math.max( 0, 16 - ( currTime - lastTime ) );
-			var id = self.setTimeout( function() { callback( currTime + timeToCall ); }, timeToCall );
+			const id = self.setTimeout( function() { callback( currTime + timeToCall ); }, timeToCall );
 			lastTime = currTime + timeToCall;
 			return id;
 
@@ -5213,7 +5213,7 @@ THREE.Matrix4.prototype = {
 	makeFrustum: function ( left, right, bottom, top, near, far ) {
 
 		var te = this.elements;
-		var x = 2 * near / ( right - left );
+		const x = 2 * near / ( right - left );
 		var y = 2 * near / ( top - bottom );
 
 		var a = ( right + left ) / ( right - left );
@@ -7683,7 +7683,7 @@ THREE.Object3D.prototype = {
 
 	rotateY: function () {
 
-		var v1 = new THREE.Vector3( 0, 1, 0 );
+		const v1 = new THREE.Vector3( 0, 1, 0 );
 
 		return function ( angle ) {
 
@@ -9540,7 +9540,7 @@ THREE.BufferGeometry.prototype = {
 
 		var tangents = this.attributes[ "tangent" ].array;
 
-		var tan1 = [], tan2 = [];
+		let tan1 = [], tan2 = [];
 
 		for ( var k = 0; k < nVertices; k ++ ) {
 
@@ -10466,7 +10466,7 @@ THREE.Geometry.prototype = {
 
 			}
 
-			for ( var j = 0, jl = faceVertexNormals.length; j < jl; j ++ ) {
+			for ( let j = 0, jl = faceVertexNormals.length; j < jl; j ++ ) {
 
 				normal = faceVertexNormals[ j ].clone();
 
@@ -16300,7 +16300,7 @@ THREE.LOD.prototype.clone = function ( object ) {
 
 THREE.Sprite = ( function () {
 
-	var vertices = new THREE.Float32Attribute( 3, 3 );
+	const vertices = new THREE.Float32Attribute( 3, 3 );
 	vertices.set( [ - 0.5, - 0.5, 0, 0.5, - 0.5, 0, 0.5, 0.5, 0 ] );
 
 	var geometry = new THREE.BufferGeometry();
@@ -23319,7 +23319,7 @@ THREE.WebGLRenderer = function ( parameters ) {
 
 				if ( attributeItem ) {
 
-					var attributeSize = attributeItem.itemSize;
+					const attributeSize = attributeItem.itemSize;
 
 					_gl.bindBuffer( _gl.ARRAY_BUFFER, attributeItem.buffer );
 					enableAttribute( attributePointer );
@@ -23425,7 +23425,7 @@ THREE.WebGLRenderer = function ( parameters ) {
 
 					updateBuffers = true;
 
-					for ( var i = 0, il = offsets.length; i < il; i ++ ) {
+					for ( let i = 0, il = offsets.length; i < il; i ++ ) {
 
 						var startIndex = offsets[ i ].index;
 
@@ -28216,7 +28216,7 @@ THREE.ImageUtils = {
 				for ( var x = 0; x < width; x++ ) {
 					var b = srcBuffer[src]; src++;
 					var g = srcBuffer[src]; src++;
-					var r = srcBuffer[src]; src++;
+					const r = srcBuffer[src]; src++;
 					var a = srcBuffer[src]; src++;
 					byteArray[dst] = r; dst++;	//r
 					byteArray[dst] = g; dst++;	//g
@@ -32786,7 +32786,7 @@ THREE.BoxGeometry = function ( width, height, depth, widthSegments, heightSegmen
 
 			for ( ix = 0; ix < gridX1; ix ++ ) {
 
-				var vector = new THREE.Vector3();
+				const vector = new THREE.Vector3();
 				vector[ u ] = ( ix * segment_width - width_half ) * udir;
 				vector[ v ] = ( iy * segment_height - height_half ) * vdir;
 				vector[ w ] = depth;
@@ -37623,7 +37623,7 @@ THREE.ShadowMapPlugin = function () {
 		virtualLight.pointsWorld = [];
 		virtualLight.pointsFrustum = [];
 
-		var pointsWorld = virtualLight.pointsWorld,
+		let pointsWorld = virtualLight.pointsWorld,
 			pointsFrustum = virtualLight.pointsFrustum;
 
 		for ( var i = 0; i < 8; i ++ ) {

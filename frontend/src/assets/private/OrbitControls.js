@@ -88,7 +88,7 @@ THREE.OrbitControls = function ( object, domElement ) {
 
     var phiDelta = 0;
     var thetaDelta = 0;
-    var scale = 1;
+    let scale = 1;
     var pan = new THREE.Vector3();
 
     var lastPosition = new THREE.Vector3();
@@ -98,7 +98,7 @@ THREE.OrbitControls = function ( object, domElement ) {
 
     // events
 
-    var changeEvent = { type: 'change' };
+    const changeEvent = { type: 'change' };
 
 
     this.rotateLeft = function ( angle ) {
@@ -210,7 +210,7 @@ THREE.OrbitControls = function ( object, domElement ) {
 
     this.update = function () {
 
-        var position = this.object.position;
+        const position = this.object.position;
         var offset = position.clone().sub( this.target );
 
         // angle from z-axis around y-axis
