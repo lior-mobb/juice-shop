@@ -3377,7 +3377,7 @@ THREE.Line3.prototype = {
 
 		var t = this.closestPointToPointParameter( point, clampToLine );
 
-		var result = optionalTarget || new THREE.Vector3();
+		const result = optionalTarget || new THREE.Vector3();
 
 		return this.delta( result ).multiplyScalar( t ).add( this.start );
 
