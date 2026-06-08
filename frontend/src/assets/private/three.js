@@ -29867,7 +29867,7 @@ THREE.Path.prototype.arc = function ( aX, aY, aRadius,
 
 	var lastargs = this.actions[ this.actions.length - 1].args;
 	var x0 = lastargs[ lastargs.length - 2 ];
-	var y0 = lastargs[ lastargs.length - 1 ];
+	const y0 = lastargs[ lastargs.length - 1 ];
 
 	this.absarc(aX + x0, aY + y0, aRadius,
 		aStartAngle, aEndAngle, aClockwise );
