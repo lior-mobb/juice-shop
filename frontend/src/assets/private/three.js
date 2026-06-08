@@ -27922,7 +27922,7 @@ THREE.ImageUtils = {
 		var images = [];
 		images.loadCount = 0;
 
-		var loader = new THREE.ImageLoader();
+		const loader = new THREE.ImageLoader();
 		loader.crossOrigin = this.crossOrigin;
 		
 		var texture = new THREE.Texture();
