@@ -31204,7 +31204,7 @@ THREE.LineCurve3 = THREE.Curve.create(
 
 	function ( t ) {
 
-		var r = new THREE.Vector3();
+		const r = new THREE.Vector3();
 
 
 		r.subVectors( this.v2, this.v1 ); // diff
