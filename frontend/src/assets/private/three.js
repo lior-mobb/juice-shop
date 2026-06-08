@@ -28434,7 +28434,7 @@ THREE.ImageUtils = {
 				var normals = [];
 				var num_points = points.length;
 
-				for ( var i = 0; i < num_points; i ++ ) {
+				for ( let i = 0; i < num_points; i ++ ) {
 
 					var v1 = points[ i ];
 					var v2 = points[ ( i + 1 ) % num_points ];
