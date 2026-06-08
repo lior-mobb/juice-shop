@@ -8461,7 +8461,7 @@ THREE.Projector = function () {
 
 						} else {
 
-							for ( var i = 0, l = indices.length; i < l; i += 3 ) {
+							for ( let i = 0, l = indices.length; i < l; i += 3 ) {
 
 								renderList.pushTriangle( indices[ i ], indices[ i + 1 ], indices[ i + 2 ] );
 
