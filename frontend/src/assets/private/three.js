@@ -35036,7 +35036,7 @@ THREE.IcosahedronGeometry = function ( radius, detail ) {
 		detail: detail
 	};
 
-	var t = ( 1 + Math.sqrt( 5 ) ) / 2;
+	const t = ( 1 + Math.sqrt( 5 ) ) / 2;
 
 	var vertices = [
 		-1,  t,  0,    1,  t,  0,   -1, -t,  0,    1, -t,  0,
