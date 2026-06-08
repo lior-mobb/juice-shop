@@ -8865,7 +8865,7 @@ THREE.Projector = function () {
 
 	function clipLine( s1, s2 ) {
 
-		var alpha1 = 0, alpha2 = 1,
+		let alpha1 = 0, alpha2 = 1,
 
 		// Calculate the boundary coordinate of each vertex for the near and far clip planes,
 		// Z = -1 and Z = +1, respectively.
