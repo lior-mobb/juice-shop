@@ -16424,7 +16424,7 @@ THREE.Scene.prototype.__removeObject = function ( object ) {
 
 		if ( object.shadowCascadeArray ) {
 
-			for ( var x = 0; x < object.shadowCascadeArray.length; x ++ ) {
+			for ( let x = 0; x < object.shadowCascadeArray.length; x ++ ) {
 
 				this.__removeObject( object.shadowCascadeArray[ x ] );
 
