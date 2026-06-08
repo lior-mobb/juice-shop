@@ -34476,7 +34476,7 @@ THREE.TorusKnotGeometry = function ( radius, tube, radialSegments, tubularSegmen
 		for ( var j = 0; j < tubularSegments; ++ j ) {
 
 			var ip = ( i + 1 ) % radialSegments;
-			var jp = ( j + 1 ) % tubularSegments;
+			const jp = ( j + 1 ) % tubularSegments;
 
 			var a = grid[ i ][ j ];
 			var b = grid[ ip ][ j ];
