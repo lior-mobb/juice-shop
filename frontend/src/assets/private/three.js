@@ -36178,7 +36178,7 @@ THREE.VertexNormalsHelper = function ( object, size, hex, linewidth ) {
 
 	var geometry = new THREE.Geometry();
 
-	var vertices = object.geometry.vertices;
+	const vertices = object.geometry.vertices;
 
 	var faces = object.geometry.faces;
 
