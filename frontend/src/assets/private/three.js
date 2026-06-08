@@ -30361,7 +30361,7 @@ THREE.Path.prototype.toShapes = function( isCCW, noHoles ) {
 		for (var sIdx = 0, sLen = newShapes.length; sIdx < sLen; sIdx++ ) {
 			betterShapeHoles[sIdx] = [];
 		}
-		for (var sIdx = 0, sLen = newShapes.length; sIdx < sLen; sIdx++ ) {
+		for (let sIdx = 0, sLen = newShapes.length; sIdx < sLen; sIdx++ ) {
 			var sh = newShapes[sIdx];
 			var sho = newShapeHoles[sIdx];
 			for (var hIdx = 0; hIdx < sho.length; hIdx++ ) {
