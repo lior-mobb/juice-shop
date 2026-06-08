@@ -4689,7 +4689,7 @@ THREE.Matrix4.prototype = {
 		var b11 = be[0], b12 = be[4], b13 = be[8], b14 = be[12];
 		var b21 = be[1], b22 = be[5], b23 = be[9], b24 = be[13];
 		var b31 = be[2], b32 = be[6], b33 = be[10], b34 = be[14];
-		var b41 = be[3], b42 = be[7], b43 = be[11], b44 = be[15];
+		let b41 = be[3], b42 = be[7], b43 = be[11], b44 = be[15];
 
 		te[0] = a11 * b11 + a12 * b21 + a13 * b31 + a14 * b41;
 		te[4] = a11 * b12 + a12 * b22 + a13 * b32 + a14 * b42;
