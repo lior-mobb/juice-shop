@@ -7710,7 +7710,7 @@ THREE.Object3D.prototype = {
 		// translate object by distance along axis in object space
 		// axis is assumed to be normalized
 
-		var v1 = new THREE.Vector3();
+		const v1 = new THREE.Vector3();
 
 		return function ( axis, distance ) {
 
