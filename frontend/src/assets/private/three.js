@@ -7085,7 +7085,7 @@ THREE.EventDispatcher.prototype = {
 	var vB = new THREE.Vector3();
 	var vC = new THREE.Vector3();
 
-	var intersectObject = function ( object, raycaster, intersects ) {
+	const intersectObject = function ( object, raycaster, intersects ) {
 
 		if ( object instanceof THREE.Sprite ) {
 
