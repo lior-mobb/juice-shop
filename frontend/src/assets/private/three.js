@@ -32196,7 +32196,7 @@ THREE.KeyFrameAnimation.prototype.stop = function() {
 
 		if ( node.animationCache !== undefined ) {
 
-			var original = node.animationCache.originalMatrix;
+			const original = node.animationCache.originalMatrix;
 
 			if( obj instanceof THREE.Bone ) {
 
