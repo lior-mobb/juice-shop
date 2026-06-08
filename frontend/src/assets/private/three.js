@@ -30313,7 +30313,7 @@ THREE.Path.prototype.toShapes = function( isCCW, noHoles ) {
 	var newShapes = [];
 	var newShapeHoles = [];
 	var mainIdx = 0;
-	var tmpPoints;
+	let tmpPoints;
 
 	newShapes[mainIdx] = undefined;
 	newShapeHoles[mainIdx] = [];
