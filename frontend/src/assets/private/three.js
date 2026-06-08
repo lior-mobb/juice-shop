@@ -21335,7 +21335,7 @@ THREE.WebGLRenderer = function ( parameters ) {
 
 	};
 
-	var onRenderTargetDispose = function ( event ) {
+	const onRenderTargetDispose = function ( event ) {
 
 		var renderTarget = event.target;
 
