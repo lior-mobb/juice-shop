@@ -35732,7 +35732,7 @@ THREE.EdgesHelper = function ( object, hex ) {
 			edge[ 1 ] = face[ keys[ ( j + 1 ) % 3 ] ];
 			edge.sort( sortFunction );
 
-			var key = edge.toString();
+			const key = edge.toString();
 
 			if ( hash[ key ] === undefined ) {
 
