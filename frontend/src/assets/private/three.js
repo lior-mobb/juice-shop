@@ -8403,7 +8403,7 @@ THREE.Projector = function () {
 
 				if ( geometry instanceof THREE.BufferGeometry ) {
 
-					var attributes = geometry.attributes;
+					const attributes = geometry.attributes;
 					var offsets = geometry.offsets;
 
 					if ( attributes.position === undefined ) continue;
