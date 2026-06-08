@@ -7880,7 +7880,7 @@ THREE.Object3D.prototype = {
 
 		callback( this );
 
-		for ( var i = 0, l = this.children.length; i < l; i ++ ) {
+		for ( let i = 0, l = this.children.length; i < l; i ++ ) {
 
 			this.children[ i ].traverse( callback );
 
