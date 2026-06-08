@@ -10074,7 +10074,7 @@ THREE.Geometry.prototype = {
 
 	computeVertexNormals: function ( areaWeighted ) {
 
-		var v, vl, f, fl, face, vertices;
+		let v, vl, f, fl, face, vertices;
 
 		vertices = new Array( this.vertices.length );
 
