@@ -34229,7 +34229,7 @@ THREE.SphereGeometry = function ( radius, widthSegments, heightSegments, phiStar
 
 			var n1 = this.vertices[ v1 ].clone().normalize();
 			var n2 = this.vertices[ v2 ].clone().normalize();
-			var n3 = this.vertices[ v3 ].clone().normalize();
+			const n3 = this.vertices[ v3 ].clone().normalize();
 			var n4 = this.vertices[ v4 ].clone().normalize();
 
 			var uv1 = uvs[ y ][ x + 1 ].clone();
