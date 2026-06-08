@@ -6259,7 +6259,7 @@ THREE.Plane.prototype = {
 
 			}
 
-			var t = - ( line.start.dot( this.normal ) + this.constant ) / denominator;
+			const t = - ( line.start.dot( this.normal ) + this.constant ) / denominator;
 
 			if( t < 0 || t > 1 ) {
 
