@@ -154,7 +154,7 @@ THREE.OrbitControls = function ( object, domElement ) {
     // right and down are positive
     this.pan = function ( delta ) {
 
-        var element = scope.domElement === document ? scope.domElement.body : scope.domElement;
+        const element = scope.domElement === document ? scope.domElement.body : scope.domElement;
 
         if ( scope.object.fov !== undefined ) {
 
