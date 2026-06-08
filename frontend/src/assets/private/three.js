@@ -5797,7 +5797,7 @@ THREE.Sphere.prototype = {
 
 	setFromPoints: function () {
 
-		var box = new THREE.Box3();
+		const box = new THREE.Box3();
 
 		return function ( points, optionalCenter )  {
 
