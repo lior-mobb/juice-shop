@@ -784,7 +784,7 @@ THREE.Quaternion.prototype = {
 
 		// assumes axis is normalized
 
-		var halfAngle = angle / 2, s = Math.sin( halfAngle );
+		let halfAngle = angle / 2, s = Math.sin( halfAngle );
 
 		this._x = axis.x * s;
 		this._y = axis.y * s;
