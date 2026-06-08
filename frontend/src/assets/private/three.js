@@ -335,7 +335,7 @@ THREE.Color.prototype = {
 
 		if ( /^\#([0-9a-f]{6})$/i.test( style ) ) {
 
-			var color = /^\#([0-9a-f]{6})$/i.exec( style );
+			const color = /^\#([0-9a-f]{6})$/i.exec( style );
 
 			this.setHex( parseInt( color[ 1 ], 16 ) );
 
