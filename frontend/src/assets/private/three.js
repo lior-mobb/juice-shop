@@ -7920,7 +7920,7 @@ THREE.Object3D.prototype = {
 
 	getObjectByName: function ( name, recursive ) {
 
-		for ( var i = 0, l = this.children.length; i < l; i ++ ) {
+		for ( let i = 0, l = this.children.length; i < l; i ++ ) {
 
 			var child = this.children[ i ];
 
