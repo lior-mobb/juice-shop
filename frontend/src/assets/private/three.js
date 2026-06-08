@@ -12688,7 +12688,7 @@ THREE.ObjectLoader.prototype = {
 
 	parseGeometries: function ( json ) {
 
-		var geometries = {};
+		const geometries = {};
 
 		if ( json !== undefined ) {
 
