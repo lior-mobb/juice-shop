@@ -37668,7 +37668,7 @@ THREE.ShadowMapPlugin = function () {
 		var nearZ = light.shadowCascadeNearZ[ cascade ];
 		var farZ = light.shadowCascadeFarZ[ cascade ];
 
-		var pointsFrustum = virtualLight.pointsFrustum;
+		const pointsFrustum = virtualLight.pointsFrustum;
 
 		pointsFrustum[ 0 ].z = nearZ;
 		pointsFrustum[ 1 ].z = nearZ;
