@@ -33842,7 +33842,7 @@ THREE.ShapeGeometry.prototype.addShape = function ( shape, options ) {
 	var shapesOffset = this.vertices.length;
 	var shapePoints = shape.extractPoints( curveSegments );
 
-	var vertices = shapePoints.shape;
+	let vertices = shapePoints.shape;
 	var holes = shapePoints.holes;
 
 	var reverse = !THREE.Shape.Utils.isClockWise( vertices );
