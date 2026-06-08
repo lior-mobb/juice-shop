@@ -15080,7 +15080,7 @@ THREE.ParticleSystemMaterial.prototype = Object.create( THREE.Material.prototype
 
 THREE.ParticleSystemMaterial.prototype.clone = function () {
 
-	var material = new THREE.ParticleSystemMaterial();
+	const material = new THREE.ParticleSystemMaterial();
 
 	THREE.Material.prototype.clone.call( this, material );
 
