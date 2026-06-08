@@ -34064,7 +34064,7 @@ THREE.PlaneGeometry = function ( width, height, widthSegments, heightSegments ) 
 			var uva = new THREE.Vector2( ix / gridX, 1 - iz / gridZ );
 			var uvb = new THREE.Vector2( ix / gridX, 1 - ( iz + 1 ) / gridZ );
 			var uvc = new THREE.Vector2( ( ix + 1 ) / gridX, 1 - ( iz + 1 ) / gridZ );
-			var uvd = new THREE.Vector2( ( ix + 1 ) / gridX, 1 - iz / gridZ );
+			const uvd = new THREE.Vector2( ( ix + 1 ) / gridX, 1 - iz / gridZ );
 
 			var face = new THREE.Face3( a, b, d );
 			face.normal.copy( normal );
