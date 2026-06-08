@@ -27746,7 +27746,7 @@ THREE.GeometryUtils = {
 				if ( end < start )
 					return start;
 
-				var mid = start + Math.floor( ( end - start ) / 2 );
+				const mid = start + Math.floor( ( end - start ) / 2 );
 
 				if ( cumulativeAreas[ mid ] > value ) {
 
