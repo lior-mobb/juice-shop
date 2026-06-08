@@ -9730,7 +9730,7 @@ THREE.BufferGeometry.prototype = {
 		*/
 
 		var sortedIndices = new Uint16Array( indices.length ); //16-bit buffers
-		var indexPtr = 0;
+		let indexPtr = 0;
 		var vertexPtr = 0;
 
 		var offsets = [ { start:0, count:0, index:0 } ];
