@@ -8047,7 +8047,7 @@ THREE.Object3D.prototype = {
 
 			for ( var i = 0; i < this.children.length; i ++ ) {
 
-				var child = this.children[ i ];
+				const child = this.children[ i ];
 				object.add( child.clone() );
 
 			}
