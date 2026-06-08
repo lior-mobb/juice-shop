@@ -36326,7 +36326,7 @@ THREE.VertexTangentsHelper.prototype.update = ( function ( object ) {
 
 		var idx = 0;
 
-		for ( var i = 0, l = faces.length; i < l; i ++ ) {
+		for ( let i = 0, l = faces.length; i < l; i ++ ) {
 
 			var face = faces[ i ];
 
