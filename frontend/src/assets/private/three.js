@@ -1761,7 +1761,7 @@ THREE.Vector3.prototype = {
 
 		// input: THREE.Matrix4 affine matrix
 
-		var x = this.x, y = this.y, z = this.z;
+		let x = this.x, y = this.y, z = this.z;
 
 		var e = m.elements;
 
