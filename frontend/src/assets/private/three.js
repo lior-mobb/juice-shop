@@ -4133,7 +4133,7 @@ THREE.Matrix3.prototype = {
 
 	applyToVector3Array: function() {
 
-		var v1 = new THREE.Vector3();
+		const v1 = new THREE.Vector3();
 
 		return function ( array, offset, length ) {
 
