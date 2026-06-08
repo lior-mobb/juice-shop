@@ -7683,7 +7683,7 @@ THREE.Object3D.prototype = {
 
 	rotateY: function () {
 
-		var v1 = new THREE.Vector3( 0, 1, 0 );
+		const v1 = new THREE.Vector3( 0, 1, 0 );
 
 		return function ( angle ) {
 
