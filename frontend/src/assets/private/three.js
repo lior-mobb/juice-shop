@@ -31949,7 +31949,7 @@ THREE.Animation.prototype.update = (function(){
 					}
 					else {
 
-						var proportionalWeight = this.weight / ( this.weight + object.accumulatedRotWeight );
+						const proportionalWeight = this.weight / ( this.weight + object.accumulatedRotWeight );
 						THREE.Quaternion.slerp( object.quaternion, newQuat, object.quaternion, proportionalWeight );
 						object.accumulatedRotWeight += this.weight;
 
