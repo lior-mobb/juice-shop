@@ -36172,7 +36172,7 @@ THREE.VertexNormalsHelper = function ( object, size, hex, linewidth ) {
 
 	this.size = ( size !== undefined ) ? size : 1;
 
-	var color = ( hex !== undefined ) ? hex : 0xff0000;
+	const color = ( hex !== undefined ) ? hex : 0xff0000;
 
 	var width = ( linewidth !== undefined ) ? linewidth : 1;
 
