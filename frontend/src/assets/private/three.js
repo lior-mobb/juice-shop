@@ -8188,7 +8188,7 @@ THREE.Projector = function () {
 
 	};
 
-	var projectGraph = function ( root, sortObjects ) {
+	const projectGraph = function ( root, sortObjects ) {
 
 		_objectCount = 0;
 
