@@ -32985,7 +32985,7 @@ THREE.CylinderGeometry = function ( radiusTop, radiusBottom, height, radialSegme
 
 			var v1 = vertices[ y ][ x ];
 			var v2 = vertices[ y + 1 ][ x ];
-			var v3 = vertices[ y + 1 ][ x + 1 ];
+			const v3 = vertices[ y + 1 ][ x + 1 ];
 			var v4 = vertices[ y ][ x + 1 ];
 
 			var n1 = na.clone();
