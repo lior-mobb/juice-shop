@@ -22967,7 +22967,7 @@ THREE.WebGLRenderer = function ( parameters ) {
 
 				} else if ( customAttribute.size === 3 ) {
 
-					var pp;
+					let pp;
 
 					if ( customAttribute.type === "c" ) {
 
