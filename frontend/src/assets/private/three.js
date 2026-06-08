@@ -28418,7 +28418,7 @@ THREE.ImageUtils = {
 				var ly = y - 1 < 0 ? 0 : y - 1;
 				var uy = y + 1 > height - 1 ? height - 1 : y + 1;
 				var lx = x - 1 < 0 ? 0 : x - 1;
-				var ux = x + 1 > width - 1 ? width - 1 : x + 1;
+				const ux = x + 1 > width - 1 ? width - 1 : x + 1;
 
 				var points = [];
 				var origin = [ 0, 0, data[ ( y * width + x ) * 4 ] / 255 * depth ];
