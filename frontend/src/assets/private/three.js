@@ -33307,7 +33307,7 @@ THREE.ExtrudeGeometry.prototype.addShape = function ( shape, options ) {
 	
 			// scaling factor for v_prev to intersection point
 	
-			var sf = (  ( ptNextShift_x - ptPrevShift_x ) * v_next_y -
+			const sf = (  ( ptNextShift_x - ptPrevShift_x ) * v_next_y -
 						( ptNextShift_y - ptPrevShift_y ) * v_next_x    ) /
 					  ( v_prev_x * v_next_y - v_prev_y * v_next_x );
 	
