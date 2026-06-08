@@ -32427,7 +32427,7 @@ THREE.CubeCamera = function ( near, far, cubeResolution ) {
 	cameraPY.lookAt( new THREE.Vector3( 0, 1, 0 ) );
 	this.add( cameraPY );
 
-	var cameraNY = new THREE.PerspectiveCamera( fov, aspect, near, far );
+	const cameraNY = new THREE.PerspectiveCamera( fov, aspect, near, far );
 	cameraNY.up.set( 0, 0, -1 );
 	cameraNY.lookAt( new THREE.Vector3( 0, -1, 0 ) );
 	this.add( cameraNY );
