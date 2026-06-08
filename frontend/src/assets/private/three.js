@@ -28349,7 +28349,7 @@ THREE.ImageUtils = {
 					var byteArray = loadARGBMip( buffer, dataOffset, width, height );
 					var dataLength = byteArray.length;
 				} else {
-					var dataLength = Math.max( 4, width ) / 4 * Math.max( 4, height ) / 4 * blockBytes;
+					const dataLength = Math.max( 4, width ) / 4 * Math.max( 4, height ) / 4 * blockBytes;
 					var byteArray = new Uint8Array( buffer, dataOffset, dataLength );
 				}
 				
