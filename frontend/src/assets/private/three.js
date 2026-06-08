@@ -12679,7 +12679,7 @@ THREE.ObjectLoader.prototype = {
 	parse: function ( json ) {
 
 		var geometries = this.parseGeometries( json.geometries );
-		var materials = this.parseMaterials( json.materials );
+		const materials = this.parseMaterials( json.materials );
 		var object = this.parseObject( json.object, geometries, materials );
 
 		return object;
