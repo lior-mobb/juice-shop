@@ -29105,7 +29105,7 @@ THREE.Curve.prototype.getSpacedPoints = function ( divisions ) {
 
 THREE.Curve.prototype.getLength = function () {
 
-	var lengths = this.getLengths();
+	const lengths = this.getLengths();
 	return lengths[ lengths.length - 1 ];
 
 };
