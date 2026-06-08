@@ -30182,7 +30182,7 @@ THREE.Path.prototype.toShapes = function( isCCW, noHoles ) {
 
 	function extractSubpaths( inActions ) {
 
-		var i, il, item, action, args;
+		let i, il, item, action, args;
 
 		var subPaths = [], lastPath = new THREE.Path();
 
