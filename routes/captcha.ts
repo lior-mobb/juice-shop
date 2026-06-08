@@ -17,7 +17,7 @@ function captchas () {
     const secondTerm = Math.floor(((crypto.getRandomValues(new Uint32Array(1))[0] / 2 ** 32) * 10) + 1)
     const thirdTerm = Math.floor((Math.random() * 10) + 1)
 
-    const firstOperator = operators[Math.floor((Math.random() * 3))]
+    const firstOperator = operators[Math.floor(((crypto.getRandomValues(new Uint32Array(1))[0] / 2 ** 32) * 3))]
     const secondOperator = operators[Math.floor((Math.random() * 3))]
 
     const expression = firstTerm.toString() + firstOperator + secondTerm.toString() + secondOperator + thirdTerm.toString()
