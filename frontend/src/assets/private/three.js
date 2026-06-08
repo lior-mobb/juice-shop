@@ -347,7 +347,7 @@ THREE.Color.prototype = {
 
 		if ( /^\#([0-9a-f])([0-9a-f])([0-9a-f])$/i.test( style ) ) {
 
-			var color = /^\#([0-9a-f])([0-9a-f])([0-9a-f])$/i.exec( style );
+			const color = /^\#([0-9a-f])([0-9a-f])([0-9a-f])$/i.exec( style );
 
 			this.setHex( parseInt( color[ 1 ] + color[ 1 ] + color[ 2 ] + color[ 2 ] + color[ 3 ] + color[ 3 ], 16 ) );
 
