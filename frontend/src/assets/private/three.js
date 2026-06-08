@@ -9624,7 +9624,7 @@ THREE.BufferGeometry.prototype = {
 
 		}
 
-		var i, il;
+		let i, il;
 		var j, jl;
 		var iA, iB, iC;
 
