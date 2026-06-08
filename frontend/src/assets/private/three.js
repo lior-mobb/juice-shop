@@ -29825,7 +29825,7 @@ THREE.Path.prototype.bezierCurveTo = function( aCP1x, aCP1y,
 											   aCP2x, aCP2y,
 											   aX, aY ) {
 
-	var args = Array.prototype.slice.call( arguments );
+	const args = Array.prototype.slice.call( arguments );
 
 	var lastargs = this.actions[ this.actions.length - 1 ].args;
 
