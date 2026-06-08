@@ -23319,7 +23319,7 @@ THREE.WebGLRenderer = function ( parameters ) {
 
 				if ( attributeItem ) {
 
-					var attributeSize = attributeItem.itemSize;
+					const attributeSize = attributeItem.itemSize;
 
 					_gl.bindBuffer( _gl.ARRAY_BUFFER, attributeItem.buffer );
 					enableAttribute( attributePointer );
