@@ -98,7 +98,7 @@ THREE.OrbitControls = function ( object, domElement ) {
 
     // events
 
-    var changeEvent = { type: 'change' };
+    const changeEvent = { type: 'change' };
 
 
     this.rotateLeft = function ( angle ) {
