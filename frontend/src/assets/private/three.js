@@ -6025,7 +6025,7 @@ THREE.Frustum.prototype = {
 
 		for ( var i = 0; i < 6; i ++ ) {
 
-			var distance = planes[ i ].distanceToPoint( center );
+			const distance = planes[ i ].distanceToPoint( center );
 
 			if ( distance < negRadius ) {
 
