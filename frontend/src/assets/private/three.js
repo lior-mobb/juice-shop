@@ -32811,7 +32811,7 @@ THREE.BoxGeometry = function ( width, height, depth, widthSegments, heightSegmen
 				var uvc = new THREE.Vector2( ( ix + 1 ) / gridX, 1 - ( iy + 1 ) / gridY );
 				var uvd = new THREE.Vector2( ( ix + 1 ) / gridX, 1 - iy / gridY );
 
-				var face = new THREE.Face3( a + offset, b + offset, d + offset );
+				let face = new THREE.Face3( a + offset, b + offset, d + offset );
 				face.normal.copy( normal );
 				face.vertexNormals.push( normal.clone(), normal.clone(), normal.clone() );
 				face.materialIndex = materialIndex;
