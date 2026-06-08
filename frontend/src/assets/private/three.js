@@ -3783,7 +3783,7 @@ THREE.Box3.prototype = {
 
 		return function( object ) {
 
-			var scope = this;
+			const scope = this;
 
 			object.updateMatrixWorld( true );
 
