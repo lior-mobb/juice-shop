@@ -34549,7 +34549,7 @@ THREE.TubeGeometry = function ( path, segments, radius, radialSegments, closed )
 	radialSegments = radialSegments || 8;
 	closed = closed || false;
 
-	var grid = [];
+	const grid = [];
 
 	var scope = this,
 
