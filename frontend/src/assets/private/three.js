@@ -30727,7 +30727,7 @@ THREE.Shape.Utils = {
 				// Check if shape point lies within angle around hole point
 				var lastHoleIdx = hole.length - 1;
 
-				var prevHoleIdx = inHoleIdx - 1;
+				let prevHoleIdx = inHoleIdx - 1;
 				if ( prevHoleIdx < 0 )			prevHoleIdx = lastHoleIdx;
 
 				var nextHoleIdx = inHoleIdx + 1;
