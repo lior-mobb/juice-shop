@@ -8420,7 +8420,7 @@ THREE.Projector = function () {
 
 						var normals = attributes.normal.array;
 
-						for ( var i = 0, l = normals.length; i < l; i += 3 ) {
+						for ( let i = 0, l = normals.length; i < l; i += 3 ) {
 
 							renderList.pushNormal( normals[ i ], normals[ i + 1 ], normals[ i + 2 ] );
 
