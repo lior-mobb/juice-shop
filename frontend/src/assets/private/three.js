@@ -29254,7 +29254,7 @@ THREE.Curve.prototype.getTangent = function( t ) {
 	if ( t2 > 1 ) t2 = 1;
 
 	var pt1 = this.getPoint( t1 );
-	var pt2 = this.getPoint( t2 );
+	const pt2 = this.getPoint( t2 );
 
 	var vec = pt2.clone().sub(pt1);
 	return vec.normalize();
