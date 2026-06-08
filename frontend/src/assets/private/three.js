@@ -33024,7 +33024,7 @@ THREE.CylinderGeometry = function ( radiusTop, radiusBottom, height, radialSegme
 			var n2 = new THREE.Vector3( 0, 1, 0 );
 			var n3 = new THREE.Vector3( 0, 1, 0 );
 
-			var uv1 = uvs[ 0 ][ x ].clone();
+			const uv1 = uvs[ 0 ][ x ].clone();
 			var uv2 = uvs[ 0 ][ x + 1 ].clone();
 			var uv3 = new THREE.Vector2( uv2.x, 0 );
 
