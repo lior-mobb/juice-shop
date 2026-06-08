@@ -6021,7 +6021,7 @@ THREE.Frustum.prototype = {
 
 		const planes = this.planes;
 		var center = sphere.center;
-		var negRadius = -sphere.radius;
+		const negRadius = -sphere.radius;
 
 		for ( var i = 0; i < 6; i ++ ) {
 
