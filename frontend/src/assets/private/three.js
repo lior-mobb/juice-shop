@@ -29071,7 +29071,7 @@ THREE.Curve.prototype.getPoints = function ( divisions ) {
 
 	if ( !divisions ) divisions = 5;
 
-	var d, pts = [];
+	let d, pts = [];
 
 	for ( d = 0; d <= divisions; d ++ ) {
 
