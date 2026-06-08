@@ -236,7 +236,7 @@ THREE.OrbitControls = function ( object, domElement ) {
         // restrict phi to be betwee EPS and PI-EPS
         phi = Math.max( EPS, Math.min( Math.PI - EPS, phi ) );
 
-        var radius = offset.length() * scale;
+        let radius = offset.length() * scale;
 
         // restrict radius to be between desired limits
         radius = Math.max( this.minDistance, Math.min( this.maxDistance, radius ) );
