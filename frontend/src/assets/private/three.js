@@ -15882,7 +15882,7 @@ THREE.SkinnedMesh.prototype.updateMatrixWorld = function () {
 
 		// update children
 
-		for ( var i = 0, l = this.children.length; i < l; i ++ ) {
+		for ( let i = 0, l = this.children.length; i < l; i ++ ) {
 
 			var child = this.children[ i ];
 
