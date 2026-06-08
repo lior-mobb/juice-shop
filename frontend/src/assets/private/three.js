@@ -32803,7 +32803,7 @@ THREE.BoxGeometry = function ( width, height, depth, widthSegments, heightSegmen
 
 				var a = ix + gridX1 * iy;
 				var b = ix + gridX1 * ( iy + 1 );
-				var c = ( ix + 1 ) + gridX1 * ( iy + 1 );
+				const c = ( ix + 1 ) + gridX1 * ( iy + 1 );
 				var d = ( ix + 1 ) + gridX1 * iy;
 
 				var uva = new THREE.Vector2( ix / gridX, 1 - iy / gridY );
