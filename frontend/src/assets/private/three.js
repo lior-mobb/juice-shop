@@ -15276,7 +15276,7 @@ THREE.SpriteMaterial.prototype = Object.create( THREE.Material.prototype );
 
 THREE.SpriteMaterial.prototype.clone = function () {
 
-	var material = new THREE.SpriteMaterial();
+	const material = new THREE.SpriteMaterial();
 
 	THREE.Material.prototype.clone.call( this, material );
 
