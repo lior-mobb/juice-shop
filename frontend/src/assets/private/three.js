@@ -28511,7 +28511,7 @@ THREE.SceneUtils = {
 
 		var group = new THREE.Object3D();
 
-		for ( var i = 0, l = materials.length; i < l; i ++ ) {
+		for ( let i = 0, l = materials.length; i < l; i ++ ) {
 
 			group.add( new THREE.Mesh( geometry, materials[ i ] ) );
 
