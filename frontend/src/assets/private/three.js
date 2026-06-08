@@ -10588,7 +10588,7 @@ THREE.Geometry.prototype = {
 		}
 
 		for ( i = faceIndicesToRemove.length - 1; i >= 0; i -- ) {
-			var idx = faceIndicesToRemove[ i ];
+			const idx = faceIndicesToRemove[ i ];
 
 			this.faces.splice( idx, 1 );
 
