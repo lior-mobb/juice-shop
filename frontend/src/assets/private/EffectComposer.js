@@ -123,7 +123,7 @@ THREE.EffectComposer.prototype = {
 
 	setSize: function ( width, height ) {
 
-		var renderTarget = this.renderTarget1.clone();
+		const renderTarget = this.renderTarget1.clone();
 
 		renderTarget.width = width;
 		renderTarget.height = height;
