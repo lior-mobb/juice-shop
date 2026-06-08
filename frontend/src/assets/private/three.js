@@ -35878,7 +35878,7 @@ THREE.GridHelper = function ( size, step ) {
 			new THREE.Vector3( i, 0, - size ), new THREE.Vector3( i, 0, size )
 		);
 
-		var color = i === 0 ? this.color1 : this.color2;
+		const color = i === 0 ? this.color1 : this.color2;
 
 		geometry.colors.push( color, color, color, color );
 
