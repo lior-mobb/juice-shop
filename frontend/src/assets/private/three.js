@@ -33195,7 +33195,7 @@ THREE.ExtrudeGeometry.prototype.addShape = function ( shape, options ) {
 
 	// Variables initalization
 
-	var ahole, h, hl; // looping of holes
+	let ahole, h, hl; // looping of holes
 	var scope = this;
 	var bevelPoints = [];
 
