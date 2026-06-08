@@ -4162,7 +4162,7 @@ THREE.Matrix3.prototype = {
 
 	multiplyScalar: function ( s ) {
 
-		var te = this.elements;
+		const te = this.elements;
 
 		te[0] *= s; te[3] *= s; te[6] *= s;
 		te[1] *= s; te[4] *= s; te[7] *= s;
