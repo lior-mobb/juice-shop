@@ -15697,7 +15697,7 @@ THREE.Skeleton = function ( boneList, useVertexTexture ) {
 	this.bones = [];
 	this.boneMatrices = [];
 
-	var bone, gbone, p, q, s;
+	let bone, gbone, p, q, s;
 
 	if ( boneList !== undefined ) {
 
