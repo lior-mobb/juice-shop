@@ -335,7 +335,7 @@ THREE.Color.prototype = {
 
 		if ( /^\#([0-9a-f]{6})$/i.test( style ) ) {
 
-			var color = /^\#([0-9a-f]{6})$/i.exec( style );
+			const color = /^\#([0-9a-f]{6})$/i.exec( style );
 
 			this.setHex( parseInt( color[ 1 ], 16 ) );
 
@@ -347,7 +347,7 @@ THREE.Color.prototype = {
 
 		if ( /^\#([0-9a-f])([0-9a-f])([0-9a-f])$/i.test( style ) ) {
 
-			var color = /^\#([0-9a-f])([0-9a-f])([0-9a-f])$/i.exec( style );
+			const color = /^\#([0-9a-f])([0-9a-f])([0-9a-f])$/i.exec( style );
 
 			this.setHex( parseInt( color[ 1 ] + color[ 1 ] + color[ 2 ] + color[ 2 ] + color[ 3 ] + color[ 3 ], 16 ) );
 
@@ -724,7 +724,7 @@ THREE.Quaternion.prototype = {
 		var c1 = Math.cos( euler._x / 2 );
 		var c2 = Math.cos( euler._y / 2 );
 		var c3 = Math.cos( euler._z / 2 );
-		var s1 = Math.sin( euler._x / 2 );
+		const s1 = Math.sin( euler._x / 2 );
 		var s2 = Math.sin( euler._y / 2 );
 		var s3 = Math.sin( euler._z / 2 );
 
@@ -784,7 +784,7 @@ THREE.Quaternion.prototype = {
 
 		// assumes axis is normalized
 
-		var halfAngle = angle / 2, s = Math.sin( halfAngle );
+		let halfAngle = angle / 2, s = Math.sin( halfAngle );
 
 		this._x = axis.x * s;
 		this._y = axis.y * s;
@@ -1957,7 +1957,7 @@ THREE.Vector3.prototype = {
 
 	clampScalar: ( function () {
 
-		var min, max;
+		let min, max;
 
 		return function ( minVal, maxVal ) {
 
@@ -2247,7 +2247,7 @@ THREE.Vector3.prototype = {
 
 		var offset = index * 4;
 
-		var me = matrix.elements;
+		const me = matrix.elements;
 
 		this.x = me[ offset ];
 		this.y = me[ offset + 1 ];
@@ -3783,7 +3783,7 @@ THREE.Box3.prototype = {
 
 		return function( object ) {
 
-			var scope = this;
+			const scope = this;
 
 			object.updateMatrixWorld( true );
 
@@ -3850,7 +3850,7 @@ THREE.Box3.prototype = {
 
 	size: function ( optionalTarget ) {
 
-		var result = optionalTarget || new THREE.Vector3();
+		const result = optionalTarget || new THREE.Vector3();
 		return result.subVectors( this.max, this.min );
 
 	},
@@ -4162,7 +4162,7 @@ THREE.Matrix3.prototype = {
 
 	multiplyScalar: function ( s ) {
 
-		var te = this.elements;
+		const te = this.elements;
 
 		te[0] *= s; te[3] *= s; te[6] *= s;
 		te[1] *= s; te[4] *= s; te[7] *= s;
@@ -4424,7 +4424,7 @@ THREE.Matrix4.prototype = {
 
 		return function ( m ) {
 
-			var te = this.elements;
+			const te = this.elements;
 			var me = m.elements;
 
 			var scaleX = 1 / v1.set( me[0], me[1], me[2] ).length();
@@ -4462,7 +4462,7 @@ THREE.Matrix4.prototype = {
 		var x = euler.x, y = euler.y, z = euler.z;
 		var a = Math.cos( x ), b = Math.sin( x );
 		var c = Math.cos( y ), d = Math.sin( y );
-		var e = Math.cos( z ), f = Math.sin( z );
+		let e = Math.cos( z ), f = Math.sin( z );
 
 		if ( euler.order === 'XYZ' ) {
 
@@ -4630,7 +4630,7 @@ THREE.Matrix4.prototype = {
 
 		return function ( eye, target, up ) {
 
-			var te = this.elements;
+			const te = this.elements;
 
 			z.subVectors( eye, target ).normalize();
 
@@ -5031,7 +5031,7 @@ THREE.Matrix4.prototype = {
 
 	getMaxScaleOnAxis: function () {
 
-		var te = this.elements;
+		const te = this.elements;
 
 		var scaleXSq = te[0] * te[0] + te[1] * te[1] + te[2] * te[2];
 		var scaleYSq = te[4] * te[4] + te[5] * te[5] + te[6] * te[6];
@@ -5112,7 +5112,7 @@ THREE.Matrix4.prototype = {
 		// Based on http://www.gamedev.net/reference/articles/article1199.asp
 
 		var c = Math.cos( angle );
-		var s = Math.sin( angle );
+		const s = Math.sin( angle );
 		var t = 1 - c;
 		var x = axis.x, y = axis.y, z = axis.z;
 		var tx = t * x, ty = t * y;
@@ -5250,7 +5250,7 @@ THREE.Matrix4.prototype = {
 
 		var x = ( right + left ) / w;
 		var y = ( top + bottom ) / h;
-		var z = ( far + near ) / p;
+		const z = ( far + near ) / p;
 
 		te[0] = 2 / w;	te[4] = 0;	te[8] = 0;	te[12] = -x;
 		te[1] = 0;	te[5] = 2 / h;	te[9] = 0;	te[13] = -y;
@@ -5358,7 +5358,7 @@ THREE.Ray.prototype = {
 
 		var result = optionalTarget || new THREE.Vector3();
 		result.subVectors( point, this.origin );
-		var directionDistance = result.dot( this.direction );
+		const directionDistance = result.dot( this.direction );
 
 		if ( directionDistance < 0 ) {
 
@@ -5411,7 +5411,7 @@ THREE.Ray.prototype = {
 		var b0 = diff.dot( this.direction );
 		var b1 = - diff.dot( segDir );
 		var c = diff.lengthSq();
-		var det = Math.abs( 1 - a01 * a01 );
+		const det = Math.abs( 1 - a01 * a01 );
 		var s0, s1, sqrDist, extDet;
 
 		if ( det >= 0 ) {
@@ -5530,7 +5530,7 @@ THREE.Ray.prototype = {
 
 		}
 
-		var denominator = plane.normal.dot( this.direction );
+		const denominator = plane.normal.dot( this.direction );
 
 		if ( denominator * distToPoint < 0 ) {
 
@@ -5951,7 +5951,7 @@ THREE.Frustum.prototype = {
 
 	set: function ( p0, p1, p2, p3, p4, p5 ) {
 
-		var planes = this.planes;
+		const planes = this.planes;
 
 		planes[0].copy( p0 );
 		planes[1].copy( p1 );
@@ -6019,13 +6019,13 @@ THREE.Frustum.prototype = {
 
 	intersectsSphere: function ( sphere ) {
 
-		var planes = this.planes;
+		const planes = this.planes;
 		var center = sphere.center;
-		var negRadius = -sphere.radius;
+		const negRadius = -sphere.radius;
 
 		for ( var i = 0; i < 6; i ++ ) {
 
-			var distance = planes[ i ].distanceToPoint( center );
+			const distance = planes[ i ].distanceToPoint( center );
 
 			if ( distance < negRadius ) {
 
@@ -6050,7 +6050,7 @@ THREE.Frustum.prototype = {
 			
 			for ( var i = 0; i < 6 ; i ++ ) {
 			
-				var plane = planes[i];
+				const plane = planes[i];
 				
 				p1.x = plane.normal.x > 0 ? box.min.x : box.max.x;
 				p2.x = plane.normal.x > 0 ? box.max.x : box.min.x;
@@ -6178,7 +6178,7 @@ THREE.Plane.prototype = {
 
 		// Note: will lead to a divide by zero if the plane is invalid.
 
-		var inverseNormalLength = 1.0 / this.normal.length();
+		const inverseNormalLength = 1.0 / this.normal.length();
 		this.normal.multiplyScalar( inverseNormalLength );
 		this.constant *= inverseNormalLength;
 
@@ -6259,7 +6259,7 @@ THREE.Plane.prototype = {
 
 			}
 
-			var t = - ( line.start.dot( this.normal ) + this.constant ) / denominator;
+			const t = - ( line.start.dot( this.normal ) + this.constant ) / denominator;
 
 			if( t < 0 || t > 1 ) {
 
@@ -6796,7 +6796,7 @@ THREE.Triangle.prototype = {
 
 	area: function() {
 
-		var v0 = new THREE.Vector3();
+		const v0 = new THREE.Vector3();
 		var v1 = new THREE.Vector3();
 
 		return function () {
@@ -7791,7 +7791,7 @@ THREE.Object3D.prototype = {
 
 		// This routine does not support objects with rotated and/or translated parent(s)
 
-		var m1 = new THREE.Matrix4();
+		const m1 = new THREE.Matrix4();
 
 		return function ( vector ) {
 
@@ -8003,7 +8003,7 @@ THREE.Object3D.prototype = {
 
 		// update children
 
-		for ( var i = 0, l = this.children.length; i < l; i ++ ) {
+		for ( let i = 0, l = this.children.length; i < l; i ++ ) {
 
 			this.children[ i ].updateMatrixWorld( force );
 
@@ -8188,7 +8188,7 @@ THREE.Projector = function () {
 
 	};
 
-	var projectGraph = function ( root, sortObjects ) {
+	const projectGraph = function ( root, sortObjects ) {
 
 		_objectCount = 0;
 
@@ -8403,14 +8403,14 @@ THREE.Projector = function () {
 
 				if ( geometry instanceof THREE.BufferGeometry ) {
 
-					var attributes = geometry.attributes;
+					const attributes = geometry.attributes;
 					var offsets = geometry.offsets;
 
 					if ( attributes.position === undefined ) continue;
 
 					var positions = attributes.position.array;
 
-					for ( var i = 0, l = positions.length; i < l; i += 3 ) {
+					for ( let i = 0, l = positions.length; i < l; i += 3 ) {
 
 						renderList.pushVertex( positions[ i ], positions[ i + 1 ], positions[ i + 2 ] );
 
@@ -8420,7 +8420,7 @@ THREE.Projector = function () {
 
 						var normals = attributes.normal.array;
 
-						for ( var i = 0, l = normals.length; i < l; i += 3 ) {
+						for ( let i = 0, l = normals.length; i < l; i += 3 ) {
 
 							renderList.pushNormal( normals[ i ], normals[ i + 1 ], normals[ i + 2 ] );
 
@@ -8432,7 +8432,7 @@ THREE.Projector = function () {
 
 						var uvs = attributes.uv.array;
 
-						for ( var i = 0, l = uvs.length; i < l; i += 2 ) {
+						for ( let i = 0, l = uvs.length; i < l; i += 2 ) {
 
 							renderList.pushUv( uvs[ i ], uvs[ i + 1 ] );
 
@@ -8646,7 +8646,7 @@ THREE.Projector = function () {
 
 							var indices = attributes.index.array;
 
-							for ( var i = 0, l = indices.length; i < l; i += 2 ) {
+							for ( let i = 0, l = indices.length; i < l; i += 2 ) {
 
 								renderList.pushLine( indices[ i ], indices[ i + 1 ] );
 
@@ -9518,7 +9518,7 @@ THREE.BufferGeometry.prototype = {
 
 		}
 
-		var indices = this.attributes[ "index" ].array;
+		const indices = this.attributes[ "index" ].array;
 		var positions = this.attributes[ "position" ].array;
 		var normals = this.attributes[ "normal" ].array;
 		var uvs = this.attributes[ "uv" ].array;
@@ -9624,7 +9624,7 @@ THREE.BufferGeometry.prototype = {
 
 		}
 
-		var i, il;
+		let i, il;
 		var j, jl;
 		var iA, iB, iC;
 
@@ -9634,7 +9634,7 @@ THREE.BufferGeometry.prototype = {
 
 			var start = offsets[ j ].start;
 			var count = offsets[ j ].count;
-			var index = offsets[ j ].index;
+			const index = offsets[ j ].index;
 
 			for ( i = start, il = start + count; i < il; i += 3 ) {
 
@@ -9851,7 +9851,7 @@ THREE.BufferGeometry.prototype = {
 	reorderBuffers: function(indexBuffer, indexMap, vertexCount) {
 
 		/* Create a copy of all attributes for reordering. */
-		var sortedAttributes = {};
+		const sortedAttributes = {};
 		var types = [ Int8Array, Uint8Array, Uint8ClampedArray, Int16Array, Uint16Array, Int32Array, Uint32Array, Float32Array, Float64Array ];
 		for( var attr in this.attributes ) {
 			if(attr == 'index')
@@ -10507,7 +10507,7 @@ THREE.Geometry.prototype = {
 				
 			}
 
-			for ( var j = 0, jl = uv.length; j < jl; j ++ ) {
+			for ( let j = 0, jl = uv.length; j < jl; j ++ ) {
 
 				uvCopy.push( new THREE.Vector2( uv[ j ].x, uv[ j ].y ) );
 
@@ -11429,7 +11429,7 @@ THREE.Loader.prototype = {
 
 		function create_texture( where, name, sourceFile, repeat, offset, wrap, anisotropy ) {
 
-			var isCompressed = /\.dds$/i.test( sourceFile );
+			const isCompressed = /\.dds$/i.test( sourceFile );
 
 			var fullPath = texturePath + sourceFile;
 
@@ -11771,7 +11771,7 @@ THREE.XHRLoader.prototype = {
 
 	load: function ( url, onLoad, onProgress, onError ) {
 
-		var scope = this;
+		const scope = this;
 
 		var cached = scope.cache.get( url );
 
@@ -12546,7 +12546,7 @@ THREE.BufferGeometryLoader.prototype = {
 
 		for ( var key in attributes ) {
 
-			var attribute = attributes[ key ];
+			const attribute = attributes[ key ];
 
 			geometry.attributes[ key ] = {
 				itemSize: attribute.itemSize,
@@ -12692,7 +12692,7 @@ THREE.ObjectLoader.prototype = {
 
 		if ( json !== undefined ) {
 
-			var geometryLoader = new THREE.JSONLoader();
+			const geometryLoader = new THREE.JSONLoader();
 			var bufferGeometryLoader = new THREE.BufferGeometryLoader();
 
 			for ( var i = 0, l = json.length; i < l; i ++ ) {
@@ -12836,7 +12836,7 @@ THREE.ObjectLoader.prototype = {
 
 			for ( var i = 0, l = json.length; i < l; i ++ ) {
 
-				var data = json[ i ];
+				const data = json[ i ];
 				var material = loader.parse( data );
 
 				material.uuid = data.uuid;
@@ -13226,7 +13226,7 @@ THREE.SceneLoader.prototype = {
 
 						if ( geometry ) {
 
-							var needsTangents = false;
+							let needsTangents = false;
 
 							material = result.materials[ objJSON.material ];
 							needsTangents = material instanceof THREE.ShaderMaterial;
@@ -14094,7 +14094,7 @@ THREE.SceneLoader.prototype = {
 				var shader = THREE.ShaderLib[ "normalmap" ];
 				var uniforms = THREE.UniformsUtils.clone( shader.uniforms );
 
-				var diffuse = matJSON.parameters.color;
+				const diffuse = matJSON.parameters.color;
 				var specular = matJSON.parameters.specular;
 				var ambient = matJSON.parameters.ambient;
 				var shininess = matJSON.parameters.shininess;
@@ -15276,7 +15276,7 @@ THREE.SpriteMaterial.prototype = Object.create( THREE.Material.prototype );
 
 THREE.SpriteMaterial.prototype.clone = function () {
 
-	var material = new THREE.SpriteMaterial();
+	const material = new THREE.SpriteMaterial();
 
 	THREE.Material.prototype.clone.call( this, material );
 
@@ -15701,7 +15701,7 @@ THREE.Skeleton = function ( boneList, useVertexTexture ) {
 
 	if ( boneList !== undefined ) {
 
-		for ( var b = 0; b < boneList.length; ++b ) {
+		for ( let b = 0; b < boneList.length; ++b ) {
 
 			gbone = boneList[ b ];
 
@@ -15727,7 +15727,7 @@ THREE.Skeleton = function ( boneList, useVertexTexture ) {
 
 		}
 
-		for ( var b = 0; b < boneList.length; ++b ) {
+		for ( let b = 0; b < boneList.length; ++b ) {
 
 			gbone = boneList[ b ];
 
@@ -15882,7 +15882,7 @@ THREE.SkinnedMesh.prototype.updateMatrixWorld = function () {
 
 		// update children
 
-		for ( var i = 0, l = this.children.length; i < l; i ++ ) {
+		for ( let i = 0, l = this.children.length; i < l; i ++ ) {
 
 			var child = this.children[ i ];
 
@@ -16283,7 +16283,7 @@ THREE.LOD.prototype.clone = function ( object ) {
 
 	THREE.Object3D.prototype.clone.call( this, object );
 
-	for ( var i = 0, l = this.objects.length; i < l; i ++ ) {
+	for ( let i = 0, l = this.objects.length; i < l; i ++ ) {
 		var x = this.objects[i].object.clone();
 		x.visible = i === 0;
 		object.addLevel( x, this.objects[i].distance );
@@ -16675,7 +16675,7 @@ THREE.CanvasRenderer = function ( parameters ) {
 		var viewportY = y * this.devicePixelRatio;
 
 		var viewportWidth = width * this.devicePixelRatio;
-		var viewportHeight = height * this.devicePixelRatio;
+		const viewportHeight = height * this.devicePixelRatio;
 
 		_context.setTransform( viewportWidth / _canvasWidth, 0, 0, - viewportHeight / _canvasHeight, viewportX, _canvasHeight - viewportY );
 		_context.translate( _canvasWidthHalf, _canvasHeightHalf );
@@ -20994,13 +20994,13 @@ THREE.WebGLRenderer = function ( parameters ) {
 
 	var _maxTextures = _gl.getParameter( _gl.MAX_TEXTURE_IMAGE_UNITS );
 	var _maxVertexTextures = _gl.getParameter( _gl.MAX_VERTEX_TEXTURE_IMAGE_UNITS );
-	var _maxTextureSize = _gl.getParameter( _gl.MAX_TEXTURE_SIZE );
+	const _maxTextureSize = _gl.getParameter( _gl.MAX_TEXTURE_SIZE );
 	var _maxCubemapSize = _gl.getParameter( _gl.MAX_CUBE_MAP_TEXTURE_SIZE );
 
 	var _maxAnisotropy = _glExtensionTextureFilterAnisotropic ? _gl.getParameter( _glExtensionTextureFilterAnisotropic.MAX_TEXTURE_MAX_ANISOTROPY_EXT ) : 0;
 
 	var _supportsVertexTextures = ( _maxVertexTextures > 0 );
-	var _supportsBoneTextures = _supportsVertexTextures && _glExtensionTextureFloat;
+	const _supportsBoneTextures = _supportsVertexTextures && _glExtensionTextureFloat;
 
 	var _compressedTextureFormats = _glExtensionCompressedTextureS3TC ? _gl.getParameter( _gl.COMPRESSED_TEXTURE_FORMATS ) : [];
 
@@ -21474,7 +21474,7 @@ THREE.WebGLRenderer = function ( parameters ) {
 
 	};
 
-	var deallocateRenderTarget = function ( renderTarget ) {
+	const deallocateRenderTarget = function ( renderTarget ) {
 
 		if ( !renderTarget || ! renderTarget.__webglTexture ) return;
 
@@ -21642,7 +21642,7 @@ THREE.WebGLRenderer = function ( parameters ) {
 
 	function initMeshBuffers ( geometryGroup, object ) {
 
-		var geometry = object.geometry,
+		let geometry = object.geometry,
 			faces3 = geometryGroup.faces3,
 
 			nvertices = faces3.length * 3,
@@ -23588,7 +23588,7 @@ THREE.WebGLRenderer = function ( parameters ) {
 
 		if ( material.visible === false ) return;
 
-		var linewidth, a, attribute, i, il;
+		let linewidth, a, attribute, i, il;
 
 		var program = setProgram( camera, lights, fog, material, object );
 
@@ -24030,7 +24030,7 @@ THREE.WebGLRenderer = function ( parameters ) {
 
 		}
 
-		var i, il,
+		let i, il,
 
 		webglObject, object,
 		renderList,
@@ -24151,7 +24151,7 @@ THREE.WebGLRenderer = function ( parameters ) {
 
 		if ( scene.overrideMaterial ) {
 
-			var material = scene.overrideMaterial;
+			const material = scene.overrideMaterial;
 
 			this.setBlending( material.blending, material.blendEquation, material.blendSrc, material.blendDst );
 			this.setDepthTest( material.depthTest );
@@ -24245,7 +24245,7 @@ THREE.WebGLRenderer = function ( parameters ) {
 
 	function renderObjects( renderList, reverse, materialType, camera, lights, fog, useBlending, overrideMaterial ) {
 
-		var webglObject, object, buffer, material, start, end, delta;
+		let webglObject, object, buffer, material, start, end, delta;
 
 		if ( reverse ) {
 
@@ -24391,7 +24391,7 @@ THREE.WebGLRenderer = function ( parameters ) {
 
 		if ( material instanceof THREE.MeshFaceMaterial ) {
 
-			var materialIndex = geometry instanceof THREE.BufferGeometry ? 0 : buffer.materialIndex;
+			const materialIndex = geometry instanceof THREE.BufferGeometry ? 0 : buffer.materialIndex;
 
 			material = material.materials[ materialIndex ];
 
@@ -24959,7 +24959,7 @@ THREE.WebGLRenderer = function ( parameters ) {
 
 		}
 
-		var code = chunks.join();
+		const code = chunks.join();
 
 		var program;
 
@@ -26433,7 +26433,7 @@ THREE.WebGLRenderer = function ( parameters ) {
 
 				var cubeImage = [];
 
-				for ( var i = 0; i < 6; i ++ ) {
+				for ( let i = 0; i < 6; i ++ ) {
 
 					if ( _this.autoScaleCubemaps && ! isCompressed ) {
 
@@ -26808,7 +26808,7 @@ THREE.WebGLRenderer = function ( parameters ) {
 			//    (up to 54 should be safe)
 
 			var nVertexUniforms = _gl.getParameter( _gl.MAX_VERTEX_UNIFORM_VECTORS );
-			var nVertexMatrices = Math.floor( ( nVertexUniforms - 20 ) / 4 );
+			const nVertexMatrices = Math.floor( ( nVertexUniforms - 20 ) / 4 );
 
 			var maxBones = nVertexMatrices;
 
@@ -27045,7 +27045,7 @@ THREE.WebGLRenderTarget.prototype = {
 
 	clone: function () {
 
-		var tmp = new THREE.WebGLRenderTarget( this.width, this.height );
+		const tmp = new THREE.WebGLRenderTarget( this.width, this.height );
 
 		tmp.wrapS = this.wrapS;
 		tmp.wrapT = this.wrapT;
@@ -27118,7 +27118,7 @@ THREE.WebGLProgram = ( function () {
 
 	};
 
-	var cacheUniformLocations = function ( gl, program, identifiers ) {
+	const cacheUniformLocations = function ( gl, program, identifiers ) {
 
 		var uniforms = {};
 
@@ -27355,7 +27355,7 @@ THREE.WebGLProgram = ( function () {
 
 		}
 
-		var glVertexShader = new THREE.WebGLShader( _gl, _gl.VERTEX_SHADER, prefix_vertex + vertexShader );
+		const glVertexShader = new THREE.WebGLShader( _gl, _gl.VERTEX_SHADER, prefix_vertex + vertexShader );
 		var glFragmentShader = new THREE.WebGLShader( _gl, _gl.FRAGMENT_SHADER, prefix_fragment + fragmentShader );
 
 		_gl.attachShader( program, glVertexShader );
@@ -27826,7 +27826,7 @@ THREE.GeometryUtils = {
 
 		geometry.computeBoundingBox();
 
-		var bb = geometry.boundingBox;
+		const bb = geometry.boundingBox;
 
 		var offset = new THREE.Vector3();
 
@@ -27925,7 +27925,7 @@ THREE.ImageUtils = {
 		var loader = new THREE.ImageLoader();
 		loader.crossOrigin = this.crossOrigin;
 		
-		var texture = new THREE.Texture();
+		const texture = new THREE.Texture();
 		texture.image = images;
 		
 		if ( mapping !== undefined ) texture.mapping = mapping;
@@ -27934,7 +27934,7 @@ THREE.ImageUtils = {
 
 		texture.flipY = false;
 
-		for ( var i = 0, il = array.length; i < il; ++ i ) {
+		for ( let i = 0, il = array.length; i < il; ++ i ) {
 
 			var cubeImage = loader.load( array[i], function () {
 
@@ -27975,7 +27975,7 @@ THREE.ImageUtils = {
 
 		texture.generateMipmaps = false;
 
-		var generateCubeFaceCallback = function ( rq, img ) {
+		const generateCubeFaceCallback = function ( rq, img ) {
 
 			return function () {
 
@@ -28158,7 +28158,7 @@ THREE.ImageUtils = {
 
 		var DDS_MAGIC = 0x20534444;
 
-		var DDSD_CAPS = 0x1,
+		let DDSD_CAPS = 0x1,
 			DDSD_HEIGHT = 0x2,
 			DDSD_WIDTH = 0x4,
 			DDSD_PITCH = 0x8,
@@ -28210,7 +28210,7 @@ THREE.ImageUtils = {
 			var dataLength = width*height*4;
 			var srcBuffer = new Uint8Array( buffer, dataOffset, dataLength );
 			var byteArray = new Uint8Array( dataLength );
-			var dst = 0;
+			let dst = 0;
 			var src = 0;
 			for ( var y = 0; y < height; y++ ) {
 				for ( var x = 0; x < width; x++ ) {
@@ -28245,7 +28245,7 @@ THREE.ImageUtils = {
 		var off_mipmapCount = 7;
 
 		var off_pfFlags = 20;
-		var off_pfFourCC = 21;
+		const off_pfFourCC = 21;
 		var off_RGBBitCount = 22;
 		var off_RBitMask = 23;
 		var off_GBitMask = 24;
@@ -28353,7 +28353,7 @@ THREE.ImageUtils = {
 					var byteArray = new Uint8Array( buffer, dataOffset, dataLength );
 				}
 				
-				var mipmap = { "data": byteArray, "width": width, "height": height };
+				const mipmap = { "data": byteArray, "width": width, "height": height };
 				dds.mipmaps.push( mipmap );
 
 				dataOffset += dataLength;
@@ -28408,7 +28408,7 @@ THREE.ImageUtils = {
 		context.drawImage( image, 0, 0 );
 
 		var data = context.getImageData( 0, 0, width, height ).data;
-		var imageData = context.createImageData( width, height );
+		const imageData = context.createImageData( width, height );
 		var output = imageData.data;
 
 		for ( var x = 0; x < width; x ++ ) {
@@ -28444,7 +28444,7 @@ THREE.ImageUtils = {
 
 				}
 
-				var normal = [ 0, 0, 0 ];
+				const normal = [ 0, 0, 0 ];
 
 				for ( var i = 0; i < normals.length; i ++ ) {
 
@@ -28604,7 +28604,7 @@ THREE.FontUtils = {
 
 		// RenderText
 
-		var i, p,
+		let i, p,
 			face = this.getFace(),
 			scale = this.size / face.resolution,
 			offset = 0,
@@ -28747,7 +28747,7 @@ THREE.FontUtils = {
 						for ( i2 = 1, divisions = this.divisions; i2 <= divisions; i2 ++ ) {
 
 							var t = i2 / divisions;
-							var tx = THREE.Shape.Utils.b3( t, cpx0, cpx1, cpx2, cpx );
+							const tx = THREE.Shape.Utils.b3( t, cpx0, cpx1, cpx2, cpx );
 							var ty = THREE.Shape.Utils.b3( t, cpy0, cpy1, cpy2, cpy );
 
 						}
@@ -28780,7 +28780,7 @@ THREE.FontUtils.generateShapes = function( text, parameters ) {
 
 	var font = parameters.font !== undefined ? parameters.font : "helvetiker";
 	var weight = parameters.weight !== undefined ? parameters.weight : "normal";
-	var style = parameters.style !== undefined ? parameters.style : "normal";
+	const style = parameters.style !== undefined ? parameters.style : "normal";
 
 	THREE.FontUtils.size = size;
 	THREE.FontUtils.divisions = curveSegments;
@@ -28791,7 +28791,7 @@ THREE.FontUtils.generateShapes = function( text, parameters ) {
 
 	// Get a Font data json object
 
-	var data = THREE.FontUtils.drawText( text );
+	const data = THREE.FontUtils.drawText( text );
 
 	var paths = data.paths;
 	var shapes = [];
@@ -29128,7 +29128,7 @@ THREE.Curve.prototype.getLengths = function ( divisions ) {
 	this.needsUpdate = false;
 
 	var cache = [];
-	var current, last = this.getPoint( 0 );
+	let current, last = this.getPoint( 0 );
 	var p, sum = 0;
 
 	cache.push( 0 );
@@ -29213,7 +29213,7 @@ THREE.Curve.prototype.getUtoTmapping = function ( u, distance ) {
 
 	if ( arcLengths[ i ] == targetArcLength ) {
 
-		var t = i / ( il - 1 );
+		const t = i / ( il - 1 );
 		return t;
 
 	}
@@ -29227,7 +29227,7 @@ THREE.Curve.prototype.getUtoTmapping = function ( u, distance ) {
 
     // determine where we are between the 'before' and 'after' points
 
-    var segmentFraction = ( targetArcLength - lengthBefore ) / segmentLength;
+    const segmentFraction = ( targetArcLength - lengthBefore ) / segmentLength;
 
     // add that fractional amount to t
 
@@ -29398,7 +29398,7 @@ THREE.CurvePath.prototype.closePath = function() {
 THREE.CurvePath.prototype.getPoint = function( t ) {
 
 	var d = t * this.getLength();
-	var curveLengths = this.getCurveLengths();
+	const curveLengths = this.getCurveLengths();
 	var i = 0, diff, curve;
 
 	// To think about boundaries points.
@@ -30285,7 +30285,7 @@ THREE.Path.prototype.toShapes = function( isCCW, noHoles ) {
 	}
 
 
-	var subPaths = extractSubpaths( this.actions );
+	const subPaths = extractSubpaths( this.actions );
 	if ( subPaths.length == 0 ) return [];
 
 	if ( noHoles === true )	return	toShapesNoHoles( subPaths );
@@ -30313,7 +30313,7 @@ THREE.Path.prototype.toShapes = function( isCCW, noHoles ) {
 	var newShapes = [];
 	var newShapeHoles = [];
 	var mainIdx = 0;
-	var tmpPoints;
+	let tmpPoints;
 
 	newShapes[mainIdx] = undefined;
 	newShapeHoles[mainIdx] = [];
@@ -30361,7 +30361,7 @@ THREE.Path.prototype.toShapes = function( isCCW, noHoles ) {
 		for (var sIdx = 0, sLen = newShapes.length; sIdx < sLen; sIdx++ ) {
 			betterShapeHoles[sIdx] = [];
 		}
-		for (var sIdx = 0, sLen = newShapes.length; sIdx < sLen; sIdx++ ) {
+		for (let sIdx = 0, sLen = newShapes.length; sIdx < sLen; sIdx++ ) {
 			var sh = newShapes[sIdx];
 			var sho = newShapeHoles[sIdx];
 			for (var hIdx = 0; hIdx < sho.length; hIdx++ ) {
@@ -30557,7 +30557,7 @@ THREE.Shape.Utils = {
 			var seg1seg2dx = inSeg1Pt1.x - inSeg2Pt1.x;
 			var seg1seg2dy = inSeg1Pt1.y - inSeg2Pt1.y;
 
-			var limit		= seg1dy * seg2dx - seg1dx * seg2dy;
+			const limit		= seg1dy * seg2dx - seg1dx * seg2dy;
 			var perpSeg1	= seg1dy * seg1seg2dx - seg1dx * seg1seg2dy;
 
 			if ( Math.abs(limit) > EPSILON ) {			// not parallel
@@ -30600,7 +30600,7 @@ THREE.Shape.Utils = {
 
 				// they are collinear or degenerate
 				var seg1Pt = ( (seg1dx == 0) && (seg1dy == 0) );	// segment1 ist just a point?
-				var seg2Pt = ( (seg2dx == 0) && (seg2dy == 0) );	// segment2 ist just a point?
+				const seg2Pt = ( (seg2dx == 0) && (seg2dy == 0) );	// segment2 ist just a point?
 				// both segments are points
 				if ( seg1Pt && seg2Pt ) {
 					if ( (inSeg1Pt1.x != inSeg2Pt1.x) ||
@@ -30680,7 +30680,7 @@ THREE.Shape.Utils = {
 			// translation of all points, so that Vertex is at (0,0)
 			var legFromPtX	= inLegFromPt.x - inVertex.x,  legFromPtY	= inLegFromPt.y - inVertex.y;
 			var legToPtX	= inLegToPt.x	- inVertex.x,  legToPtY		= inLegToPt.y	- inVertex.y;
-			var otherPtX	= inOtherPt.x	- inVertex.x,  otherPtY		= inOtherPt.y	- inVertex.y;
+			let otherPtX	= inOtherPt.x	- inVertex.x,  otherPtY		= inOtherPt.y	- inVertex.y;
 
 			// main angle >0: < 180 deg.; 0: 180 deg.; <0: > 180 deg.
 			var from2toAngle	= legFromPtX * legToPtY - legFromPtY * legToPtX;
@@ -30718,7 +30718,7 @@ THREE.Shape.Utils = {
 				var nextShapeIdx = inShapeIdx + 1;
 				if ( nextShapeIdx > lastShapeIdx )	nextShapeIdx = 0;
 
-				var insideAngle = isPointInsideAngle( shape[inShapeIdx], shape[ prevShapeIdx ], shape[ nextShapeIdx ], hole[inHoleIdx] );
+				let insideAngle = isPointInsideAngle( shape[inShapeIdx], shape[ prevShapeIdx ], shape[ nextShapeIdx ], hole[inHoleIdx] );
 				if (! insideAngle ) {
 					// console.log( "Vertex (Shape): " + inShapeIdx + ", Point: " + hole[inHoleIdx].x + "/" + hole[inHoleIdx].y );
 					return	false;
@@ -30727,7 +30727,7 @@ THREE.Shape.Utils = {
 				// Check if shape point lies within angle around hole point
 				var lastHoleIdx = hole.length - 1;
 
-				var prevHoleIdx = inHoleIdx - 1;
+				let prevHoleIdx = inHoleIdx - 1;
 				if ( prevHoleIdx < 0 )			prevHoleIdx = lastHoleIdx;
 
 				var nextHoleIdx = inHoleIdx + 1;
@@ -31358,7 +31358,7 @@ THREE.ClosedSplineCurve3 = THREE.Curve.create(
 
     function ( t ) {
 
-        var v = new THREE.Vector3();
+        const v = new THREE.Vector3();
         var c = [];
         var points = this.points, point, intPoint, weight;
         point = ( points.length - 0 ) * t;
@@ -31475,7 +31475,7 @@ THREE.AnimationHandler = ( function () {
 
 		// setup hierarchy
 
-		var hierarchy = [];
+		const hierarchy = [];
 
 		if ( root instanceof THREE.SkinnedMesh ) {
 
@@ -31809,7 +31809,7 @@ THREE.Animation.prototype.update = (function(){
 
 		//
 
-		var vector;
+		let vector;
 		var duration = this.data.length;
 
 		if ( this.loop === true && this.currentTime > duration ) {
@@ -31827,7 +31827,7 @@ THREE.Animation.prototype.update = (function(){
 		for ( var h = 0, hl = this.hierarchy.length; h < hl; h ++ ) {
 
 			var object = this.hierarchy[ h ];
-			var animationCache = object.animationCache[this.data.name];
+			const animationCache = object.animationCache[this.data.name];
 
 			// loop through pos/rot/scl
 
@@ -31835,7 +31835,7 @@ THREE.Animation.prototype.update = (function(){
 
 				// get keys
 
-				var type    = this.keyTypes[ t ];
+				const type    = this.keyTypes[ t ];
 				var prevKey = animationCache.prevKey[ type ];
 				var nextKey = animationCache.nextKey[ type ];
 
@@ -31924,7 +31924,7 @@ THREE.Animation.prototype.update = (function(){
 							target.y = 0;
 							target.normalize();
 
-							var angle = Math.atan2( target.x, target.z );
+							const angle = Math.atan2( target.x, target.z );
 							object.rotation.set( 0, angle, 0 );
 
 						}
@@ -32191,12 +32191,12 @@ THREE.KeyFrameAnimation.prototype.stop = function() {
 
 	for ( var h = 0; h < this.data.hierarchy.length; h++ ) {
 		
-		var obj = this.hierarchy[ h ];
+		const obj = this.hierarchy[ h ];
 		var node = this.data.hierarchy[ h ];
 
 		if ( node.animationCache !== undefined ) {
 
-			var original = node.animationCache.originalMatrix;
+			const original = node.animationCache.originalMatrix;
 
 			if( obj instanceof THREE.Bone ) {
 
@@ -32239,7 +32239,7 @@ THREE.KeyFrameAnimation.prototype.update = function ( delta ) {
 
 	this.currentTime = Math.min( this.currentTime, duration );
 
-	for ( var h = 0, hl = this.hierarchy.length; h < hl; h++ ) {
+	for ( let h = 0, hl = this.hierarchy.length; h < hl; h++ ) {
 
 		var object = this.hierarchy[ h ];
 		var node = this.data.hierarchy[ h ];
@@ -32803,7 +32803,7 @@ THREE.BoxGeometry = function ( width, height, depth, widthSegments, heightSegmen
 
 				var a = ix + gridX1 * iy;
 				var b = ix + gridX1 * ( iy + 1 );
-				var c = ( ix + 1 ) + gridX1 * ( iy + 1 );
+				const c = ( ix + 1 ) + gridX1 * ( iy + 1 );
 				var d = ( ix + 1 ) + gridX1 * iy;
 
 				var uva = new THREE.Vector2( ix / gridX, 1 - iy / gridY );
@@ -33024,7 +33024,7 @@ THREE.CylinderGeometry = function ( radiusTop, radiusBottom, height, radialSegme
 			var n2 = new THREE.Vector3( 0, 1, 0 );
 			var n3 = new THREE.Vector3( 0, 1, 0 );
 
-			var uv1 = uvs[ 0 ][ x ].clone();
+			const uv1 = uvs[ 0 ][ x ].clone();
 			var uv2 = uvs[ 0 ][ x + 1 ].clone();
 			var uv3 = new THREE.Vector2( uv2.x, 0 );
 
@@ -33288,7 +33288,7 @@ THREE.ExtrudeGeometry.prototype.addShape = function ( shape, options ) {
 		var v_prev_lensq = ( v_prev_x * v_prev_x + v_prev_y * v_prev_y );
 		
 		// check for colinear edges
-		var colinear0 = ( v_prev_x * v_next_y - v_prev_y * v_next_x );
+		const colinear0 = ( v_prev_x * v_next_y - v_prev_y * v_next_x );
 		
 		if ( Math.abs( colinear0 ) > EPSILON ) {		// not colinear
 			
@@ -33369,7 +33369,7 @@ THREE.ExtrudeGeometry.prototype.addShape = function ( shape, options ) {
 
 		var pt_i = contour[ i ];
 		var pt_j = contour[ j ];
-		var pt_k = contour[ k ];
+		const pt_k = contour[ k ];
 
 		contourMovements[ i ]= getBevelVec( contour[ i ], contour[ j ], contour[ k ] );
 
@@ -33833,7 +33833,7 @@ THREE.ShapeGeometry.prototype.addShape = function ( shape, options ) {
 	var material = options.material;
 	var uvgen = options.UVGenerator === undefined ? THREE.ExtrudeGeometry.WorldUVGenerator : options.UVGenerator;
 
-	var shapebb = this.shapebb;
+	const shapebb = this.shapebb;
 
 	//
 
@@ -33969,7 +33969,7 @@ THREE.LatheGeometry = function ( points, segments, phiStart, phiLength ) {
 			var c = base + 1 + np;
 			var d = base + 1;
 
-			var u0 = i * inverseSegments;
+			const u0 = i * inverseSegments;
 			var v0 = j * inversePointLength;
 			var u1 = u0 + inverseSegments;
 			var v1 = v0 + inversePointLength;
@@ -34137,7 +34137,7 @@ THREE.RingGeometry = function ( innerRadius, outerRadius, thetaSegments, phiSegm
 
 			var v1 = segment + i;
 			var v2 = segment + thetaSegments + i;
-			var v3 = segment + thetaSegments + 1 + i;
+			let v3 = segment + thetaSegments + 1 + i;
 
 			this.faces.push( new THREE.Face3( v1, v2, v3, [ n.clone(), n.clone(), n.clone() ] ) );
 			this.faceVertexUvs[ 0 ].push( [ uvs[ v1 ].clone(), uvs[ v2 ].clone(), uvs[ v3 ].clone() ]);
@@ -34198,10 +34198,10 @@ THREE.SphereGeometry = function ( radius, widthSegments, heightSegments, phiStar
 
 		for ( x = 0; x <= widthSegments; x ++ ) {
 
-			var u = x / widthSegments;
+			const u = x / widthSegments;
 			var v = y / heightSegments;
 
-			var vertex = new THREE.Vector3();
+			const vertex = new THREE.Vector3();
 			vertex.x = - radius * Math.cos( phiStart + u * phiLength ) * Math.sin( thetaStart + v * thetaLength );
 			vertex.y = radius * Math.cos( thetaStart + v * thetaLength );
 			vertex.z = radius * Math.sin( phiStart + u * phiLength ) * Math.sin( thetaStart + v * thetaLength );
@@ -34230,11 +34230,11 @@ THREE.SphereGeometry = function ( radius, widthSegments, heightSegments, phiStar
 			var n1 = this.vertices[ v1 ].clone().normalize();
 			var n2 = this.vertices[ v2 ].clone().normalize();
 			var n3 = this.vertices[ v3 ].clone().normalize();
-			var n4 = this.vertices[ v4 ].clone().normalize();
+			const n4 = this.vertices[ v4 ].clone().normalize();
 
 			var uv1 = uvs[ y ][ x + 1 ].clone();
 			var uv2 = uvs[ y ][ x ].clone();
-			var uv3 = uvs[ y + 1 ][ x ].clone();
+			const uv3 = uvs[ y + 1 ][ x ].clone();
 			var uv4 = uvs[ y + 1 ][ x + 1 ].clone();
 
 			if ( Math.abs( this.vertices[ v1 ].y ) === radius ) {
@@ -34383,7 +34383,7 @@ THREE.TorusGeometry = function ( radius, tube, radialSegments, tubularSegments, 
 
 	for ( var j = 1; j <= radialSegments; j ++ ) {
 
-		for ( var i = 1; i <= tubularSegments; i ++ ) {
+		for ( let i = 1; i <= tubularSegments; i ++ ) {
 
 			var a = ( tubularSegments + 1 ) * j + i - 1;
 			var b = ( tubularSegments + 1 ) * ( j - 1 ) + i - 1;
@@ -34454,7 +34454,7 @@ THREE.TorusKnotGeometry = function ( radius, tube, radialSegments, tubularSegmen
 		bitan.normalize();
 		n.normalize();
 
-		for ( var j = 0; j < tubularSegments; ++ j ) {
+		for ( let j = 0; j < tubularSegments; ++ j ) {
 
 			var v = j / tubularSegments * 2 * Math.PI;
 			var cx = - tube * Math.cos( v ); // TODO: Hack: Negating it so it faces outside.
@@ -34549,7 +34549,7 @@ THREE.TubeGeometry = function ( path, segments, radius, radialSegments, closed )
 	radialSegments = radialSegments || 8;
 	closed = closed || false;
 
-	var grid = [];
+	const grid = [];
 
 	var scope = this,
 
@@ -34961,7 +34961,7 @@ THREE.PolyhedronGeometry = function ( vertices, indices, radius, detail ) {
 
 		// Construct all of the faces.
 
-		for ( var i = 0; i < cols ; i ++ ) {
+		for ( let i = 0; i < cols ; i ++ ) {
 
 			for ( var j = 0; j < 2 * (cols - i) - 1; j ++ ) {
 
@@ -35036,7 +35036,7 @@ THREE.IcosahedronGeometry = function ( radius, detail ) {
 		detail: detail
 	};
 
-	var t = ( 1 + Math.sqrt( 5 ) ) / 2;
+	const t = ( 1 + Math.sqrt( 5 ) ) / 2;
 
 	var vertices = [
 		-1,  t,  0,    1,  t,  0,   -1, -t,  0,    1, -t,  0,
@@ -35119,7 +35119,7 @@ THREE.ParametricGeometry = function ( func, slices, stacks ) {
 	var uvs = this.faceVertexUvs[ 0 ];
 
 	var i, il, j, p;
-	var u, v;
+	let u, v;
 
 	var stackCount = stacks + 1;
 	var sliceCount = slices + 1;
@@ -35878,7 +35878,7 @@ THREE.GridHelper = function ( size, step ) {
 			new THREE.Vector3( i, 0, - size ), new THREE.Vector3( i, 0, size )
 		);
 
-		var color = i === 0 ? this.color1 : this.color2;
+		const color = i === 0 ? this.color1 : this.color2;
 
 		geometry.colors.push( color, color, color, color );
 
@@ -36117,7 +36117,7 @@ THREE.SpotLightHelper = function ( light ) {
 	this.matrixWorld = light.matrixWorld;
 	this.matrixAutoUpdate = false;
 
-	var geometry = new THREE.CylinderGeometry( 0, 1, 1, 8, 1, true );
+	const geometry = new THREE.CylinderGeometry( 0, 1, 1, 8, 1, true );
 
 	geometry.applyMatrix( new THREE.Matrix4().makeTranslation( 0, -0.5, 0 ) );
 	geometry.applyMatrix( new THREE.Matrix4().makeRotationX( - Math.PI / 2 ) );
@@ -36174,7 +36174,7 @@ THREE.VertexNormalsHelper = function ( object, size, hex, linewidth ) {
 
 	var color = ( hex !== undefined ) ? hex : 0xff0000;
 
-	var width = ( linewidth !== undefined ) ? linewidth : 1;
+	const width = ( linewidth !== undefined ) ? linewidth : 1;
 
 	var geometry = new THREE.Geometry();
 
@@ -36275,7 +36275,7 @@ THREE.VertexTangentsHelper = function ( object, size, hex, linewidth ) {
 
 	var color = ( hex !== undefined ) ? hex : 0x0000ff;
 
-	var width = ( linewidth !== undefined ) ? linewidth : 1;
+	const width = ( linewidth !== undefined ) ? linewidth : 1;
 
 	var geometry = new THREE.Geometry();
 
@@ -36283,7 +36283,7 @@ THREE.VertexTangentsHelper = function ( object, size, hex, linewidth ) {
 
 	var faces = object.geometry.faces;
 
-	for ( var i = 0, l = faces.length; i < l; i ++ ) {
+	for ( let i = 0, l = faces.length; i < l; i ++ ) {
 
 		var face = faces[ i ];
 
@@ -36409,9 +36409,9 @@ THREE.WireframeHelper = function ( object, hex ) {
 
 		geometry.addAttribute( 'position', new THREE.Float32Attribute( numEdges * 2, 3 ) );
 
-		var coords = geometry.attributes.position.array;
+		const coords = geometry.attributes.position.array;
 
-		for ( var i = 0, l = numEdges; i < l; i ++ ) {
+		for ( let i = 0, l = numEdges; i < l; i ++ ) {
 
 			for ( var j = 0; j < 2; j ++ ) {
 
@@ -36440,11 +36440,11 @@ THREE.WireframeHelper = function ( object, hex ) {
 
 			var start = offsets[ o ].start;
 			var count = offsets[ o ].count;
-			var index = offsets[ o ].index;
+			const index = offsets[ o ].index;
 
 			for ( var i = start, il = start + count; i < il; i += 3 ) {
 
-				for ( var j = 0; j < 3; j ++ ) {
+				for ( let j = 0; j < 3; j ++ ) {
 
 					edge[ 0 ] = index + indices[ i + j ];
 					edge[ 1 ] = index + indices[ i + ( j + 1 ) % 3 ];
@@ -36489,7 +36489,7 @@ THREE.WireframeHelper = function ( object, hex ) {
 
 		var vertices = object.geometry.attributes.position.array;
 		var numEdges = vertices.length / 3;
-		var numTris = numEdges / 3;
+		const numTris = numEdges / 3;
 
 		geometry.addAttribute( 'position', new THREE.Float32Attribute( numEdges * 2, 3 ) );
 
@@ -36600,7 +36600,7 @@ THREE.LensFlare.prototype.add = function ( texture, size, distance, blending, co
 THREE.LensFlare.prototype.updateLensFlares = function () {
 
 	var f, fl = this.lensFlares.length;
-	var flare;
+	let flare;
 	var vecX = -this.positionScreen.x * 2;
 	var vecY = -this.positionScreen.y * 2;
 
@@ -36649,7 +36649,7 @@ THREE.MorphBlendMesh = function( geometry, material ) {
 	var name = "__default";
 
 	var startFrame = 0;
-	var endFrame = numFrames - 1;
+	const endFrame = numFrames - 1;
 
 	var fps = numFrames / 1;
 
@@ -36711,7 +36711,7 @@ THREE.MorphBlendMesh.prototype.autoCreateAnimations = function ( fps ) {
 
 			if ( ! frameRanges[ name ] ) frameRanges[ name ] = { start: Infinity, end: -Infinity };
 
-			var range = frameRanges[ name ];
+			const range = frameRanges[ name ];
 
 			if ( i < range.start ) range.start = i;
 			if ( i > range.end ) range.end = i;
@@ -37248,7 +37248,7 @@ THREE.LensFlarePlugin = function () {
 
 THREE.ShadowMapPlugin = function () {
 
-	var _gl,
+	let _gl,
 	_renderer,
 	_depthMaterial, _depthMaterialMorph, _depthMaterialSkin, _depthMaterialMorphSkin,
 
@@ -37666,7 +37666,7 @@ THREE.ShadowMapPlugin = function () {
 		virtualLight.shadowBias = light.shadowCascadeBias[ cascade ];
 
 		var nearZ = light.shadowCascadeNearZ[ cascade ];
-		var farZ = light.shadowCascadeFarZ[ cascade ];
+		const farZ = light.shadowCascadeFarZ[ cascade ];
 
 		var pointsFrustum = virtualLight.pointsFrustum;
 
