@@ -34056,7 +34056,7 @@ THREE.PlaneGeometry = function ( width, height, widthSegments, heightSegments ) 
 
 		for ( ix = 0; ix < gridX; ix ++ ) {
 
-			var a = ix + gridX1 * iz;
+			const a = ix + gridX1 * iz;
 			var b = ix + gridX1 * ( iz + 1 );
 			var c = ( ix + 1 ) + gridX1 * ( iz + 1 );
 			var d = ( ix + 1 ) + gridX1 * iz;
