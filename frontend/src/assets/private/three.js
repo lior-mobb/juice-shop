@@ -2474,7 +2474,7 @@ THREE.Vector4.prototype = {
 		var x = this.x;
 		var y = this.y;
 		var z = this.z;
-		var w = this.w;
+		const w = this.w;
 
 		var e = m.elements;
 
