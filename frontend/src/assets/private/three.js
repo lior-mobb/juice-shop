@@ -15460,7 +15460,7 @@ THREE.CompressedTexture.prototype = Object.create( THREE.Texture.prototype );
 
 THREE.CompressedTexture.prototype.clone = function () {
 
-	var texture = new THREE.CompressedTexture();
+	const texture = new THREE.CompressedTexture();
 
 	THREE.Texture.prototype.clone.call( this, texture );
 
