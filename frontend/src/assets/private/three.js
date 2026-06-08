@@ -9750,7 +9750,7 @@ THREE.BufferGeometry.prototype = {
 		for(var findex = 0; findex < facesCount; findex++) {
 			newVerticeMaps = 0;
 
-			for(var vo = 0; vo < 3; vo++) {
+			for(let vo = 0; vo < 3; vo++) {
 				var vid = indices[ findex*3 + vo ];
 				if(vertexMap[vid] == -1) {
 					//Unmapped vertice
