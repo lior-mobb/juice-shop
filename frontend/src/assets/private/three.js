@@ -28040,7 +28040,7 @@ THREE.ImageUtils = {
 
 					var faces = dds.mipmaps.length / dds.mipmapCount;
 
-					for ( var f = 0; f < faces; f ++ ) {
+					for ( let f = 0; f < faces; f ++ ) {
 
 						images[ f ] = { mipmaps : [] };
 
