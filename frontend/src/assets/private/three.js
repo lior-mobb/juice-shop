@@ -30878,7 +30878,7 @@ THREE.Shape.Utils = {
 		// remove holes by cutting paths to holes and adding them to the shape
 		var shapeWithoutHoles = removeHoles( contour, holes );
 
-		var triangles = THREE.FontUtils.Triangulate( shapeWithoutHoles, false ); // True returns indices for points of spooled shape
+		const triangles = THREE.FontUtils.Triangulate( shapeWithoutHoles, false ); // True returns indices for points of spooled shape
 		//console.log( "triangles",triangles, triangles.length );
 
 		// check all face vertices against all points map
