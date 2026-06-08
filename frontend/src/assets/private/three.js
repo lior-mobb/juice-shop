@@ -31013,7 +31013,7 @@ THREE.LineCurve.prototype.getPointAt = function ( u ) {
 
 THREE.LineCurve.prototype.getTangent = function( t ) {
 
-	var tangent = this.v2.clone().sub(this.v1);
+	const tangent = this.v2.clone().sub(this.v1);
 
 	return tangent.normalize();
 
