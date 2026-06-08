@@ -3163,7 +3163,7 @@ THREE.Euler.prototype = {
 
 		// http://www.mathworks.com/matlabcentral/fileexchange/20696-function-to-convert-between-dcm-euler-angles-quaternions-and-euler-vectors/content/SpinCalc.m
 
-		var sqx = q.x * q.x;
+		const sqx = q.x * q.x;
 		var sqy = q.y * q.y;
 		var sqz = q.z * q.z;
 		var sqw = q.w * q.w;
