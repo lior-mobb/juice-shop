@@ -16036,7 +16036,7 @@ THREE.MorphAnimMesh.prototype.setDirectionBackward = function () {
 
 THREE.MorphAnimMesh.prototype.parseAnimations = function () {
 
-	var geometry = this.geometry;
+	const geometry = this.geometry;
 
 	if ( ! geometry.animations ) geometry.animations = {};
 
