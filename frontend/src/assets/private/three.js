@@ -36411,7 +36411,7 @@ THREE.WireframeHelper = function ( object, hex ) {
 
 		var coords = geometry.attributes.position.array;
 
-		for ( var i = 0, l = numEdges; i < l; i ++ ) {
+		for ( let i = 0, l = numEdges; i < l; i ++ ) {
 
 			for ( var j = 0; j < 2; j ++ ) {
 
