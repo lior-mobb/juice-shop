@@ -13183,7 +13183,7 @@ THREE.SceneLoader.prototype = {
 								"skin": 1, "morph": 1, "mirroredLoop": 1, "duration": 1
 							};
 
-							var loaderParameters = {};
+							const loaderParameters = {};
 
 							for ( var parType in objJSON ) {
 
