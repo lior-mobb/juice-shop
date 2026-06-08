@@ -5034,7 +5034,7 @@ THREE.Matrix4.prototype = {
 		var te = this.elements;
 
 		var scaleXSq = te[0] * te[0] + te[1] * te[1] + te[2] * te[2];
-		var scaleYSq = te[4] * te[4] + te[5] * te[5] + te[6] * te[6];
+		const scaleYSq = te[4] * te[4] + te[5] * te[5] + te[6] * te[6];
 		var scaleZSq = te[8] * te[8] + te[9] * te[9] + te[10] * te[10];
 
 		return Math.sqrt( Math.max( scaleXSq, Math.max( scaleYSq, scaleZSq ) ) );
