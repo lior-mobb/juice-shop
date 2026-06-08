@@ -8410,7 +8410,7 @@ THREE.Projector = function () {
 
 					var positions = attributes.position.array;
 
-					for ( var i = 0, l = positions.length; i < l; i += 3 ) {
+					for ( let i = 0, l = positions.length; i < l; i += 3 ) {
 
 						renderList.pushVertex( positions[ i ], positions[ i + 1 ], positions[ i + 2 ] );
 
