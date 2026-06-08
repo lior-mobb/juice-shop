@@ -31115,7 +31115,7 @@ THREE.SplineCurve.prototype = Object.create( THREE.Curve.prototype );
 THREE.SplineCurve.prototype.getPoint = function ( t ) {
 
 	var v = new THREE.Vector2();
-	var c = [];
+	const c = [];
 	var points = this.points, point, intPoint, weight;
 	point = ( points.length - 1 ) * t;
 
