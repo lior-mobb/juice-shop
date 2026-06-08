@@ -8205,7 +8205,7 @@ THREE.Projector = function () {
 
 	};
 
-	var RenderList = function () {
+	const RenderList = function () {
 
 		var normals = [];
 		var uvs = [];
