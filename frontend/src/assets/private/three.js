@@ -288,7 +288,7 @@ THREE.Color.prototype = {
 
 			};
 
-			var p = l <= 0.5 ? l * ( 1 + s ) : l + s - ( l * s );
+			const p = l <= 0.5 ? l * ( 1 + s ) : l + s - ( l * s );
 			var q = ( 2 * l ) - p;
 
 			this.r = hue2rgb( q, p, h + 1 / 3 );
