@@ -34357,7 +34357,7 @@ THREE.TorusGeometry = function ( radius, tube, radialSegments, tubularSegments, 
 
 	var center = new THREE.Vector3(), uvs = [], normals = [];
 
-	for ( var j = 0; j <= radialSegments; j ++ ) {
+	for ( let j = 0; j <= radialSegments; j ++ ) {
 
 		for ( var i = 0; i <= tubularSegments; i ++ ) {
 
