@@ -10439,7 +10439,7 @@ THREE.Geometry.prototype = {
 
 		for ( var i = 0, il = vertices2.length; i < il; i ++ ) {
 
-			var vertex = vertices2[ i ];
+			const vertex = vertices2[ i ];
 
 			var vertexCopy = vertex.clone();
 
