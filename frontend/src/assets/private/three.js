@@ -5666,7 +5666,7 @@ THREE.Ray.prototype = {
 	intersectTriangle: function() {
 
 		// Compute the offset origin, edges, and normal.
-		var diff = new THREE.Vector3();
+		const diff = new THREE.Vector3();
 		var edge1 = new THREE.Vector3();
 		var edge2 = new THREE.Vector3();
 		var normal = new THREE.Vector3();
@@ -6215,7 +6215,7 @@ THREE.Plane.prototype = {
 
 	orthoPoint: function ( point, optionalTarget ) {
 
-		var perpendicularMagnitude = this.distanceToPoint( point );
+		const perpendicularMagnitude = this.distanceToPoint( point );
 
 		var result = optionalTarget || new THREE.Vector3();
 		return result.copy( this.normal ).multiplyScalar( perpendicularMagnitude );
@@ -7920,7 +7920,7 @@ THREE.Object3D.prototype = {
 
 	getObjectByName: function ( name, recursive ) {
 
-		for ( var i = 0, l = this.children.length; i < l; i ++ ) {
+		for ( let i = 0, l = this.children.length; i < l; i ++ ) {
 
 			var child = this.children[ i ];
 
@@ -20999,7 +20999,7 @@ THREE.WebGLRenderer = function ( parameters ) {
 
 	var _maxAnisotropy = _glExtensionTextureFilterAnisotropic ? _gl.getParameter( _glExtensionTextureFilterAnisotropic.MAX_TEXTURE_MAX_ANISOTROPY_EXT ) : 0;
 
-	var _supportsVertexTextures = ( _maxVertexTextures > 0 );
+	const _supportsVertexTextures = ( _maxVertexTextures > 0 );
 	var _supportsBoneTextures = _supportsVertexTextures && _glExtensionTextureFloat;
 
 	var _compressedTextureFormats = _glExtensionCompressedTextureS3TC ? _gl.getParameter( _gl.COMPRESSED_TEXTURE_FORMATS ) : [];
@@ -31479,7 +31479,7 @@ THREE.AnimationHandler = ( function () {
 
 		if ( root instanceof THREE.SkinnedMesh ) {
 
-			for ( var b = 0; b < root.skeleton.bones.length; b++ ) {
+			for ( let b = 0; b < root.skeleton.bones.length; b++ ) {
 
 				hierarchy.push( root.skeleton.bones[ b ] );
 
