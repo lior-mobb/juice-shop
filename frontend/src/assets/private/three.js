@@ -36599,7 +36599,7 @@ THREE.LensFlare.prototype.add = function ( texture, size, distance, blending, co
 
 THREE.LensFlare.prototype.updateLensFlares = function () {
 
-	var f, fl = this.lensFlares.length;
+	let f, fl = this.lensFlares.length;
 	var flare;
 	var vecX = -this.positionScreen.x * 2;
 	var vecY = -this.positionScreen.y * 2;
