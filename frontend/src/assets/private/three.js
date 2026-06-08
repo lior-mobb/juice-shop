@@ -33147,7 +33147,7 @@ THREE.ExtrudeGeometry.prototype.addShape = function ( shape, options ) {
 	const steps = options.steps !== undefined ? options.steps : 1;
 
 	var extrudePath = options.extrudePath;
-	var extrudePts, extrudeByPath = false;
+	let extrudePts, extrudeByPath = false;
 
 	var material = options.material;
 	var extrudeMaterial = options.extrudeMaterial;
