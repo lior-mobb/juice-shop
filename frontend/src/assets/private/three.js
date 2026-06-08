@@ -36219,7 +36219,7 @@ THREE.VertexNormalsHelper.prototype.update = ( function ( object ) {
 
 		this.normalMatrix.getNormalMatrix( this.object.matrixWorld );
 
-		var vertices = this.geometry.vertices;
+		const vertices = this.geometry.vertices;
 
 		var verts = this.object.geometry.vertices;
 
