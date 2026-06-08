@@ -70,7 +70,7 @@ THREE.OrbitControls = function ( object, domElement ) {
     ////////////
     // internals
 
-    var scope = this;
+    const scope = this;
 
     var EPS = 0.000001;
 
@@ -84,9 +84,9 @@ THREE.OrbitControls = function ( object, domElement ) {
 
     var dollyStart = new THREE.Vector2();
     var dollyEnd = new THREE.Vector2();
-    var dollyDelta = new THREE.Vector2();
+    const dollyDelta = new THREE.Vector2();
 
-    var phiDelta = 0;
+    let phiDelta = 0;
     var thetaDelta = 0;
     var scale = 1;
     var pan = new THREE.Vector3();
@@ -129,7 +129,7 @@ THREE.OrbitControls = function ( object, domElement ) {
     this.panLeft = function ( distance ) {
 
         var panOffset = new THREE.Vector3();
-        var te = this.object.matrix.elements;
+        const te = this.object.matrix.elements;
         // get X column of matrix
         panOffset.set( te[0], te[1], te[2] );
         panOffset.multiplyScalar(-distance);
@@ -141,7 +141,7 @@ THREE.OrbitControls = function ( object, domElement ) {
     // pass in distance in world space to move up
     this.panUp = function ( distance ) {
 
-        var panOffset = new THREE.Vector3();
+        const panOffset = new THREE.Vector3();
         var te = this.object.matrix.elements;
         // get Y column of matrix
         panOffset.set( te[4], te[5], te[6] );
@@ -159,7 +159,7 @@ THREE.OrbitControls = function ( object, domElement ) {
         if ( scope.object.fov !== undefined ) {
 
             // perspective
-            var position = scope.object.position;
+            const position = scope.object.position;
             var offset = position.clone().sub( scope.target );
             var targetDistance = offset.length();
 
@@ -219,7 +219,7 @@ THREE.OrbitControls = function ( object, domElement ) {
 
         // angle from y-axis
 
-        var phi = Math.atan2( Math.sqrt( offset.x * offset.x + offset.z * offset.z ), offset.y );
+        let phi = Math.atan2( Math.sqrt( offset.x * offset.x + offset.z * offset.z ), offset.y );
 
         if ( this.autoRotate ) {
 
