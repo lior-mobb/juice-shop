@@ -21474,7 +21474,7 @@ THREE.WebGLRenderer = function ( parameters ) {
 
 	};
 
-	var deallocateRenderTarget = function ( renderTarget ) {
+	const deallocateRenderTarget = function ( renderTarget ) {
 
 		if ( !renderTarget || ! renderTarget.__webglTexture ) return;
 
