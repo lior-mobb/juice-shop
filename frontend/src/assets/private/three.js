@@ -29158,7 +29158,7 @@ THREE.Curve.prototype.updateArcLengths = function() {
 
 THREE.Curve.prototype.getUtoTmapping = function ( u, distance ) {
 
-	var arcLengths = this.getLengths();
+	const arcLengths = this.getLengths();
 
 	var i = 0, il = arcLengths.length;
 
