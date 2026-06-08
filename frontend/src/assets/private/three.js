@@ -7791,7 +7791,7 @@ THREE.Object3D.prototype = {
 
 		// This routine does not support objects with rotated and/or translated parent(s)
 
-		var m1 = new THREE.Matrix4();
+		const m1 = new THREE.Matrix4();
 
 		return function ( vector ) {
 
