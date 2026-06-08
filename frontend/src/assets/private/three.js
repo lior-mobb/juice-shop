@@ -36275,7 +36275,7 @@ THREE.VertexTangentsHelper = function ( object, size, hex, linewidth ) {
 
 	var color = ( hex !== undefined ) ? hex : 0x0000ff;
 
-	var width = ( linewidth !== undefined ) ? linewidth : 1;
+	const width = ( linewidth !== undefined ) ? linewidth : 1;
 
 	var geometry = new THREE.Geometry();
 
