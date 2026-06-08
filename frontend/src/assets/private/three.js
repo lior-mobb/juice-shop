@@ -26837,7 +26837,7 @@ THREE.WebGLRenderer = function ( parameters ) {
 		var spotLights = 0;
 		var hemiLights = 0;
 
-		for ( var l = 0, ll = lights.length; l < ll; l ++ ) {
+		for ( let l = 0, ll = lights.length; l < ll; l ++ ) {
 
 			var light = lights[ l ];
 
