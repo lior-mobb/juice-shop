@@ -36386,7 +36386,7 @@ THREE.WireframeHelper = function ( object, hex ) {
 
 			var face = faces[ i ];
 
-			for ( var j = 0; j < 3; j ++ ) {
+			for ( let j = 0; j < 3; j ++ ) {
 
 				edge[ 0 ] = face[ keys[ j ] ];
 				edge[ 1 ] = face[ keys[ ( j + 1 ) % 3 ] ];
