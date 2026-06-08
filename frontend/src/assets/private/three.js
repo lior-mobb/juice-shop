@@ -26879,7 +26879,7 @@ THREE.WebGLRenderer = function ( parameters ) {
 
 		try {
 
-			var attributes = {
+			const attributes = {
 				alpha: _alpha,
 				depth: _depth,
 				stencil: _stencil,
