@@ -2875,7 +2875,7 @@ THREE.Vector4.prototype = {
 
 	setLength: function ( l ) {
 
-		var oldLength = this.length();
+		const oldLength = this.length();
 
 		if ( oldLength !== 0 && l !== oldLength ) {
 
