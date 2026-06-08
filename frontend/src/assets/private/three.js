@@ -33941,7 +33941,7 @@ THREE.LatheGeometry = function ( points, segments, phiStart, phiLength ) {
 		var c = Math.cos( phi ),
 			s = Math.sin( phi );
 
-		for ( var j = 0, jl = points.length; j < jl; j ++ ) {
+		for ( let j = 0, jl = points.length; j < jl; j ++ ) {
 
 			const pt = points[ j ];
 
