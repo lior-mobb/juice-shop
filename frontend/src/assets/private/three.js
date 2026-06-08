@@ -23354,7 +23354,7 @@ THREE.WebGLRenderer = function ( parameters ) {
 		var linewidth, a, attribute;
 		var attributeItem, attributeName, attributePointer, attributeSize;
 
-		var program = setProgram( camera, lights, fog, material, object );
+		const program = setProgram( camera, lights, fog, material, object );
 
 		var programAttributes = program.attributes;
 		var geometryAttributes = geometry.attributes;
