@@ -31835,7 +31835,7 @@ THREE.Animation.prototype.update = (function(){
 
 				// get keys
 
-				var type    = this.keyTypes[ t ];
+				const type    = this.keyTypes[ t ];
 				var prevKey = animationCache.prevKey[ type ];
 				var nextKey = animationCache.nextKey[ type ];
 
