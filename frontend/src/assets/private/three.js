@@ -10367,7 +10367,7 @@ THREE.Geometry.prototype = {
 
 	computeLineDistances: function ( ) {
 
-		var d = 0;
+		let d = 0;
 		var vertices = this.vertices;
 
 		for ( var i = 0, il = vertices.length; i < il; i ++ ) {
