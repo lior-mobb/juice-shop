@@ -35119,7 +35119,7 @@ THREE.ParametricGeometry = function ( func, slices, stacks ) {
 	var uvs = this.faceVertexUvs[ 0 ];
 
 	var i, il, j, p;
-	var u, v;
+	let u, v;
 
 	var stackCount = stacks + 1;
 	var sliceCount = slices + 1;
