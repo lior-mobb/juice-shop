@@ -36308,7 +36308,7 @@ THREE.VertexTangentsHelper.prototype = Object.create( THREE.Line.prototype );
 
 THREE.VertexTangentsHelper.prototype.update = ( function ( object ) {
 
-	var v1 = new THREE.Vector3();
+	const v1 = new THREE.Vector3();
 
 	return function( object ) {
 
