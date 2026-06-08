@@ -34234,7 +34234,7 @@ THREE.SphereGeometry = function ( radius, widthSegments, heightSegments, phiStar
 
 			var uv1 = uvs[ y ][ x + 1 ].clone();
 			var uv2 = uvs[ y ][ x ].clone();
-			var uv3 = uvs[ y + 1 ][ x ].clone();
+			const uv3 = uvs[ y + 1 ][ x ].clone();
 			var uv4 = uvs[ y + 1 ][ x + 1 ].clone();
 
 			if ( Math.abs( this.vertices[ v1 ].y ) === radius ) {
