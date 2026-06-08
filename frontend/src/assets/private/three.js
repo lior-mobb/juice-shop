@@ -5234,7 +5234,7 @@ THREE.Matrix4.prototype = {
 
 		var ymax = near * Math.tan( THREE.Math.degToRad( fov * 0.5 ) );
 		var ymin = - ymax;
-		var xmin = ymin * aspect;
+		const xmin = ymin * aspect;
 		var xmax = ymax * aspect;
 
 		return this.makeFrustum( xmin, xmax, ymin, ymax, near, far );
