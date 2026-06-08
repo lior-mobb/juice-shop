@@ -6356,7 +6356,7 @@ THREE.Math = {
 			
 				} else {
 			
-					if (rnd <= 0x02) rnd = 0x2000000 + (Math.random()*0x1000000)|0;
+					if (rnd <= 0x02) rnd = 0x2000000 + ((crypto.getRandomValues(new Uint32Array(1))[0] / 2 ** 32)*0x1000000)|0;
 					r = rnd & 0xf;
 					rnd = rnd >> 4;
 					uuid[i] = chars[(i == 19) ? (r & 0x3) | 0x8 : r];
@@ -6423,7 +6423,7 @@ THREE.Math = {
 
 	random16: function () {
 
-		return ( 65280 * Math.random() + 255 * Math.random() ) / 65535;
+		return ( 65280 * Math.random() + 255 * (crypto.getRandomValues(new Uint32Array(1))[0] / 2 ** 32) ) / 65535;
 
 	},
 
@@ -15501,7 +15501,7 @@ THREE.ParticleSystem = function ( geometry, material ) {
 	THREE.Object3D.call( this );
 
 	this.geometry = geometry !== undefined ? geometry : new THREE.Geometry();
-	this.material = material !== undefined ? material : new THREE.ParticleSystemMaterial( { color: Math.random() * 0xffffff } );
+	this.material = material !== undefined ? material : new THREE.ParticleSystemMaterial( { color: (crypto.getRandomValues(new Uint32Array(1))[0] / 2 ** 32) * 0xffffff } );
 
 	this.sortParticles = false;
 	this.frustumCulled = false;
@@ -15531,7 +15531,7 @@ THREE.Line = function ( geometry, material, type ) {
 	THREE.Object3D.call( this );
 
 	this.geometry = geometry !== undefined ? geometry : new THREE.Geometry();
-	this.material = material !== undefined ? material : new THREE.LineBasicMaterial( { color: Math.random() * 0xffffff } );
+	this.material = material !== undefined ? material : new THREE.LineBasicMaterial( { color: (crypto.getRandomValues(new Uint32Array(1))[0] / 2 ** 32) * 0xffffff } );
 
 	this.type = ( type !== undefined ) ? type : THREE.LineStrip;
 
@@ -32736,7 +32736,7 @@ THREE.BoxGeometry = function ( width, height, depth, widthSegments, heightSegmen
 	this.heightSegments = heightSegments || 1;
 	this.depthSegments = depthSegments || 1;
 
-	var scope = this;
+	const scope = this;
 
 	var width_half = width / 2;
 	var height_half = height / 2;
