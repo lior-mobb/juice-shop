@@ -9851,7 +9851,7 @@ THREE.BufferGeometry.prototype = {
 	reorderBuffers: function(indexBuffer, indexMap, vertexCount) {
 
 		/* Create a copy of all attributes for reordering. */
-		var sortedAttributes = {};
+		const sortedAttributes = {};
 		var types = [ Int8Array, Uint8Array, Uint8ClampedArray, Int16Array, Uint16Array, Int32Array, Uint32Array, Float32Array, Float64Array ];
 		for( var attr in this.attributes ) {
 			if(attr == 'index')
