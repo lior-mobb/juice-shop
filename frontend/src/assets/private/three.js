@@ -32447,7 +32447,7 @@ THREE.CubeCamera = function ( near, far, cubeResolution ) {
 	this.updateCubeMap = function ( renderer, scene ) {
 
 		var renderTarget = this.renderTarget;
-		var generateMipmaps = renderTarget.generateMipmaps;
+		const generateMipmaps = renderTarget.generateMipmaps;
 
 		renderTarget.generateMipmaps = false;
 
