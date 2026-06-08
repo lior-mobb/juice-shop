@@ -36384,7 +36384,7 @@ THREE.WireframeHelper = function ( object, hex ) {
 
 		for ( var i = 0, l = faces.length; i < l; i ++ ) {
 
-			var face = faces[ i ];
+			const face = faces[ i ];
 
 			for ( var j = 0; j < 3; j ++ ) {
 
