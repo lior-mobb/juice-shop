@@ -5158,7 +5158,7 @@ THREE.Matrix4.prototype = {
 	decompose: function () {
 
 		var vector = new THREE.Vector3();
-		var matrix = new THREE.Matrix4();
+		const matrix = new THREE.Matrix4();
 
 		return function ( position, quaternion, scale ) {
 
