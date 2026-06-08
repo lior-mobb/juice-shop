@@ -34454,7 +34454,7 @@ THREE.TorusKnotGeometry = function ( radius, tube, radialSegments, tubularSegmen
 		bitan.normalize();
 		n.normalize();
 
-		for ( var j = 0; j < tubularSegments; ++ j ) {
+		for ( let j = 0; j < tubularSegments; ++ j ) {
 
 			var v = j / tubularSegments * 2 * Math.PI;
 			var cx = - tube * Math.cos( v ); // TODO: Hack: Negating it so it faces outside.
