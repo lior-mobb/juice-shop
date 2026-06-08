@@ -28245,7 +28245,7 @@ THREE.ImageUtils = {
 		var off_mipmapCount = 7;
 
 		var off_pfFlags = 20;
-		var off_pfFourCC = 21;
+		const off_pfFourCC = 21;
 		var off_RGBBitCount = 22;
 		var off_RBitMask = 23;
 		var off_GBitMask = 24;
