@@ -161,7 +161,7 @@ THREE.OrbitControls = function ( object, domElement ) {
             // perspective
             var position = scope.object.position;
             var offset = position.clone().sub( scope.target );
-            var targetDistance = offset.length();
+            let targetDistance = offset.length();
 
             // half of the fov is center to top of screen
             targetDistance *= Math.tan( (scope.object.fov/2) * Math.PI / 180.0 );
