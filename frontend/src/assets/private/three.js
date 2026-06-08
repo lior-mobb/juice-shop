@@ -33812,7 +33812,7 @@ THREE.ShapeGeometry.prototype = Object.create( THREE.Geometry.prototype );
  */
 THREE.ShapeGeometry.prototype.addShapeList = function ( shapes, options ) {
 
-	for ( var i = 0, l = shapes.length; i < l; i++ ) {
+	for ( let i = 0, l = shapes.length; i < l; i++ ) {
 
 		this.addShape( shapes[ i ], options );
 
