@@ -13708,7 +13708,7 @@ THREE.SceneLoader.prototype = {
 
 		};
 
-		var callbackTexture = function ( count ) {
+		const callbackTexture = function ( count ) {
 
 			counter_textures -= count;
 			async_callback_gate();
