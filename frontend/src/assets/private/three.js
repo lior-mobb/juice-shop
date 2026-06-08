@@ -21391,7 +21391,7 @@ THREE.WebGLRenderer = function ( parameters ) {
 
 	};
 
-	var deallocateGeometry = function ( geometry ) {
+	const deallocateGeometry = function ( geometry ) {
 
 		geometry.__webglInit = undefined;
 
