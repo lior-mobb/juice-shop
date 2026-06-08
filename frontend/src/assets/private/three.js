@@ -36324,7 +36324,7 @@ THREE.VertexTangentsHelper.prototype.update = ( function ( object ) {
 
 		var worldMatrix = this.object.matrixWorld;
 
-		var idx = 0;
+		let idx = 0;
 
 		for ( var i = 0, l = faces.length; i < l; i ++ ) {
 
