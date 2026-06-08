@@ -29227,7 +29227,7 @@ THREE.Curve.prototype.getUtoTmapping = function ( u, distance ) {
 
     // determine where we are between the 'before' and 'after' points
 
-    var segmentFraction = ( targetArcLength - lengthBefore ) / segmentLength;
+    const segmentFraction = ( targetArcLength - lengthBefore ) / segmentLength;
 
     // add that fractional amount to t
 
