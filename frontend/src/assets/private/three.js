@@ -29377,7 +29377,7 @@ THREE.CurvePath.prototype.closePath = function() {
 	// TODO Test
 	// and verify for vector3 (needs to implement equals)
 	// Add a line curve if start and end of lines are not connected
-	var startPoint = this.curves[0].getPoint(0);
+	const startPoint = this.curves[0].getPoint(0);
 	var endPoint = this.curves[this.curves.length-1].getPoint(1);
 	
 	if (!startPoint.equals(endPoint)) {
