@@ -35408,7 +35408,7 @@ THREE.BoxHelper.prototype.update = function ( object ) {
 
 THREE.BoundingBoxHelper = function ( object, hex ) {
 
-	var color = ( hex !== undefined ) ? hex : 0x888888;
+	const color = ( hex !== undefined ) ? hex : 0x888888;
 
 	this.object = object;
 
