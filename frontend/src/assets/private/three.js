@@ -37050,7 +37050,7 @@ THREE.LensFlarePlugin = function () {
 
 		if ( ! nFlares ) return;
 
-		var tempPosition = new THREE.Vector3();
+		const tempPosition = new THREE.Vector3();
 
 		var invAspect = viewportHeight / viewportWidth,
 			halfViewportWidth = viewportWidth * 0.5,
