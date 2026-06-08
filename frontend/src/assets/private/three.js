@@ -21642,7 +21642,7 @@ THREE.WebGLRenderer = function ( parameters ) {
 
 	function initMeshBuffers ( geometryGroup, object ) {
 
-		var geometry = object.geometry,
+		let geometry = object.geometry,
 			faces3 = geometryGroup.faces3,
 
 			nvertices = faces3.length * 3,
