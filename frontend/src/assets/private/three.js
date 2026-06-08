@@ -27934,7 +27934,7 @@ THREE.ImageUtils = {
 
 		texture.flipY = false;
 
-		for ( var i = 0, il = array.length; i < il; ++ i ) {
+		for ( let i = 0, il = array.length; i < il; ++ i ) {
 
 			var cubeImage = loader.load( array[i], function () {
 
