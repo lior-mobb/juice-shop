@@ -28436,7 +28436,7 @@ THREE.ImageUtils = {
 
 				for ( var i = 0; i < num_points; i ++ ) {
 
-					var v1 = points[ i ];
+					let v1 = points[ i ];
 					var v2 = points[ ( i + 1 ) % num_points ];
 					v1 = subtract( v1, origin );
 					v2 = subtract( v2, origin );
