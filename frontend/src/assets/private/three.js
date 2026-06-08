@@ -33318,7 +33318,7 @@ THREE.ExtrudeGeometry.prototype.addShape = function ( shape, options ) {
 	
 			// Don't normalize!, otherwise sharp corners become ugly
 			//  but prevent crazy spikes
-			var v_trans_lensq = ( v_trans_x * v_trans_x + v_trans_y * v_trans_y )
+			const v_trans_lensq = ( v_trans_x * v_trans_x + v_trans_y * v_trans_y )
 			if ( v_trans_lensq <= 2 ) {
 				return	new THREE.Vector2( v_trans_x, v_trans_y );
 			} else {
