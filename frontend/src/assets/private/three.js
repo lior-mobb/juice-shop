@@ -27858,7 +27858,7 @@ THREE.ImageUtils = {
 
 		var texture = new THREE.Texture( undefined, mapping );
 
-		var image = loader.load( url, function () {
+		const image = loader.load( url, function () {
 
 			texture.needsUpdate = true;
 
