@@ -32536,7 +32536,7 @@ THREE.CombinedCamera.prototype.toOrthographic = function () {
 
 	// Switches to the Orthographic camera estimating viewport from Perspective
 
-	var fov = this.fov;
+	const fov = this.fov;
 	var aspect = this.cameraP.aspect;
 	var near = this.cameraP.near;
 	var far = this.cameraP.far;
