@@ -31809,7 +31809,7 @@ THREE.Animation.prototype.update = (function(){
 
 		//
 
-		var vector;
+		let vector;
 		var duration = this.data.length;
 
 		if ( this.loop === true && this.currentTime > duration ) {
