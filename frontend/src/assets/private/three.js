@@ -6796,7 +6796,7 @@ THREE.Triangle.prototype = {
 
 	area: function() {
 
-		var v0 = new THREE.Vector3();
+		const v0 = new THREE.Vector3();
 		var v1 = new THREE.Vector3();
 
 		return function () {
