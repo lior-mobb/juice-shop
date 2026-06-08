@@ -13226,7 +13226,7 @@ THREE.SceneLoader.prototype = {
 
 						if ( geometry ) {
 
-							var needsTangents = false;
+							let needsTangents = false;
 
 							material = result.materials[ objJSON.material ];
 							needsTangents = material instanceof THREE.ShaderMaterial;
