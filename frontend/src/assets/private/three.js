@@ -26304,7 +26304,7 @@ THREE.WebGLRenderer = function ( parameters ) {
 
 			setTextureParameters( _gl.TEXTURE_2D, texture, isImagePowerOfTwo );
 
-			var mipmap, mipmaps = texture.mipmaps;
+			let mipmap, mipmaps = texture.mipmaps;
 
 			if ( texture instanceof THREE.DataTexture ) {
 
