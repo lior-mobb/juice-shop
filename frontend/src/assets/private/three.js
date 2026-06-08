@@ -31055,7 +31055,7 @@ THREE.QuadraticBezierCurve.prototype.getTangent = function( t ) {
 
 	// returns unit vector
 
-	var tangent = new THREE.Vector2( tx, ty );
+	const tangent = new THREE.Vector2( tx, ty );
 	tangent.normalize();
 
 	return tangent;
