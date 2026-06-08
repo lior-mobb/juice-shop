@@ -37623,7 +37623,7 @@ THREE.ShadowMapPlugin = function () {
 		virtualLight.pointsWorld = [];
 		virtualLight.pointsFrustum = [];
 
-		var pointsWorld = virtualLight.pointsWorld,
+		let pointsWorld = virtualLight.pointsWorld,
 			pointsFrustum = virtualLight.pointsFrustum;
 
 		for ( var i = 0; i < 8; i ++ ) {
