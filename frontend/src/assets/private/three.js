@@ -15581,7 +15581,7 @@ THREE.Mesh.prototype.updateMorphTargets = function () {
 		this.morphTargetInfluences = [];
 		this.morphTargetDictionary = {};
 
-		for ( var m = 0, ml = this.geometry.morphTargets.length; m < ml; m ++ ) {
+		for ( let m = 0, ml = this.geometry.morphTargets.length; m < ml; m ++ ) {
 
 			this.morphTargetInfluences.push( 0 );
 			this.morphTargetDictionary[ this.geometry.morphTargets[ m ].name ] = m;
