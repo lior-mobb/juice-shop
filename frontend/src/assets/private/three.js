@@ -8654,7 +8654,7 @@ THREE.Projector = function () {
 
 						} else {
 
-							for ( var i = 0, l = ( positions.length / 3 ) - 1; i < l; i ++ ) {
+							for ( let i = 0, l = ( positions.length / 3 ) - 1; i < l; i ++ ) {
 
 								renderList.pushLine( i, i + 1 );
 
