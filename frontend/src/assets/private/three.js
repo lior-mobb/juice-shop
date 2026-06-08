@@ -17076,7 +17076,7 @@ THREE.CanvasRenderer = function ( parameters ) {
 			} else {
 
 				var colorStyle1 = element.vertexColors[0].getStyle();
-				var colorStyle2 = element.vertexColors[1].getStyle();
+				const colorStyle2 = element.vertexColors[1].getStyle();
 
 				if ( colorStyle1 === colorStyle2 ) {
 
