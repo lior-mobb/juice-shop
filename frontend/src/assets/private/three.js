@@ -10679,7 +10679,7 @@ THREE.Geometry.prototype = {
 
 		var geometry = new THREE.Geometry();
 
-		var vertices = this.vertices;
+		const vertices = this.vertices;
 
 		for ( var i = 0, il = vertices.length; i < il; i ++ ) {
 
