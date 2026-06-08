@@ -70,7 +70,7 @@ THREE.OrbitControls = function ( object, domElement ) {
     ////////////
     // internals
 
-    var scope = this;
+    const scope = this;
 
     var EPS = 0.000001;
 
