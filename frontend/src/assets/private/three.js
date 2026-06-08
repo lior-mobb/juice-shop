@@ -14096,7 +14096,7 @@ THREE.SceneLoader.prototype = {
 
 				var diffuse = matJSON.parameters.color;
 				var specular = matJSON.parameters.specular;
-				var ambient = matJSON.parameters.ambient;
+				const ambient = matJSON.parameters.ambient;
 				var shininess = matJSON.parameters.shininess;
 
 				uniforms[ "tNormal" ].value = result.textures[ matJSON.parameters.normalMap ];
