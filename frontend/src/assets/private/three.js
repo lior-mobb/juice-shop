@@ -27961,7 +27961,7 @@ THREE.ImageUtils = {
 		var images = [];
 		images.loadCount = 0;
 
-		var texture = new THREE.CompressedTexture();
+		const texture = new THREE.CompressedTexture();
 		texture.image = images;
 		if ( mapping !== undefined ) texture.mapping = mapping;
 
