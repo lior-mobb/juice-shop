@@ -33943,7 +33943,7 @@ THREE.LatheGeometry = function ( points, segments, phiStart, phiLength ) {
 
 		for ( var j = 0, jl = points.length; j < jl; j ++ ) {
 
-			var pt = points[ j ];
+			const pt = points[ j ];
 
 			var vertex = new THREE.Vector3();
 
