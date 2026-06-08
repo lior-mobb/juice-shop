@@ -31924,7 +31924,7 @@ THREE.Animation.prototype.update = (function(){
 							target.y = 0;
 							target.normalize();
 
-							var angle = Math.atan2( target.x, target.z );
+							const angle = Math.atan2( target.x, target.z );
 							object.rotation.set( 0, angle, 0 );
 
 						}
