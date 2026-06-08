@@ -9387,7 +9387,7 @@ THREE.BufferGeometry.prototype = {
 
 			}
 
-			var positions = this.attributes[ "position" ].array;
+			const positions = this.attributes[ "position" ].array;
 			var normals = this.attributes[ "normal" ].array;
 
 			var vA, vB, vC, x, y, z,
